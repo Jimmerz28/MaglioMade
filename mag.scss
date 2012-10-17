@@ -1,3 +1,15 @@
+@font-face 
+{                               
+	font-family: "Outage Cut";
+	src: url("fonts/Outage Cut.ttf");
+}
+
+@font-face 
+{                               
+	font-family: "Lavanderia Regular";
+	src: url("fonts/Lavanderia Regular.otf");
+}
+
 html, body, h1
 {
 	margin: 0;
@@ -8,8 +20,30 @@ header
 {
 	nav + h1
 	{
-		min-height: 7em;
+		//min-height: 250px;
 		color: white;
 		background-color: gray;
+		font-size: 4em;
+		padding: 1em .5em 1em .5em;
+	}
+	
+	span
+	{
+		position: relative;
+		display: block;
+		margin-left: 3.5em;
+	}
+	
+	span:first-child
+	{
+		text-transform: uppercase;
+		font-family: "Outage Cut";
+	}
+	
+	span:nth-child(2)
+	{
+		font-family: "Lavanderia Regular";
+		padding-left: 3.5em;
+		margin-top: -.85em;
 	}
 }
