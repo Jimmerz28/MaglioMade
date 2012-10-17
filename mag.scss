@@ -1,0 +1,15 @@
+html, body, h1
+{
+	margin: 0;
+	padding: 0;
+}
+
+header
+{
+	nav + h1
+	{
+		min-height: 7em;
+		color: white;
+		background-color: gray;
+	}
+}
