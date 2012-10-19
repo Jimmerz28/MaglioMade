@@ -2,12 +2,16 @@
 {                               
 	font-family: "Outage Cut";
 	src: url("fonts/Outage Cut.ttf");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face 
 {                               
 	font-family: "Lavanderia Regular";
 	src: url("fonts/Lavanderia Regular.otf");
+	font-weight: normal;
+	font-style: normal;
 }
 
 html, body, h1
@@ -20,9 +24,10 @@ header
 {
 	nav + h1
 	{
-		//min-height: 250px;
+		//height: 300px;
 		color: white;
-		background-color: gray;
+		background-image: url("images/woodplanks.png");
+		background-size: 1680px 300px;
 		font-size: 4em;
 		padding: 1em .5em 1em .5em;
 	}
@@ -38,6 +43,8 @@ header
 	{
 		text-transform: uppercase;
 		font-family: "Outage Cut";
+		font-weight: normal;
+		font-style: normal;
 	}
 	
 	span:nth-child(2)
@@ -45,5 +52,7 @@ header
 		font-family: "Lavanderia Regular";
 		padding-left: 3.5em;
 		margin-top: -.85em;
+		font-weight: normal;
+		font-style: normal;
 	}
 }
