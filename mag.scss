@@ -1,3 +1,7 @@
+$mintGreen: #BDE1CD;
+$darkGray: #292929;
+$lightGray: #646464;
+
 @font-face 
 {                               
 	font-family: "Outage Cut";
@@ -20,16 +24,33 @@ html, body, h1
 	padding: 0;
 }
 
+a:link, a:hover, a:active, a:visited
+{
+	color: inherit;
+	text-decoration: none;
+}
+
 header
 {
 	nav + h1
 	{
-		//height: 300px;
 		color: white;
 		background-image: url("images/woodplanks.png");
 		background-size: 1680px 300px;
 		font-size: 4em;
 		padding: 1em .5em 1em .5em;
+	}
+	
+	nav
+	{
+		margin-top: 90px;
+		margin-right: 20%;
+		text-align: right;
+		
+		a
+		{
+			text-transform: uppercase;
+		}
 	}
 	
 	span
