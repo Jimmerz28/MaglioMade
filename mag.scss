@@ -111,12 +111,41 @@ section
 		{
 			color: white;
 			background-color: $mintGreen;
-			padding: 0 .8em;
+			padding: 0 .8em .1em .8em;
 			font-family: "Blanch Caps";
 			font-size: 32pt;
 			display: inline-block;
 			font-weight: normal;
 			font-style: normal;
+		}
+	}
+	
+	&:first-of-type
+	{
+		font-family: "Blanch Caps";
+		font-weight: normal;
+		font-style: normal;
+		
+		p
+		{
+			color: white;
+			display: inline-block;
+			font-size: 32pt;
+			margin: .1em 1em;
+			width: 18em;
+			
+			span
+			{
+				background-color: $darkGray;
+				display: inline-block;
+				padding: 0 .2em;
+				
+				&.green
+				{
+					background-color: $mintGreen;
+					margin: 0 .2em;
+				}
+			}
 		}
 	}
 }
