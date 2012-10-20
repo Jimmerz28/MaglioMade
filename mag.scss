@@ -131,8 +131,13 @@ section
 			color: white;
 			display: inline-block;
 			font-size: 32pt;
-			margin: .1em 1em;
+			margin: .1em 1.35em;
 			width: 18em;
+			
+			&:first-of-type
+			{
+				margin-top: .2em;
+			}
 			
 			span
 			{
