@@ -5,7 +5,7 @@ $lightGray: #646464;
 @font-face 
 {                               
 	font-family: "Outage Cut";
-	src: url("fonts/Outage Cut.ttf");
+	src: url("fonts/Outage Cut.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -13,7 +13,7 @@ $lightGray: #646464;
 @font-face 
 {                               
 	font-family: "Lavanderia Regular";
-	src: url("fonts/Lavanderia Regular.otf");
+	src: url("fonts/Lavanderia Regular.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -21,7 +21,7 @@ $lightGray: #646464;
 @font-face 
 {                               
 	font-family: "Blanch Caps";
-	src: url("fonts/BLANCH_CAPS.otf");
+	src: url("fonts/BLANCH_CAPS.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
