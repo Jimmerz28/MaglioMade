@@ -18,6 +18,14 @@ $lightGray: #646464;
 	font-style: normal;
 }
 
+@font-face 
+{                               
+	font-family: "Blanch Caps";
+	src: url("fonts/BLANCH_CAPS.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+
 html, body, h1
 {
 	margin: 0;
@@ -46,10 +54,25 @@ header
 		margin-top: 90px;
 		margin-right: 20%;
 		text-align: right;
+		font-family: "Blanch Caps";
+		font-size: 24pt;
 		
 		a
 		{
 			text-transform: uppercase;
+			height: 100%;
+			clear: both;
+		}
+		
+		a:first-child, a:nth-child(2), a:nth-child(3)
+		{
+			margin-right: .6em;
+		}
+		
+		a > img
+		{
+			height: 16px;
+			width: 16px;
 		}
 	}
 	
