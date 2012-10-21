@@ -103,7 +103,14 @@ body > header
 
 section
 {
-	padding: 0 5em;
+	margin: 0 auto;
+	width: 50em;
+	padding: 4em 0;
+	
+	&:not(:last-child)
+	{
+		border-bottom: solid thin $darkGray;
+	}
 	
 	header
 	{
