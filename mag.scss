@@ -124,6 +124,7 @@ section
 			display: inline-block;
 			font-weight: normal;
 			font-style: normal;
+			vertical-align: middle;
 		}
 	}
 	
@@ -158,6 +159,30 @@ section
 					margin: 0 .2em;
 				}
 			}
+		}
+	}
+}
+
+header
+{
+	h1 + a
+	{		
+		margin-left: 0.8em;
+		vertical-align: middle;
+	
+		img
+		{
+			width: 28px;
+			height: 28px;
+			vertical-align: middle;
+		}
+		
+		span
+		{
+			color: #646464;
+			font-family: "Blanch Caps";
+			padding-left: 0.3em;
+			vertical-align: middle;
 		}
 	}
 }
