@@ -115,12 +115,12 @@ section
 	width: 50em;
 	padding: 4em 0;
 	
-	&:not(:last-child)
+	&:not(:last-of-type)
 	{
 		border-bottom: solid thin $darkGray;
 	}
 	
-	&:last-child
+	&:last-of-type
 	{
 		h2, h3
 		{
