@@ -26,7 +26,15 @@ $lightGray: #646464;
 	font-style: normal;
 }
 
-html, body, h1
+@font-face 
+{                               
+	font-family: "Blanch Caps Light";
+	src: url("fonts/BLANCH_CAPS_LIGHT.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body, h1, h3
 {
 	margin: 0;
 	padding: 0;
@@ -112,6 +120,44 @@ section
 		border-bottom: solid thin $darkGray;
 	}
 	
+	&:last-child
+	{
+		h2, h3
+		{
+			font-family: "Blanch Caps";
+			font-weight: normal;
+			font-style: normal;
+		}
+	
+		h2
+		{
+			background-color: $darkGray;
+			padding: 0 .2em;
+			color: white;
+			font-size: 32pt;
+			display: inline-block;
+			margin: .4em 0;
+		}
+		
+		h3
+		{
+			font-size: 24pt;
+			
+			span
+			{
+				color: $lightGray;
+				font-family: "Blanch Caps Light";
+			}
+		}
+		
+		p
+		{
+			font-family: Helvetica, sans-serif;
+			margin: 0;
+			font-weight: lighter;
+		}
+	}
+	
 	header
 	{
 		h1
@@ -184,5 +230,11 @@ header
 			padding-left: 0.3em;
 			vertical-align: middle;
 		}
+	}
+	
+	h1 + a[href="#"] img
+	{
+		width: 28px;
+		height: 22px;
 	}
 }
