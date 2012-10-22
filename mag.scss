@@ -238,3 +238,50 @@ header
 		height: 22px;
 	}
 }
+
+footer
+{
+	font-family: Helvetica, sans-serif;
+	font-weight: lighter;
+	color: white;
+	background-image: url("images/woodplanks.png");
+	background-size: 1680px 300px;
+	//height: 150px;
+		
+	p
+	{
+		margin: 0;
+		position: relative;
+	}
+	
+	p:first-child
+	{
+		padding-top: 2em;
+		//padding-bottom: .5em;
+	}
+	
+	p:nth-child(2)
+	{
+		line-height: 2em;
+		opacity: .7;
+	}
+	
+	p:first-child, p:nth-child(2)
+	{
+		margin-left: 20%;
+	}
+		
+	p:last-of-type
+	{		
+		display: inline-block;
+		bottom: 6em;
+		margin-left: 60%;
+		
+		img
+		{
+			vertical-align: -1.3em;
+			height: 80px;
+			width: 71px;
+		}
+	}
+}
