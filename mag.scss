@@ -1,6 +1,7 @@
 $mintGreen: #BDE1CD;
 $darkGray: #292929;
 $lightGray: #646464;
+$resumeMargin: 2.1em;
 
 @font-face 
 {                               
@@ -136,7 +137,12 @@ section
 			color: white;
 			font-size: 32pt;
 			display: inline-block;
-			margin: .4em 0;
+			margin: .4em 1.35em;
+		}
+		
+		h3
+		{
+			margin-left: $resumeMargin;
 		}
 		
 		h3
@@ -153,7 +159,7 @@ section
 		p
 		{
 			font-family: Helvetica, sans-serif;
-			margin: 0;
+			margin: 0 $resumeMargin * 2;
 			font-weight: lighter;
 		}
 	}
