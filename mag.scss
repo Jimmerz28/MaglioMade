@@ -110,7 +110,7 @@ body > header
 	}
 }
 
-section
+body > section
 {
 	margin: 0 auto;
 	width: 50em;
@@ -166,6 +166,8 @@ section
 	
 	header
 	{
+		margin-bottom: 15px;
+		
 		h1
 		{
 			color: white;
@@ -245,6 +247,11 @@ header
 	}
 }
 
+header + *
+{
+	margin-top: 0 !important;
+}
+
 footer
 {
 	font-family: Helvetica, sans-serif;
@@ -288,6 +295,23 @@ footer
 			vertical-align: -1.3em;
 			height: 80px;
 			width: 71px;
+		}
+	}
+}
+
+#work
+{
+	section
+	{
+		display: inline-block;
+		
+		a
+		{
+			img
+			{
+				width: 100px;
+				height: 100px;
+			}
 		}
 	}
 }
