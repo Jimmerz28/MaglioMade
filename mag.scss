@@ -2,6 +2,7 @@ $mintGreen: #BDE1CD;
 $darkGray: #292929;
 $lightGray: #646464;
 $resumeMargin: 2.1em;
+$previewMargin: 1em;
 
 @font-face 
 {                               
@@ -301,43 +302,72 @@ footer
 
 #work
 {
-	min-height: 35em;
-	
 	section
 	{
 		display: inline-block;
 		margin-left: 57px;
-		
+		height: 29em;
+				
 		> div
 		{
 			position: absolute;
-			width: 41.8em;
+			margin-top: 2.5em;
 			
 			> div:first-of-type
 			{
 				display: inline-block;
-				width: 377px;
-				height: 377px;
-				margin-right: .5em;
+				margin-right: $previewMargin;
+				
+				+ div
+				{
+					display:  inline-block;
+					vertical-align: top;
+					min-height: 377px;
+					max-width: 18em;
+					
+					hgroup
+					{
+						margin-top: -.9em;
+						
+						h2
+						{
+							margin: 0;
+							color: $mintGreen;
+							font-family: "Blanch Caps";
+							font-weight: normal;
+							font-style: normal;
+							font-size: 2.5em;
+						}
+						
+						h3
+						{
+							font-weight: lighter;
+							font-family: Helvetica, sans-serif;
+							color: $darkGray;
+							font-size: .8em;
+						}
+					}
+					
+					p
+					{
+						height: 239px;
+						font-weight: lighter;
+						font-family: Helvetica, sans-serif;
+					}
+					
+					img
+					{
+						width: 4em;
+						height: 4em;
+						margin-right: $previewMargin;
+					}
+				}
 				
 				img
 				{
-					max-height: 100%;
-					max-width: 100%;
+					max-width: 377px;
+					max-height: 377px;
 				}
-			}
-		}
-		
-		div + div
-		{		
-			display: inline-block;
-			text-align: right;
-			
-			img
-			{
-				width: 4em;
-				height: 4em;
-				margin: 0 .5em;
 			}
 		}
 		
