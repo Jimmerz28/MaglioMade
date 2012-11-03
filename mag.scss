@@ -3,6 +3,8 @@ $darkGray: #292929;
 $lightGray: #646464;
 $resumeMargin: 2.1em;
 $previewMargin: 1em;
+$workTopPadding: 130px;
+$indentation: 57px;
 
 @font-face 
 {                               
@@ -302,6 +304,60 @@ footer
 
 #work
 {
+	height: 47em;
+
+	section
+	{
+		position: absolute;
+		background-color: white;
+		padding-top: $workTopPadding;
+		margin-left: $indentation;
+		
+		&:first-of-type
+		{
+			z-index: 1;
+		}	
+		
+		> a
+		{
+			position: absolute;
+			width: 5em;
+			margin-top: -$workTopPadding;
+			z-index: 1;
+			margin-bottom: 5em;
+		}
+	
+		p + div > img
+		{
+			width: 4em;
+			height: 4em;
+		}
+		
+		> a > img
+		{
+			width: 85px;
+			height: 85px;
+		}
+		
+		> div > div > img:only-child
+		{
+			max-height: 377px;
+			margin: 0 auto;
+		}
+	}
+	
+	> section:nth-of-type(2)
+	{
+		> a
+		{
+			margin-left: $indentation * 2.3;
+		}
+	}
+}
+
+/*
+#work
+{
 	section
 	{
 		display: inline-block;
@@ -312,6 +368,7 @@ footer
 		{
 			position: absolute;
 			margin-top: 2.5em;
+			
 			
 			> div:first-of-type
 			{
@@ -380,4 +437,31 @@ footer
 			}
 		}
 	}
+	
+	section:first-of-type
+	{
+		> div
+		{
+			display: block;
+		}
+	}
+	
+	section:not(:target)
+	{
+		> div
+		{
+			display: none;
+		}
+	}
+	
+	section:target
+	{
+		> div
+		{
+			display: block;
+		}
+	}
 }
+*/
+
+
