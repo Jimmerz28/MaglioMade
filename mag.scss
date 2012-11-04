@@ -365,7 +365,15 @@ footer
 			&:nth-of-type(2)
 			{
 				width: 25em;
+				padding-left: 1em;
+				min-height: $workimagesquare;
 			}
+		}
+		
+		header
+		{
+			margin-bottom: 1.5em;
+			margin-top: -.85em;
 		}
 		
 		hgroup
@@ -396,6 +404,8 @@ footer
 			font-weight: lighter;
 			font-family: Helvetica, sans-serif;
 			font-size: .9em;
+			line-height: 1.3em;
+			width: 21em;
 		}
 		
 	}
