@@ -337,11 +337,18 @@ footer
 			margin-bottom: 5em;
 			background-color: none;
 		}
+		
+		p + div
+		{
+			position: absolute;
+			bottom: 0;
+		}
 	
 		p + div > img
 		{
 			width: 4em;
 			height: 4em;
+			vertical-align: bottom;
 		}
 		
 		> a > img
@@ -367,6 +374,7 @@ footer
 				width: 25em;
 				padding-left: 1em;
 				min-height: $workimagesquare;
+				position: relative;
 			}
 		}
 		
