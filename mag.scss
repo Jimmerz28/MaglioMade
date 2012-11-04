@@ -5,7 +5,7 @@ $resumeMargin: 2.1em;
 $previewMargin: 1em;
 $workTopPadding: 130px;
 $indentation: 57px;
-$multiplier: 2.56;
+$multiplier: 2.6;
 
 @font-face 
 {                               
@@ -305,7 +305,7 @@ footer
 
 #work
 {
-	height: 47em;
+	height: 37em;
 	
 	> header
 	{
@@ -325,7 +325,7 @@ footer
 		
 		&:target
 		{
-			z-index: 2 !important;
+			z-index: 2;
 		}
 		
 		> a
@@ -354,6 +354,48 @@ footer
 			max-height: 377px;
 			margin: 0 auto;
 		}
+		
+		> div > div
+		{
+			display: inline-block;
+			vertical-align: top;
+			
+			&:nth-of-type(2)
+			{
+				width: 25em;
+			}
+		}
+		
+		hgroup
+		{
+			
+			h2
+			{
+				margin: 0;
+				color: $mintGreen;
+				font-family: "Blanch Caps";
+				font-weight: normal;
+				font-style: normal;
+				font-size: 2.5em;
+			}
+			
+			h3
+			{
+				font-weight: lighter;
+				font-family: Helvetica, sans-serif;
+				color: $darkGray;
+				font-size: .9em;
+				text-transform: lowercase;
+			}
+		}
+		
+		p
+		{
+			font-weight: lighter;
+			font-family: Helvetica, sans-serif;
+			font-size: .9em;
+		}
+		
 	}
 	
 	> section:nth-of-type(2)
