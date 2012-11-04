@@ -6,6 +6,7 @@ $previewMargin: 1em;
 $workTopPadding: 130px;
 $indentation: 57px;
 $multiplier: 2.6;
+$workimagesquare: 380px;
 
 @font-face 
 {                               
@@ -351,7 +352,8 @@ footer
 		
 		> div > div > img:only-child
 		{
-			max-height: 377px;
+			max-height: $workimagesquare;
+			max-width: $workimagesquare;
 			margin: 0 auto;
 		}
 		
