@@ -329,6 +329,11 @@ footer
 			z-index: 2;
 		}
 		
+		> div
+		{
+			min-width: 50em;
+		}
+		
 		> a
 		{
 			position: absolute;
