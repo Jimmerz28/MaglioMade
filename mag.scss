@@ -306,6 +306,154 @@ footer
 
 #work
 {
+	position: relative;
+	min-height: 35em;
+
+	section
+	{	
+		background-color: white;		
+		position: absolute;
+		padding-top: 7em;
+		min-width: 100%;
+		padding-left: 57px;
+		
+		&:target
+		{
+			z-index: 2;
+		}
+		
+		> a
+		{
+			display: block;
+			position: absolute;
+			z-index: 3 !important;
+			top: 0;
+			
+			&, > img
+			{
+				width: 85px;
+				height: 85px;
+			}
+		}
+		
+		> div
+		{
+			display: -moz-box;
+			display: -webkit-box;
+			display: box;
+			-webkit-box-orient: horizontal;
+			-moz-box-orient: horizontal;
+			box-orient: horizontal;
+			
+			> div:nth-of-type(2)
+			{
+				margin-left: 1em;
+				position: relative;
+			} 
+			
+			> div:first-of-type
+			{
+				min-width: $workimagesquare;
+			}
+		}
+		
+		> div > div > img:only-child
+		{
+			max-height: $workimagesquare;
+			max-width: $workimagesquare;
+			display: block;
+			margin: 0 auto;
+		}
+		
+		header
+		{
+			margin-top: -.8em;
+		}
+		
+		hgroup
+		{
+			
+			h2
+			{
+				margin: 0;
+				color: $mintGreen;
+				font-family: "Blanch Caps";
+				font-weight: normal;
+				font-style: normal;
+				font-size: 2.5em;
+			}
+			
+			h3
+			{
+				font-weight: lighter;
+				font-family: Helvetica, sans-serif;
+				color: $darkGray;
+				font-size: .9em;
+				text-transform: lowercase;
+			}
+		}
+		
+		p
+		{
+			font-weight: lighter;
+			font-family: Helvetica, sans-serif;
+			font-size: .9em;
+			line-height: 1.3em;
+			width: 20.5em;
+		}
+		
+		p + div
+		{
+			position: absolute;
+			bottom: 0;
+			
+			& > img
+			{
+				max-width: 4em;
+				height: 4em;
+				vertical-align: bottom;
+				margin-right: 1em;
+			}
+		}
+	}
+	
+	> section:nth-of-type(2)
+	{
+		> a
+		{
+			margin-left: $indentation * ($multiplier * 1);
+		}
+	}
+	
+	> section:nth-of-type(3)
+	{
+		> a
+		{
+			margin-left: $indentation * ($multiplier * 2);
+		}
+	}
+	
+	> section:nth-of-type(4)
+	{
+		> a
+		{
+			margin-left: $indentation * ($multiplier * 3);
+		}
+	}
+	
+	> section:nth-of-type(5)
+	{
+		> a
+		{
+			margin-left: $indentation * ($multiplier * 4);
+			opacity: .5;
+		}
+	}
+}
+
+/*
+#work
+{
 	height: 37em;
 	
 	> header
@@ -469,4 +617,4 @@ footer
 			z-index: 2;
 		}
 	}
-}
+}*/
