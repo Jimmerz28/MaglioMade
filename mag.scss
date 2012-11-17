@@ -40,6 +40,13 @@ $workimagesquare: 380px;
 	font-style: normal;
 }
 
+@mixin fadeTransition
+{
+	-webkit-transition: opacity 1s linear;
+	-moz-transition: opacity 1s linear;
+	transition: opacity 1s linear;
+}
+
 html, body, h1, h3
 {
 	margin: 0;
@@ -433,6 +440,7 @@ footer
 			> div
 			{
 				opacity: 1;
+				//@include fadeTransition;
 			}
 		}
 			
@@ -442,6 +450,7 @@ footer
 			{
 				//z-index: 1;
 				opacity: 0;
+				//@include fadeTransition;
 			}
 		}
 		
@@ -451,6 +460,7 @@ footer
 			{
 				//z-index: 2;
 				opacity: 1;
+				//@include fadeTransition;
 			}
 		}
 	}
