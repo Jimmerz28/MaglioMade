@@ -311,7 +311,7 @@ footer
 
 	section
 	{	
-		background-color: white;		
+		//background-color: white;		
 		position: absolute;
 		padding-top: 7em;
 		//min-width: 43em;
@@ -319,11 +319,11 @@ footer
 		padding-right: 57px;
 		overflow: hidden;
 		
-		> a
+		> a:first-child
 		{
 			display: block;
 			position: absolute;
-			z-index: 3 !important;
+			z-index: 10;
 			top: 0;
 			
 			&, > img
@@ -338,9 +338,12 @@ footer
 			display: -moz-box;
 			display: -webkit-box;
 			display: box;
+			
 			-webkit-box-orient: horizontal;
 			-moz-box-orient: horizontal;
 			box-orient: horizontal;
+			
+			background-color: white;
 			
 			> div:nth-of-type(2)
 			{
@@ -357,7 +360,7 @@ footer
 				-webkit-box-orient: vertical;
 				-moz-box-orient: vertical;
 				box-orient: vertical;
-				//position: relative;
+				position: relative;
 			} 
 			
 			> div:first-of-type
@@ -425,9 +428,30 @@ footer
 			}
 		}
 		
+		&#one
+		{
+			> div
+			{
+				opacity: 1;
+			}
+		}
+			
+		&:not(:target)
+		{
+			> div
+			{
+				//z-index: 1;
+				opacity: 0;
+			}
+		}
+		
 		&:target
 		{
-			z-index: 2;
+			> div
+			{
+				//z-index: 2;
+				opacity: 1;
+			}
 		}
 	}
 	
