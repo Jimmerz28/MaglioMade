@@ -314,13 +314,10 @@ footer
 		background-color: white;		
 		position: absolute;
 		padding-top: 7em;
-		min-width: 100%;
+		//min-width: 43em;
 		padding-left: 57px;
-		
-		&:target
-		{
-			z-index: 2;
-		}
+		padding-right: 57px;
+		overflow: hidden;
 		
 		> a
 		{
@@ -348,7 +345,19 @@ footer
 			> div:nth-of-type(2)
 			{
 				margin-left: 1em;
-				position: relative;
+				
+				display: -webkit-box;
+				display: -moz-box;
+				display: box;
+				
+				-webkit-box-flex: 1;
+				-moz-box-flex: 1;
+				box-flex: 1;
+				
+				-webkit-box-orient: vertical;
+				-moz-box-orient: vertical;
+				box-orient: vertical;
+				//position: relative;
 			} 
 			
 			> div:first-of-type
@@ -399,7 +408,7 @@ footer
 			font-family: Helvetica, sans-serif;
 			font-size: .9em;
 			line-height: 1.3em;
-			width: 20.5em;
+			//width: 20.5em;
 		}
 		
 		p + div
@@ -414,6 +423,11 @@ footer
 				vertical-align: bottom;
 				margin-right: 1em;
 			}
+		}
+		
+		&:target
+		{
+			z-index: 2;
 		}
 	}
 	
