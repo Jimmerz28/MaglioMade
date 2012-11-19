@@ -342,6 +342,10 @@ footer
 		
 		> div
 		{
+			position: relative;
+			z-index: 0;
+			opacity: 0;
+			
 			display: -moz-box;
 			display: -webkit-box;
 			display: box;
@@ -373,15 +377,33 @@ footer
 			> div:first-of-type
 			{
 				min-width: $workimagesquare;
+				min-height: $workimagesquare;
 			}
 		}
 		
-		> div > div > img:only-child
+		> div > div > img
 		{
 			max-height: $workimagesquare;
 			max-width: $workimagesquare;
-			display: block;
+			display: none;
+			position: absolute;
+			
 			margin: 0 auto;
+			
+			&:not(:target)
+			{
+				display: none;
+			}
+			
+			&:first-child
+			{
+				display: block;
+			}
+			
+			&:target
+			{
+				display: block;
+			}
 		}
 		
 		header
@@ -426,20 +448,26 @@ footer
 			position: absolute;
 			bottom: 0;
 			
-			& > img
+			& > a
 			{
 				max-width: 4em;
 				height: 4em;
 				vertical-align: bottom;
 				margin-right: 1em;
+				
+				img
+				{
+					vertical-align: bottom;
+				}
 			}
 		}
-		
-		&#one
+				
+		#one
 		{
 			> div
 			{
 				opacity: 1;
+				z-index: 0;
 				//@include fadeTransition;
 			}
 		}
@@ -450,6 +478,7 @@ footer
 			{
 				//z-index: 1;
 				opacity: 0;
+				z-index: -1;
 				//@include fadeTransition;
 			}
 		}
@@ -460,6 +489,7 @@ footer
 			{
 				//z-index: 2;
 				opacity: 1;
+				z-index: 2;
 				//@include fadeTransition;
 			}
 		}
