@@ -459,16 +459,6 @@ footer
 				}
 			}
 		}
-				
-		#one
-		{
-			> div
-			{
-				opacity: 1;
-				z-index: 0;
-				//@include fadeTransition;
-			}
-		}
 			
 		&:not(:target)
 		{
@@ -486,6 +476,16 @@ footer
 			> div
 			{
 				//z-index: 2;
+				opacity: 1;
+				z-index: 2;
+				//@include fadeTransition;
+			}
+		}
+		
+		&#one
+		{
+			> div
+			{
 				opacity: 1;
 				z-index: 2;
 				//@include fadeTransition;
