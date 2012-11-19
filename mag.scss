@@ -381,28 +381,26 @@ footer
 			}
 		}
 		
+		> div > div
+		{
+			z-index: 0;
+			position: relative;
+		}
+		
 		> div > div > img
 		{
 			max-height: $workimagesquare;
 			max-width: $workimagesquare;
-			display: none;
 			position: absolute;
 			
-			margin: 0 auto;
-			
-			&:not(:target)
-			{
-				display: none;
-			}
+			left:0;
+			right:0;
+			margin-left:auto;
+			margin-right:auto;
 			
 			&:first-child
 			{
-				display: block;
-			}
-			
-			&:target
-			{
-				display: block;
+				z-index: 1;
 			}
 		}
 		
