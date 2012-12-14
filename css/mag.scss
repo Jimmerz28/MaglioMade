@@ -11,7 +11,7 @@ $workimagesquare: 380px;
 @font-face 
 {                               
 	font-family: "Outage Cut";
-	src: url("fonts/Outage Cut.ttf") format("truetype");
+	src: url("../fonts/Outage Cut.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -19,7 +19,7 @@ $workimagesquare: 380px;
 @font-face 
 {                               
 	font-family: "Lavanderia Regular";
-	src: url("fonts/Lavanderia Regular.otf") format("opentype");
+	src: url("../fonts/Lavanderia Regular.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,7 +27,7 @@ $workimagesquare: 380px;
 @font-face 
 {                               
 	font-family: "Blanch Caps";
-	src: url("fonts/BLANCH_CAPS.otf") format("opentype");
+	src: url("../fonts/BLANCH_CAPS.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -35,7 +35,7 @@ $workimagesquare: 380px;
 @font-face 
 {                               
 	font-family: "Blanch Caps Light";
-	src: url("fonts/BLANCH_CAPS_LIGHT.otf") format("opentype");
+	src: url("../fonts/BLANCH_CAPS_LIGHT.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -63,20 +63,27 @@ body > header
 {
 	nav + h1
 	{
+		position: relative;
 		color: white;
-		background-image: url("images/woodplanks.png");
+		background-image: url("../images/woodplanks.png");
 		background-size: 1680px 300px;
 		font-size: 4em;
 		padding: 1em .5em 1em .5em;
+		top: 65px;
+		margin-bottom: 1em;
 	}
 	
 	nav
 	{
-		margin-top: 50px;
-		margin-right: 20%;
+		position: fixed;
+		padding-top: 30px;
 		text-align: right;
 		font-family: "Blanch Caps";
 		font-size: 24pt;
+		box-shadow: 0 2px 10px -.05em rgba(0,0,0,.5)	;
+		background-color: rgba(255,255,255,.95);
+		width: 100%;
+		z-index: 250;	
 		
 		a
 		{
@@ -88,6 +95,11 @@ body > header
 		a:first-child, a:nth-child(2), a:nth-child(3)
 		{
 			margin-right: .6em;
+		}
+		
+		a:last-child
+		{
+			margin-right: 20%;
 		}
 		
 		a > img
@@ -269,7 +281,7 @@ footer
 	font-family: Helvetica, sans-serif;
 	font-weight: lighter;
 	color: white;
-	background-image: url("images/woodplanks.png");
+	background-image: url("../images/woodplanks.png");
 	background-size: 1680px 300px;
 	//height: 150px;
 		
