@@ -91,6 +91,12 @@ body > header
 		width: 100%;
 		z-index: 250;	
 		
+		> div
+		{
+			width: 25em;
+			margin: 0 auto;
+		}
+		
 		a
 		{
 			text-transform: uppercase;
@@ -101,11 +107,6 @@ body > header
 		a:first-child, a:nth-child(2), a:nth-child(3)
 		{
 			margin-right: .6em;
-		}
-		
-		a:last-child
-		{
-			margin-right: 20%;
 		}
 		
 		a > img
