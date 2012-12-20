@@ -1,5 +1,26 @@
+// http://upshots.org/javascript/jquery-test-if-element-is-in-viewport-visible-on-screen
+$.fn.isOnScreen = function(){
+     
+    var win = $(window);
+     
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+     
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+     
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+     
+};
+
 $(document).ready( function() 
 {		
+	$("img[alt=toTop]").css({ "opacity": "0" });
 	var navHeight = $("nav").outerHeight(true);
 	jQuery.easing.def = "easeOutBack";
 	
@@ -39,6 +60,40 @@ $(document).ready( function()
 			"opacity": "1",
 			"z-index": "2"
 		});
+	});
+	
+	$("footer a[href=#]").on("click", function( event, ui ) 
+	{		
+		event.preventDefault();
+		
+		$('html, body').stop().animate(
+		{
+			'scrollTop': $("html").offset().top
+		}, 1000 );
+	});
+	
+	$(window).scroll( function() 
+	{	
+	    if ( $(this).scrollTop() > 350 )
+	    {
+	        $("img[alt=toTop]").css({"opacity": ".8"});
+	    }
+	    
+	    else 
+	    {
+	    	$("img[alt=toTop]").css({"opacity":"0"});
+	    }
+	    
+	    if ( $("footer").isOnScreen() )
+	    {
+	    	 $("img[alt=toTop]").css({"bottom":"12em"});
+	    }
+	    
+	    else 
+	    {
+	    	$("img[alt=toTop]").css({"bottom":"3em"});
+	    }
+	    
 	});
 	
 });

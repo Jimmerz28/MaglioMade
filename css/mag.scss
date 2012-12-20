@@ -321,6 +321,14 @@ footer
 			width: 71px;
 		}
 	}
+	
+	img[alt=toTop]
+	{
+		position: fixed;
+		bottom: 3em;
+		opacity: .8;
+		-webkit-transition: opacity .2s .2s ease-out, bottom .3s ease-in-out;
+	}
 }
 
 #work
