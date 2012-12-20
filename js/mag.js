@@ -27,8 +27,8 @@ $(document).ready( function()
 	$("#work section p + div > a").click( function( event, ui ) 
 	{
 		event.preventDefault();
-		
-		$( "img" + $(this).attr("href") ).css({"z-index":"1", "opacity":"1"}).siblings("img").css( { "z-index" : "-1", "opacity":"0"});
+				
+		$( "img" + $(this).attr("href") ).removeClass("bottomBoy").addClass("biBoy").siblings("img").removeClass().addClass("bottomBoy");
 		
 	});
 	
@@ -49,17 +49,9 @@ $(document).ready( function()
 	{
 		event.preventDefault();
 		
-		$($(event.target).parents("section")[0]).siblings().children("div").css(
-		{
-			"opacity": "0",
-			"z-index": "-1" 
-		});
+		$($(event.target).parents("section")[0]).siblings().removeClass().addClass("bottomBoys");
 		
-		$($(event.target).parents("section")[0]).children("div").css(
-		{
-			"opacity": "1",
-			"z-index": "2"
-		});
+		$($(event.target).parents("section")[0]).removeClass().addClass("topBoy");
 	});
 	
 	$("footer a[href=#]").on("click", function( event, ui ) 

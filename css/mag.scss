@@ -557,6 +557,24 @@ footer
 	}
 }
 
+.bottomBoys > div, .bottomBoy
+{
+	opacity: 0 !important;
+	z-index: -1 !important;
+}
+
+.topBoy > div
+{
+	opacity: 1 !important;
+	z-index: 2 !important;
+}
+
+.biBoy
+{
+	z-index: 1;
+	opacity: 1;
+}
+
 /*
 #work
 {
