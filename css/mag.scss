@@ -328,6 +328,16 @@ footer
 		bottom: 3em;
 		opacity: .8;
 		-webkit-transition: opacity .2s .2s ease-out, bottom .3s ease-in-out;
+		
+		&.dead
+		{
+			opacity: 0;
+		}
+		
+		&.bumpUp
+		{
+			bottom: 12em;
+		}
 	}
 }
 

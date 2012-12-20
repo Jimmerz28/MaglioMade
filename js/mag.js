@@ -20,7 +20,7 @@ $.fn.isOnScreen = function(){
 
 $(document).ready( function() 
 {		
-	$("img[alt=toTop]").css({ "opacity": "0" });
+	$("img[alt=toTop]").addClass("dead");
 	var navHeight = $("nav").outerHeight(true);
 	jQuery.easing.def = "easeOutBack";
 	
@@ -76,22 +76,22 @@ $(document).ready( function()
 	{	
 	    if ( $(this).scrollTop() > 350 )
 	    {
-	        $("img[alt=toTop]").css({"opacity": ".8"});
+	        $("img[alt=toTop]").removeClass("dead");
 	    }
 	    
 	    else 
 	    {
-	    	$("img[alt=toTop]").css({"opacity":"0"});
+	    	$("img[alt=toTop]").addClass("dead");
 	    }
 	    
 	    if ( $("footer").isOnScreen() )
 	    {
-	    	 $("img[alt=toTop]").css({"bottom":"12em"});
+	    	 $("img[alt=toTop]").addClass("bumpUp");
 	    }
 	    
 	    else 
 	    {
-	    	$("img[alt=toTop]").css({"bottom":"3em"});
+	    	$("img[alt=toTop]").removeClass("bumpUp");
 	    }
 	    
 	});
