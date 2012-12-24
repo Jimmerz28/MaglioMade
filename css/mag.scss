@@ -328,6 +328,24 @@ footer
 			width: 71px;
 		}
 	}
+	
+	img[alt=toTop]
+	{
+		position: fixed;
+		bottom: 3em;
+		opacity: .8;
+		-webkit-transition: opacity .2s .2s ease-out, bottom .3s ease-in-out;
+		
+		&.dead
+		{
+			opacity: 0;
+		}
+		
+		&.bumpUp
+		{
+			bottom: 12em;
+		}
+	}
 }
 
 #work
@@ -546,170 +564,20 @@ footer
 	}
 }
 
-/*
-#work
+.bottomBoys > div, .bottomBoy
 {
-	height: 37em;
-	
-	> header
-	{
-		margin-bottom: $workTopPadding + 15;
-	}
+	opacity: 0 !important;
+	z-index: -1 !important;
+}
 
-	section
-	{
-		position: absolute;
-		background-color: white;
-		margin-left: $indentation;
-		
-		&:first-of-type
-		{
-			z-index: 1;
-		}	
-		
-		&:target
-		{
-			z-index: 2;
-		}
-		
-		> div
-		{
-			min-width: 50em;
-		}
-		
-		> a
-		{
-			position: absolute;
-			width: 5em;
-			margin-top: -$workTopPadding;
-			margin-bottom: 5em;
-			background-color: none;
-		}
-		
-		p + div
-		{
-			position: absolute;
-			bottom: 0;
-		}
-	
-		p + div > img
-		{
-			max-width: 4em;
-			height: 4em;
-			vertical-align: bottom;
-			margin-right: 1em;
-		}
-		
-		> a > img
-		{
-			width: 85px;
-			height: 85px;
-		}
-		
-		> div > div > img:only-child
-		{
-			max-height: $workimagesquare;
-			max-width: $workimagesquare;
-		}
-		
-		> div > div
-		{
-			display: inline-block;
-			vertical-align: top;
-			
-			&:first-of-type
-			{
-				text-align: center;
-				min-width: $workimagesquare;
-			}
-			
-			&:nth-of-type(2)
-			{
-				width: 25em;
-				padding-left: 1em;
-				min-height: $workimagesquare;
-				position: relative;
-			}
-		}
-		
-		header
-		{
-			margin-bottom: 1.5em;
-			margin-top: -.85em;
-		}
-		
-		hgroup
-		{
-			
-			h2
-			{
-				margin: 0;
-				color: $mintGreen;
-				font-family: "Blanch Caps";
-				font-weight: normal;
-				font-style: normal;
-				font-size: 2.5em;
-			}
-			
-			h3
-			{
-				font-weight: lighter;
-				font-family: Helvetica, sans-serif;
-				color: $darkGray;
-				font-size: .9em;
-				text-transform: lowercase;
-			}
-		}
-		
-		p
-		{
-			font-weight: lighter;
-			font-family: Helvetica, sans-serif;
-			font-size: .9em;
-			line-height: 1.3em;
-			width: 21em;
-		}
-		
-	}
-	
-	> section:nth-of-type(2)
-	{
-		> a
-		{
-			margin-left: $indentation * ($multiplier * 1);
-		}
-	}
-	
-	> section:nth-of-type(3)
-	{
-		> a
-		{
-			margin-left: $indentation * ($multiplier * 2);
-		}
-	}
-	
-	> section:nth-of-type(4)
-	{
-		> a
-		{
-			margin-left: $indentation * ($multiplier * 3);
-		}
-	}
-	
-	> section:nth-of-type(5)
-	{
-		> a
-		{
-			margin-left: $indentation * ($multiplier * 4);
-			opacity: .5;
-		}
-	}
-	
-	> section
-	{
-		> a
-		{
-			z-index: 2;
-		}
-	}
-}*/
+.topBoy > div
+{
+	opacity: 1 !important;
+	z-index: 2 !important;
+}
+
+.biBoy
+{
+	z-index: 1;
+	opacity: 1;
+}
