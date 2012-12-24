@@ -72,10 +72,27 @@ body > header
 		top: 65px;
 		margin-bottom: 1em;
 		
-		> div
+		> span:first-child
 		{
 			margin: 0 auto;
 			width: 12.5em;
+			
+			> span:first-child
+			{
+				text-transform: uppercase;
+				font-family: "Outage Cut";
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+			> span:nth-child(2)
+			{
+				font-family: "Lavanderia Regular";
+				padding-left: 3.5em;
+				margin-top: -.85em;
+				font-weight: normal;
+				font-style: normal;
+			}
 		}
 	}
 	
@@ -121,23 +138,6 @@ body > header
 		position: relative;
 		display: block;
 		//margin-left: 3.5em;
-	}
-	
-	span:first-child
-	{
-		text-transform: uppercase;
-		font-family: "Outage Cut";
-		font-weight: normal;
-		font-style: normal;
-	}
-	
-	span:nth-child(2)
-	{
-		font-family: "Lavanderia Regular";
-		padding-left: 3.5em;
-		margin-top: -.85em;
-		font-weight: normal;
-		font-style: normal;
 	}
 }
 
