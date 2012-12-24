@@ -25,10 +25,10 @@ $(document).ready( function()
 	jQuery.easing.def = "easeOutBack";
 	
 	$("#work section p + div > a").click( function( event, ui ) 
-	{
+	{	
 		event.preventDefault();
-				
-		$( "img" + $(this).attr("href") ).removeClass("bottomBoy").addClass("biBoy").siblings("img").removeClass().addClass("bottomBoy");
+										
+		$( $(event.target).parent("a").attr("href") ).removeClass("bottomBoy").addClass("biBoy").siblings("a").removeClass().addClass("bottomBoy");
 		
 	});
 	
