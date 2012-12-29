@@ -375,6 +375,18 @@ footer
 				width: 85px;
 				height: 85px;
 			}
+			
+			span
+			{
+				color: white;
+				font-family: Blanch Caps;
+				font-size: 2.5em;
+				height: 100%;
+				line-height: 2em;
+				position: absolute;
+				text-align: center;
+				width: 100%;
+			}
 		}
 		
 		> div
@@ -506,6 +518,11 @@ footer
 				z-index: -1;
 				//@include fadeTransition;
 			}
+			
+			> a > span
+			{
+				background-color: transparent;
+			}
 		}
 		
 		&:target
@@ -517,14 +534,19 @@ footer
 				z-index: 2;
 				//@include fadeTransition;
 			}
+			
+			> a > span
+			{
+				background-color: $mintGreen;
+			}
 		}
 		
-		&#one
+		&:first-of-type
 		{
 			> div
 			{
 				opacity: 1;
-				z-index: 2;
+				z-index: 2	;
 				//@include fadeTransition;
 			}
 		}
@@ -570,10 +592,18 @@ footer
 	z-index: -1 !important;
 }
 
-.topBoy > div
+.topBoy
 {
-	opacity: 1 !important;
-	z-index: 2 !important;
+	> div
+	{
+		opacity: 1 !important;
+		z-index: 2 !important;
+	}
+	
+	> a > span
+	{
+		background-color: $mintGreen !important;
+	}
 }
 
 .biBoy

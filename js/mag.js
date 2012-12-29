@@ -24,6 +24,8 @@ $(document).ready( function()
 	var navHeight = $("nav").outerHeight(true);
 	jQuery.easing.def = "easeOutBack";
 	
+	$("#one").addClass("topBoy");
+	
 	$("#work section p + div > a").click( function( event, ui ) 
 	{	
 		event.preventDefault();
