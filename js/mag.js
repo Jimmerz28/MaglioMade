@@ -18,6 +18,24 @@ $.fn.isOnScreen = function(){
      
 };
 
+function setIndicator( target )
+{	
+	$(target).parent("a").siblings("a").children("img[alt=indicator]").remove();
+
+	$( $(target).parent("a").attr("href") ).removeClass("bottomBoy").addClass("biBoy").siblings("a").removeClass().addClass("bottomBoy");
+	
+	if ( $(target).parent("a").has("img[alt=indicator]").length === 0 )
+	{
+		var indicator = document.createElement("img");
+		var lefty = ( $(target).width() / 2 ) + 5;
+		indicator.setAttribute("src", "images/indicator.svg");
+		indicator.setAttribute("alt", "indicator");
+		indicator.setAttribute("style", "margin-left:" + (-lefty) + "px;");
+		
+		$(indicator).appendTo( $(target).parent("a") );
+	}
+}
+
 $(document).ready( function() 
 {		
 	$("img[alt=toTop]").addClass("dead");
@@ -26,11 +44,16 @@ $(document).ready( function()
 	
 	$("#one").addClass("topBoy");
 	
+	$("#one p + div > a:first-child > img").load( function() 
+	{
+		setIndicator( $("#one p + div > a:first-child > img") );
+	}); 
+	
 	$("#work section p + div > a").click( function( event, ui ) 
 	{	
 		event.preventDefault();
 										
-		$( $(event.target).parent("a").attr("href") ).removeClass("bottomBoy").addClass("biBoy").siblings("a").removeClass().addClass("bottomBoy");
+		setIndicator( event.target );
 		
 	});
 	
@@ -52,8 +75,10 @@ $(document).ready( function()
 		event.preventDefault();
 		
 		$($(event.target).parents("section")[0]).siblings().removeClass().addClass("bottomBoys");
-		
+			
 		$($(event.target).parents("section")[0]).removeClass().addClass("topBoy");
+		
+		setIndicator( $(this).siblings("div").children("div:nth-child(2)").children("div").children("a:first-child").children("img") );
 	});
 	
 	$("footer a[href=#]").on("click", function( event, ui ) 

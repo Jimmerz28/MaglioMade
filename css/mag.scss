@@ -375,7 +375,7 @@ footer
 				width: 85px;
 				height: 85px;
 			}
-			
+						
 			span
 			{
 				color: white;
@@ -394,6 +394,7 @@ footer
 			position: relative;
 			z-index: 0;
 			opacity: 0;
+			padding-bottom: 1em;
 			
 			display: -moz-box;
 			display: -webkit-box;
@@ -610,4 +611,11 @@ footer
 {
 	z-index: 1;
 	opacity: 1;
+}
+
+img[alt=indicator]
+{
+	margin-top: 3.3em;
+	position: absolute;
+	-webkit-filter: blur(1px);
 }
