@@ -27,7 +27,7 @@ function setIndicator( target )
 	if ( $(target).parent("a").has("img[alt=indicator]").length === 0 )
 	{
 		var indicator = document.createElement("img");
-		var lefty = ( $(target).width() / 2 ) + 5;
+		var lefty = ( $(target).width() / 2 ) + (7.5/2);
 		indicator.setAttribute("src", "images/indicator.svg");
 		indicator.setAttribute("alt", "indicator");
 		indicator.setAttribute("style", "margin-left:" + (-lefty) + "px;");
