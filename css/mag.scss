@@ -299,7 +299,6 @@ footer
 	background-image: url("../images/woodplanks.png");
 	background-size: 1680px 300px;
 	padding: 2em;
-	//height: 150px;
 	text-align: center;
 		
 	p
@@ -325,6 +324,31 @@ footer
 		opacity: .7;
 	}
 	
+	a
+	{
+		position: fixed;
+		display: inline-block;
+		top: 5em;
+		opacity: .8;
+		right: 0;
+		margin-right: 3em;
+		
+		img
+		{
+			text-align: right;
+			
+			&.dead
+			{
+				opacity: 0;
+			}
+			
+			&.bumpUp
+			{
+				bottom: 12em;
+			}
+		}
+	}
+	/*
 	img[alt=toTop]
 	{
 		position: fixed;
@@ -342,7 +366,7 @@ footer
 		{
 			bottom: 12em;
 		}
-	}
+	}*/
 }
 
 #work
