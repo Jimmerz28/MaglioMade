@@ -119,6 +119,11 @@ body > header
 			text-transform: uppercase;
 			height: 100%;
 			clear: both;
+			
+			&:hover
+			{
+				opacity: .5;
+			}
 		}
 		
 		a:first-child, a:nth-child(2), a:nth-child(3)
@@ -262,6 +267,10 @@ header
 	{		
 		margin-left: 0.8em;
 		vertical-align: middle;
+		&:hover
+		{
+			opacity: .5;
+		}
 	
 		img
 		{
