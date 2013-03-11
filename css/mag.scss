@@ -345,6 +345,7 @@ footer
 		img
 		{
 			text-align: right;
+			width: 36px;
 			
 			&.dead
 			{
@@ -357,25 +358,6 @@ footer
 			}
 		}
 	}
-	/*
-	img[alt=toTop]
-	{
-		position: fixed;
-		top: 5em;
-		opacity: .8;
-		-webkit-transition: opacity .2s .2s ease-out, bottom .3s ease-in-out;
-		transition: opacity .2s .2s ease-out, bottom .3s ease-in-out;
-		
-		&.dead
-		{
-			opacity: 0;
-		}
-		
-		&.bumpUp
-		{
-			bottom: 12em;
-		}
-	}*/
 }
 
 #work
