@@ -298,7 +298,9 @@ footer
 	color: white;
 	background-image: url("../images/woodplanks.png");
 	background-size: 1680px 300px;
+	padding: 2em;
 	//height: 150px;
+	text-align: center;
 		
 	p
 	{
@@ -306,35 +308,21 @@ footer
 		position: relative;
 	}
 	
-	p:first-child
+	p:first-child, p:nth-child(2)
 	{
-		padding-top: 2em;
-		//padding-bottom: .5em;
+		display: inline-block;
 	}
 	
-	p:nth-child(2)
+	p:first-child::after
+	{
+		content: "|";
+		padding: 0 1em 0 1.15em;
+	}
+	
+	p:nth-child(3)
 	{
 		line-height: 2em;
 		opacity: .7;
-	}
-	
-	p:first-child, p:nth-child(2)
-	{
-		margin-left: 20%;
-	}
-		
-	p:last-of-type
-	{		
-		display: inline-block;
-		bottom: 6em;
-		margin-left: 60%;
-		
-		img
-		{
-			vertical-align: -1.3em;
-			height: 80px;
-			width: 71px;
-		}
 	}
 	
 	img[alt=toTop]
@@ -643,4 +631,11 @@ img[alt=indicator]
 {
 	margin-top: 3.3em;
 	position: absolute;
+}
+
+img[alt="HTML 5"]
+{		
+	vertical-align: -.8em;
+	height: 41px;
+	width: 36px;
 }
