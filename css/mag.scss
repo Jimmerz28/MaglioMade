@@ -267,6 +267,7 @@ header
 	{		
 		margin-left: 0.8em;
 		vertical-align: middle;
+		
 		&:hover
 		{
 			opacity: .5;
@@ -630,10 +631,20 @@ footer
 	}
 }
 
+section:not(.topBoy)
+{
+	> a:hover
+	{
+		opacity: .5;
+	}
+}
+
 .biBoy
 {
 	z-index: 1;
 	opacity: 1;
+	
+	
 	
 	img
 	{
