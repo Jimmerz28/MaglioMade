@@ -1,6 +1,8 @@
 @import '../bourbon/bourbon';
 @include font-face(NewsGothic, "../fonts/nwgthc");
 
+$linkBorderOrange: #D59029;
+
 html, body, p
 {
 	padding: 0;
@@ -16,6 +18,26 @@ a:link, a:hover, a:active, a:visited
 
 header
 {
+	height: 100px;
+	background-color: rgba(255,255,255,.75);
+	position: fixed;
+	width: 100%;
+	
+	a:link, a:active, a:visited
+	{
+		margin-left: 68px;
+		padding-right: 14px;
+		font-size: 18pt;
+		color: rgba(58,58,58,.75);
+		padding-bottom: 5px;
+		border-bottom: 2px transparent solid;
+	}
+	
+	a:hover
+	{
+		border-bottom: 2px $linkBorderOrange solid;
+	}
+	
 	img
 	{
 		width: 94px;
@@ -23,7 +45,7 @@ header
 	}
 }
 
-section, header
+section, header > div, header
 {
 	display: flex;
 	justify-content: center;
