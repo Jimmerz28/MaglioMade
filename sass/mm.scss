@@ -1,5 +1,5 @@
 @import '../bourbon/bourbon';
-@include font-face(NewsGothic, "../fonts/nwgthc");
+@include font-face(NewsGothic, "../fonts/nwgthc", normal, normal);
 
 $linkBorderOrange: #D59029;
 
@@ -7,13 +7,13 @@ html, body, p
 {
 	padding: 0;
 	margin: 0;
+	font-family: NewsGothic;
 }
 
 a:link, a:hover, a:active, a:visited
 {
 	color: inherit;
 	text-decoration: none;
-	font-family: NewsGothic;
 }
 
 header
@@ -21,6 +21,7 @@ header
 	height: 100px;
 	background-color: rgba(255,255,255,.75);
 	position: fixed;
+	visibility: hidden;
 	width: 100%;
 	
 	a:link, a:active, a:visited
@@ -61,8 +62,34 @@ section
 {
 	background-image: url("../images/Mt-Hood-Gotham.jpg");
 	background-repeat: no-repeat;
-	background-size: auto 100%;
-	height: 1170px;
+	background-size: cover;
+	height: 100%;	
+	
+	img
+	{
+		border-right: 1px solid rgba(255,255,255,.3);
+		padding: 63px;
+		margin-right: 64px;
+	}
+	
+	p
+	{
+		color: white;
+		opacity: .6;
+		font-weight: 100;
+		
+		span
+		{
+			color: $linkBorderOrange;
+		}
+	}
+}
+
+#initial
+{
+	display: flex;
+	flex-display: row;
+	align-items: center;
 }
 
 // 
