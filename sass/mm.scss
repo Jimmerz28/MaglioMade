@@ -4,7 +4,7 @@
 $linkBorderOrange: #D59029;
 $someTanColor: #E6E2D0;
 
-html, body, p
+html, body, p, h1
 {
 	padding: 0;
 	margin: 0;
@@ -57,6 +57,17 @@ section, header > div, header
 section
 {
 	flex-direction: column;
+	
+	h1
+	{
+		background-color: white;
+		color: $linkBorderOrange;
+		padding: 15px 45px 15px 15px;
+		width: 100px;
+		margin-bottom: 90px;
+		margin-top: -28px;
+		text-transform: lowercase;
+	}
 }
 
 #intro
@@ -104,18 +115,24 @@ section
 #work
 {
 	background-color: $someTanColor;
-	height: 764px;
+	height: 793px;
 	
 	img
 	{
 		height: 270px;
 		width: 270px;
 		margin: 22px;
+		
+		&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+		{
+			margin-top: 0;
+		}
 	}
-	
+		
 	.central > div
 	{
 		margin-left: -22px;
 		margin-right: -44px;
+		margin-bottom: 90px;
 	}
 }
