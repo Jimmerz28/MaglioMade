@@ -2,6 +2,7 @@
 @include font-face(NewsGothic, "../fonts/nwgthc", normal, normal);
 
 $linkBorderOrange: #D59029;
+$someTanColor: #E6E2D0;
 
 html, body, p
 {
@@ -92,12 +93,29 @@ section
 	align-items: center;
 }
 
-// 
-// .central
-// {
-// 	display: flex;
-// 	flex-direction: row;
-// 	background-color: #E6E2D0;
-// 	width: 900px;
-// 	height: 500px;
-// }
+.central
+{
+	display: flex;
+	flex-direction: column;
+	background-color: inherit;
+	width: 900px;
+}
+
+#work
+{
+	background-color: $someTanColor;
+	height: 764px;
+	
+	img
+	{
+		height: 270px;
+		width: 270px;
+		margin: 22px;
+	}
+	
+	.central > div
+	{
+		margin-left: -22px;
+		margin-right: -44px;
+	}
+}
