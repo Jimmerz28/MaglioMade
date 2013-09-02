@@ -117,6 +117,7 @@ section
 {
 	background-color: $someTanColor;
 	height: 793px;
+	padding-bottom: 33px;
 	
 	img
 	{
@@ -136,4 +137,90 @@ section
 		margin-right: -44px;
 		margin-bottom: 90px;
 	}
+}
+
+#resume
+{
+	background-color: $someLightGray;
+	height: 764px;
+
+	h1
+	{
+		width: 122px;
+		margin-top: -189px;
+		
+		& + div
+		{
+			margin-top: 80px;
+		}
+	}
+
+	p
+	{
+		color: white;
+		font-size: 14pt;
+	}
+}
+
+#resumeSnippet
+{
+	p
+	{		
+		&:first-of-type
+		{
+			font-size: 20pt;
+			line-height: 30pt;
+			margin-bottom: 1em;
+		}
+		
+		// &:nth-of-type(2)
+		// {
+		// 	line-height: 25pt;
+		// }
+	}
+	
+	& > div:first-of-type
+	{
+		display: flex;
+		align-items: center;
+		
+		> div
+		{
+			padding: 0 5em;
+		}
+	}
+	
+	& + p
+	{
+		text-align: center;
+	}
+}
+
+#rightArrow, #leftArrow
+{
+	width: 34px;
+	height: 57px;
+}
+
+#rightArrow
+{
+	@include transform(rotate(180deg));
+}
+
+#indicators
+{
+	margin: 3em 0 5em 0;
+	text-align: center;
+	
+	img
+	{
+		margin-right: 25px;
+	}
+}
+
+a[href*=".pdf"]
+{
+	background-color: $someOrange;
+	padding: 1em 4em;
+	margin-left: 1em;
 }
