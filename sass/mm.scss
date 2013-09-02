@@ -1,8 +1,9 @@
 @import '../bourbon/bourbon';
 @include font-face(NewsGothic, "../fonts/nwgthc", normal, normal);
 
-$linkBorderOrange: #D59029;
+$someOrange: #D59029;
 $someTanColor: #E6E2D0;
+$someLightGray: #B8B5AA;
 
 html, body, p, h1
 {
@@ -37,7 +38,7 @@ header
 	
 	a:hover
 	{
-		border-bottom: 2px $linkBorderOrange solid;
+		border-bottom: 2px $someOrange solid;
 	}
 	
 	img
@@ -61,7 +62,7 @@ section
 	h1
 	{
 		background-color: white;
-		color: $linkBorderOrange;
+		color: $someOrange;
 		padding: 15px 45px 15px 15px;
 		width: 100px;
 		margin-bottom: 90px;
@@ -92,7 +93,7 @@ section
 		
 		span
 		{
-			color: $linkBorderOrange;
+			color: $someOrange;
 		}
 	}
 }
