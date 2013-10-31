@@ -199,6 +199,102 @@ section
 	}
 }
 
+#contact
+{
+	background-color: $someDarkGray;
+	// height: 764px;
+	color: white;
+	
+	h3
+	{
+		width: 15em;
+		font-size: 18pt;
+		font-weight: 100;
+		font-style: normal;
+		margin: 0;
+		line-height: 32pt;
+		
+		& > span
+		{
+			padding-bottom: 5px;
+			border-bottom: 2px $someOrange solid;
+			padding-right: 14px;
+		}
+	}
+	
+	form
+	{
+		overflow: hidden;
+	}
+	
+	p
+	{
+		width: 22em;
+	}
+	
+	input:not([type="submit"]), textarea
+	{
+		background-color: $someBlack;
+	}
+	
+	input, textarea
+	{
+		border: none;
+		color: white;
+		font-family: NewsGothic;
+		font-size: 18pt;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+	input
+	{
+		height: 60px;
+	}
+	
+	textarea
+	{
+		height: 300px;
+		padding-top: 15px;
+	}
+	
+	.central > div
+	{
+		display: flex;
+		flex-direction: row;
+		
+		> div
+		{
+			flex: 0 0 50%;
+		}
+		
+		.innerCircle
+		{
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: space-between;
+		}
+	}
+	
+	input[type="text"], input[type="email"], textarea
+	{
+		padding-left: 15px;
+	}
+}
+
+#socials
+{
+	margin-top: 3em;
+	margin-bottom: 1.25em;
+	
+	img
+	{
+		height: 30px;
+		margin-right: 10px;
+	}
+}
+
 #rightArrow, #leftArrow
 {
 	width: 34px;
@@ -221,9 +317,14 @@ section
 	}
 }
 
-a[href*=".pdf"]
+.orangeButton
 {
 	background-color: $someOrange;
+	text-transform: uppercase;
+}
+
+a[href*=".pdf"]
+{
 	padding: 1em 4em;
 	margin-left: 1em;
 }
