@@ -26,8 +26,9 @@ header
 	height: 100px;
 	background-color: rgba(255,255,255,.75);
 	position: fixed;
-	visibility: hidden;
 	width: 100%;
+	opacity: 0;
+	@include transition (opacity .2s ease-in);
 	
 	a:link, a:active, a:visited
 	{
@@ -353,6 +354,11 @@ footer
 {
 	background-color: $someOrange;
 	text-transform: uppercase;
+}
+
+.fadeItBack
+{
+	opacity: 1;
 }
 
 a[href*=".pdf"]
