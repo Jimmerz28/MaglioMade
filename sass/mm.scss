@@ -361,12 +361,30 @@ footer
 	opacity: 1;
 }
 
+.hideMe
+{
+	display: none !important;
+}
+
 .permaUnderline
 {
 	padding-bottom: 5px;
 	border-bottom: 2px $someOrange solid;
 	padding-right: 14px;
 	color: white !important;
+}
+
+.columnFlex
+{
+       flex-direction: column;
+       width: 725px;
+       font-size: 1.2em;
+       align-items: stretch !important;
+
+       & p:first-of-type
+       {
+               margin-bottom: 1em;
+       }
 }
 
 a[href*=".pdf"]
