@@ -361,6 +361,14 @@ footer
 	opacity: 1;
 }
 
+.permaUnderline
+{
+	padding-bottom: 5px;
+	border-bottom: 2px $someOrange solid;
+	padding-right: 14px;
+	color: white !important;
+}
+
 a[href*=".pdf"]
 {
 	padding: 1em 4em;
