@@ -176,6 +176,7 @@ footer
 		width: $workPreviewImagesSize;
 		display: inline-block;
 		margin: 22px;
+		overflow: hidden;
 		
 		img
 		{
@@ -195,7 +196,6 @@ footer
 			background-color: white;
 			height: $workPreviewImagesSize;
 			width: $workPreviewImagesSize;
-			position: absolute;
 			margin-top: -$workPreviewImagesSize - 4px;
 			
 			> div
@@ -237,11 +237,19 @@ footer
 			}
 		}
 		
-		&:hover > div
+		img + div
 		{
+			margin-left: -$workPreviewImagesSize;
+			overflow: hidden;
+		}
+		
+		&:hover > img + div
+		{
+			margin-left: 0;
 			opacity: .95;
 			background-color: $someOrange;
 			color: white;
+			transition: opacity .5s linear, margin .5s cubic-bezier(0.460, 0.155, 0.370, 1.355);
 		}	
 	}
 }
