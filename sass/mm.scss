@@ -264,17 +264,11 @@ footer
 #resume
 {
 	background-color: $someLightGray;
-	height: 764px;
-
+	padding-bottom: 63px;
+	
 	h1
 	{
 		width: 122px;
-		margin-top: -131px;
-		
-		& + div
-		{
-			margin-top: 80px;
-		}
 	}
 
 	p
