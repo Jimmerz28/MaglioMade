@@ -343,6 +343,12 @@ footer
 	p
 	{
 		width: 22em;
+		line-height: 18pt;
+		
+		&:first-of-type
+		{
+			margin: 2em 0 2em 0;
+		}
 	}
 	
 	input:not([type="submit"]), textarea
