@@ -239,6 +239,8 @@ footer
 		
 		img + div
 		{
+			background-color: $someOrange;
+			color: white;
 			margin-left: -$workPreviewImagesSize;
 			overflow: hidden;
 		}
@@ -247,10 +249,13 @@ footer
 		{
 			margin-left: 0;
 			opacity: .95;
-			background-color: $someOrange;
-			color: white;
-			transition: opacity .5s linear, margin .5s cubic-bezier(0.460, 0.155, 0.370, 1.355);
 		}	
+		
+		&:hover > img + div, img + div
+		{
+			transition: opacity .5s linear, margin .5s cubic-bezier(0.460, 0.155, 0.370, 1.355);
+			transition-delay: .5s;
+		}
 	}
 }
 
