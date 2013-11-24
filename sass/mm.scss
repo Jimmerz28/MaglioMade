@@ -28,6 +28,7 @@ header
 	height: 100px;
 	background-color: rgba(255,255,255,.75);
 	position: fixed;
+	z-index: 5;
 	width: 100%;
 	opacity: 0;
 	@include transition (opacity .2s ease-in);
@@ -192,6 +193,8 @@ footer
 		// Paragraph and Link
 		> div
 		{
+			position: relative;
+			z-index: 1;
 			opacity: 0;
 			background-color: white;
 			height: $workPreviewImagesSize;
@@ -292,11 +295,6 @@ footer
 			line-height: 30pt;
 			margin-bottom: 1em;
 		}
-		
-		// &:nth-of-type(2)
-		// {
-		// 	line-height: 25pt;
-		// }
 	}
 	
 	& > div:first-of-type
@@ -319,7 +317,6 @@ footer
 #contact
 {
 	background-color: $someDarkGray;
-	// height: 764px;
 	color: white;
 	padding-bottom: 70px;
 	
