@@ -278,7 +278,17 @@ footer
 	}
 }
 
-#resumeSnippet
+.container > div:not(.activeObject)
+{
+	display: none;
+}
+
+.container > div
+{
+	height: 300px;
+}
+
+#resumeCopy
 {
 	p
 	{		
@@ -409,26 +419,39 @@ footer
 	}
 }
 
-#rightArrow, #leftArrow
+.rightArrow, .leftArrow
 {
 	width: 34px;
 	height: 57px;
+	cursor: pointer;
 }
 
-#rightArrow
+.rightArrow
 {
 	@include transform(rotate(180deg));
 }
 
-#indicators
+.indicators
 {
 	margin: 3em 0 5em 0;
 	text-align: center;
 	
-	img
+	svg
 	{
 		margin-right: 25px;
+		width: 10px;
+		height: 10px;
+		
+		rect
+		{
+			fill: white;
+		}
 	}
+}
+
+svg.activeIndicator rect
+{
+	fill: $someOrange;
 }
 
 .orangeButton
