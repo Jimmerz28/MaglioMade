@@ -82,9 +82,26 @@ function ResumeReel(container)
 	});
 }
 
+function scrollEmDown(elements, bufferPixs, speed)
+{
+	$(elements).on( "click", function( event )
+	{
+		event.preventDefault();
+
+		var target = this.hash,
+		$target = $(target);
+
+		$('html, body').stop().animate(
+		{
+			'scrollTop': $target.offset().top - bufferPixs
+		}, speed );
+	});
+}
+
 $(document).ready(function()
 {
 	$("#initial + div").hide();
+	scrollEmDown($("header a"), 100, 500);
 	
 	var reel = new ResumeReel(document.getElementById("resumeCopy"));
 });
