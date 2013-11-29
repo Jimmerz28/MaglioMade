@@ -1,0 +1,17 @@
+{
+  "name": "MaglioMade",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jimmerz28/MaglioMade.git"
+  },
+  "author": "James Daniel Holby",
+  "license": "Attribution-NonCommercial-ShareAlike 4.0 International",
+  "bugs": {
+    "url": "https://github.com/Jimmerz28/MaglioMade/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-html-validation": "~0.1.10"
+  }
+}
