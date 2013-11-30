@@ -53,8 +53,7 @@ module.exports = function(grunt)
 					expand: true,
 					cwd: "images/",
 					src: ["**/*.svg"],
-					dest: "src/images/",
-					ext: "min.svg"
+					dest: "src/images/"
 				}]
 			}
 		},
@@ -79,8 +78,9 @@ module.exports = function(grunt)
 			{
 				files:
 				[
-					{expand: true, src:["fonts/*"], dest: "src/fonts/"},
-					{src: ["index.html"], dest: "src/"}
+					{expand: true, src:["fonts/*"], dest: "src/"},
+					{src: ["index.html"], dest: "src/"},
+					{src:["js/jquery.min.js"], dest: "src/"}
 				]
 			}
 		},
