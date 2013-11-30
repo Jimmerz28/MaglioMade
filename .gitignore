@@ -2,3 +2,6 @@
 css/
 bourbon/
 /.*
+node_modules
+validation*.json
+src/*
