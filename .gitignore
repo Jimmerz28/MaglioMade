@@ -5,3 +5,4 @@ bourbon/
 node_modules
 validation*.json
 src/*
+js/brains.min.js
