@@ -8,63 +8,72 @@ function ResumeReel(container)
 	self.activeIndex = $(self.lists).index(".activeObject");
 	self.size = $(self.lists).size();
 	
-	// Begin Probable Function
-	var indicatorContainer = document.createElement("div");
-	indicatorContainer.className = "indicators";
-	var svgs = "";
-	
-	for ( var i = 0; i < self.size; i++ )
+	this.init = function()
 	{
-		if ( i === 0 )
+		self.indicators = createIndicators();
+	};
+	
+	function createIndicators()
+	{
+		var indicatorContainer = document.createElement("div");
+		indicatorContainer.className = "indicators";
+		var svgs = "";
+		
+		for ( var i = 0; i < self.size; i++ )
 		{
-			svgs += '<svg class="activeIndicator"><rect width="10" height="10" fill="white"></rect></svg>';
+			if ( i === 0 )
+			{
+				svgs += "<svg class=\"activeIndicator\"><rect width=\"10\" height=\"10\" fill=\"white\"></rect></svg>";
+			}
+			
+			else
+			{
+				svgs += "<svg><rect width=\"10\" height=\"10\" fill=\"white\"></rect></svg>";
+			}
+		}
+		
+		indicatorContainer.innerHTML = svgs;
+		
+		var frag = document.createDocumentFragment();
+		frag.appendChild(indicatorContainer);
+		
+		container.appendChild(frag);
+		
+		var indicators = container.getElementsByClassName("indicators");
+		
+		return indicators[0].children;
+	}
+	
+	function moveTo(arrows)
+	{
+		var offset = ($(arrows).attr("class") === "rightArrow") ? 1 : -1;
+		
+		if ( (self.activeIndex + offset) < 0 )
+		{
+			self.activeIndex = 0;
+		}
+		
+		else if ( (self.activeIndex + offset) > (self.size - 1) )
+		{
+			self.activeIndex = self.size - 1;
 		}
 		
 		else
 		{
-			svgs += '<svg><rect width="10" height="10" fill="white"></rect></svg>';
+			self.activeIndex = self.activeIndex + offset;
 		}
+		
+		return offset;
 	}
-	
-	indicatorContainer.innerHTML = svgs;
-	
-	var frag = document.createDocumentFragment();
-	frag.appendChild(indicatorContainer);
-	
-	container.appendChild(frag);
-	
-	// End probable function
-	
-	self.indicators = container.getElementsByClassName("indicators");
-	self.indicators = self.indicators[0].children;
 		
 	$(self).find(".rightArrow, .leftArrow").on("click", function()
 	{
-		var offset = ($(this).attr("class") === "rightArrow") ? 1 : -1;
-		var proposedOffset = self.activeIndex + offset;
+		var offset = moveTo(this);
 		
-		if ( proposedOffset < 0 )
-		{
-			self.activeIndex = 0;
-			return;
-		}
-		
-		else if ( proposedOffset > (self.size - 1) )
-		{
-			self.activeIndex = self.size - 1;
-			return;
-		}
-		
-		else
-		{
-			self.activeIndex = proposedOffset;
-		}
-		
-		$(self.lists).eq(proposedOffset - offset).fadeOut("fast", function()
+		$(self.lists).eq(self.activeIndex - offset).fadeOut("fast", function()
 		{
 			$(self.lists).removeClass();
 			$(self.lists).eq(self.activeIndex).fadeIn("fast");
-			// TODO Change the indicator
 			
 			for ( var i = 0; i < self.indicators.length; i++ )
 			{
@@ -76,7 +85,7 @@ function ResumeReel(container)
 				else
 				{
 					self.indicators[i].setAttribute("class", "");
-				}	
+				}
 			}
 		});
 	});
@@ -91,9 +100,9 @@ function scrollEmDown(elements, bufferPixs, speed)
 		var target = this.hash,
 		$target = $(target);
 
-		$('html, body').stop().animate(
+		$("html, body").stop().animate(
 		{
-			'scrollTop': $target.offset().top - bufferPixs
+			"scrollTop": $target.offset().top - bufferPixs
 		}, speed );
 	});
 }
@@ -104,12 +113,14 @@ $(document).ready(function()
 	scrollEmDown($("header a"), 100, 500);
 	
 	var reel = new ResumeReel(document.getElementById("resumeCopy"));
+	
+	reel.init();
 });
 
 var pastPoint = false;
 
 $(document).on("scroll", function()
-{	
+{
 	if ( $(this).scrollTop() > 100 && pastPoint === false )
 	{
 		$("header").addClass("fadeItBack");
@@ -120,7 +131,7 @@ $(document).on("scroll", function()
 		});
 		
 		pastPoint = true;
-	} 
+	}
 	
 	if ( $(this).scrollTop() < 100 && pastPoint === true )
 	{
