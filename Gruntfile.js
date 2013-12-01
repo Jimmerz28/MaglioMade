@@ -71,30 +71,30 @@ module.exports = function(grunt)
 				}]
 			}
 		},
-		sass: 
+		sass:
 		{
-			dist: 
+			dist:
 			{
-				options: 
+				options:
 				{
-					includePaths: ['node_modules/node-bourbon/assets/stylesheets/'],
-					outputStyle: 'compressed'
+					includePaths: ["node_modules/node-bourbon/assets/stylesheets/"],
+					outputStyle: "compressed"
 				},
-				files: 
+				files:
 				{
-					'src/css/mm.css': 'sass/mm.scss'
+					"src/css/mm.css": "sass/mm.scss"
 				}
 			},
 			dev:
 			{
-				options: 
+				options:
 				{
-					includePaths: ['node_modules/node-bourbon/assets/stylesheets/'],
-					outputStyle: 'nested'
+					includePaths: ["node_modules/node-bourbon/assets/stylesheets/"],
+					outputStyle: "nested"
 				},
-				files: 
+				files:
 				{
-					'css/mm.css': 'sass/mm.scss'
+					"css/mm.css": "sass/mm.scss"
 				}
 			}
 		},
@@ -121,12 +121,56 @@ module.exports = function(grunt)
 				src: ["index.html"]
 			}
 		},
+		jshint:
+		{
+			options:
+			{
+				curly: true,
+				eqeqeq: true,
+				forin: true,
+				indent: true,
+				newcap: true,
+				latedef: true,
+				nonew: true,
+				quotmark: "double",
+				trailing: true,
+				maxcomplexity: 5,
+				globals:
+				{
+					jQuery: true
+				}
+			},
+			brains:
+			{
+				files:
+				{
+					src: ["js/brains.js"]
+				}
+			},
+			gruntfile:
+			{
+				files:
+				{
+					src: ["Gruntfile.js"]
+				}
+			}
+		},
 		watch:
 		{
+			options:
+			{
+				// Makes the task not take over a minute
+				spawn: false
+			},
 			scripts:
 			{
 				files: ["js/brains.js"],
-				tasks: ["uglify:dev"]
+				tasks: ["jshint:brains","uglify:dev"]
+			},
+			gruntfile:
+			{
+				files: ["Gruntfile.js"],
+				tasks: ["jshint:gruntfile"]
 			},
 			css:
 			{
@@ -134,15 +178,16 @@ module.exports = function(grunt)
 				tasks: ["sass:dev"]
 			}
 		}
-	});	
+	});
 	
-	grunt.loadNpmTasks('grunt-htmlhint');
+	grunt.loadNpmTasks("grunt-htmlhint");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-imagemin");
 	grunt.loadNpmTasks("grunt-svgmin");
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks("grunt-sass");
+	grunt.loadNpmTasks("grunt-contrib-copy");
+	grunt.loadNpmTasks("grunt-contrib-jshint");
+	grunt.loadNpmTasks("grunt-contrib-watch");
 	
 	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","copy"]);
 
