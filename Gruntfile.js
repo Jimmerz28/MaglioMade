@@ -21,12 +21,9 @@ module.exports = function(grunt)
 			},
 			dev:
 			{
-				my_target:
+				files:
 				{
-					files:
-					{
-						"js/brains.min.js": ["js/brains.js"]
-					}
+					"js/brains.min.js": ["js/brains.js"]
 				}
 			}
 			
@@ -134,7 +131,7 @@ module.exports = function(grunt)
 				nonew: true,
 				quotmark: "double",
 				trailing: true,
-				maxcomplexity: 5,
+				maxcomplexity: 4,
 				globals:
 				{
 					jQuery: true
