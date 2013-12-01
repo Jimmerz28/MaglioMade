@@ -5,17 +5,31 @@ module.exports = function(grunt)
 		pkg: grunt.file.readJSON("package.json"),
 		uglify:
 		{
-			options:
+			dist:
 			{
-				"report": "gzip"
-			},
-			my_target:
-			{
-				files:
+				options:
 				{
-					"src/js/brains.min.js": ["js/brains.js"]
+					"report": "gzip"
+				},
+				my_target:
+				{
+					files:
+					{
+						"src/js/brains.min.js": ["js/brains.js"]
+					}
+				}
+			},
+			dev:
+			{
+				my_target:
+				{
+					files:
+					{
+						"js/brains.min.js": ["js/brains.js"]
+					}
 				}
 			}
+			
 		},
 		imagemin:
 		{
@@ -70,6 +84,18 @@ module.exports = function(grunt)
 				{
 					'src/css/mm.css': 'sass/mm.scss'
 				}
+			},
+			dev:
+			{
+				options: 
+				{
+					includePaths: ['node_modules/node-bourbon/assets/stylesheets/'],
+					outputStyle: 'nested'
+				},
+				files: 
+				{
+					'css/mm.css': 'sass/mm.scss'
+				}
 			}
 		},
 		copy:
@@ -94,6 +120,19 @@ module.exports = function(grunt)
 				},
 				src: ["index.html"]
 			}
+		},
+		watch:
+		{
+			scripts:
+			{
+				files: ["js/brains.js"],
+				tasks: ["uglify:dev"]
+			},
+			css:
+			{
+				files: ["sass/mm.scss"],
+				tasks: ["sass:dev"]
+			}
 		}
 	});	
 	
@@ -103,7 +142,8 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-svgmin");
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	
-	grunt.registerTask("default", ["svgmin","uglify","imagemin","sass","htmlhint","copy"]);
+	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","copy"]);
 
 };
