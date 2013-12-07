@@ -3,6 +3,7 @@ module.exports = function(grunt)
 	grunt.initConfig(
 	{
 		pkg: grunt.file.readJSON("package.json"),
+		aws: grunt.file.readJSON("grunt-aws.json"),
 		uglify:
 		{
 			dist:
@@ -152,6 +153,64 @@ module.exports = function(grunt)
 				}
 			}
 		},
+		s3:
+		{
+			options:
+			{
+				key: "<%= aws.key %>",
+				secret: "<%= aws.secret %>",
+				bucket: "<%= aws.bucket %>",
+				access: "public-read",
+				headers:
+				{
+					// 30 Day Cache Policy
+					"Cache-Control": "max-age=2678400, public",
+					"Expires": new Date(Date.now() + 2678400).toUTCString()
+				}
+			},
+			prod:
+			{
+				upload:
+				[
+					{
+						src: "src/css/*.css",
+						dest: "css",
+						options: { gzip: true }
+					},
+					{
+						src: "src/js/*.js",
+						dest: "js",
+						options: { gzip: true }
+					},
+					{
+						src: "images/*",
+						dest: "images",
+						options: { gzip: true, gzipExclude: [".jpg", ".png"] }
+					},
+					{
+						src: "images/social/*",
+						dest: "images/social",
+						options: { gzip: true, gzipExclude: [".jpg", ".png"] }
+					},
+					{
+						src: "images/work/*",
+						dest: "images/work",
+						options: { gzip: true, gzipExclude: [".jpg", ".png"] }
+					},
+					{
+						src: "index.html",
+						dest: ".",
+						options: { gzip: true }
+					},
+					{
+						src: "fonts/*",
+						dest: "fonts",
+						options: { gzip: true }
+					}
+					
+				]
+			}
+		},
 		watch:
 		{
 			options:
@@ -185,7 +244,9 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks("grunt-s3");
 	
-	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","copy"]);
+	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
+	grunt.registerTask("deploy", "s3:prod");
 
 };
