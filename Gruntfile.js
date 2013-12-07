@@ -10,14 +10,18 @@ module.exports = function(grunt)
 			{
 				options:
 				{
-					"report": "gzip"
-				},
-				my_target:
-				{
-					files:
+					"report": "gzip",
+					mangle:
 					{
-						"src/js/brains.min.js": ["js/brains.js"]
-					}
+						except: ["jQuery"]
+					},
+					dead_code: false,
+					quote_keys: true
+					
+				},
+				files:
+				{
+					"src/js/brains.min.js": ["js/brains.js"]
 				}
 			},
 			dev:
@@ -211,12 +215,17 @@ module.exports = function(grunt)
 				]
 			}
 		},
+		phplint:
+		{
+			devs: ["*.php"]
+		},
 		watch:
 		{
 			options:
 			{
 				// Makes the task not take over a minute
-				spawn: false
+				spawn: false,
+				debounceDelay: 500,
 			},
 			scripts:
 			{
@@ -232,6 +241,16 @@ module.exports = function(grunt)
 			{
 				files: ["sass/mm.scss"],
 				tasks: ["sass:dev"]
+			},
+			html:
+			{
+				files: ["index.html"],
+				tasks: ["htmlhint"]
+			},
+			php:
+			{
+				files: ["*.php"],
+				tasks: ["phplint:devs"]
 			}
 		}
 	});
@@ -245,6 +264,7 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-s3");
+	grunt.loadNpmTasks("grunt-phplint");
 	
 	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
 	grunt.registerTask("deploy", "s3:prod");
