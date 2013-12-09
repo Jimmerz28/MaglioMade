@@ -1,7 +1,4 @@
 <?php
-
-	// TODO Read from external array of property names which if supplied will fail the test
-	// TODO Send the mail
 	
 	class Mailer
 	{
@@ -68,25 +65,23 @@
 			
 			if ( !isset($this->message) )
 			{
-				throw new InvalidArgumentException("Message cannot be empty");
+				$status = '{"error": "Message cannot be empty"}';
 			}
 			
 			if ( !isset($this->subject) )
 			{
-				throw new InvalidArgumentException("Subject cannot be empty!");
+				$status = '{"error":"Subject cannot be empty!"}';
 			}
 			
 			if ( !$this->isBotFieldPopulated() )
 			{
 				if ( mail($sender, $this->subject, $this->message, $headers) )
 				{
-					echo "Your request has been submitted!";
 					$status = '{"status": 61}';
 				}
 				
 				else
 				{
-					echo "There was an error sending your request. Please try again.";
 					$status = '{"status": 95}';
 				}
 			}
