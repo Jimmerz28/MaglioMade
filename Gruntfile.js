@@ -108,7 +108,8 @@ module.exports = function(grunt)
 				[
 					{expand: true, src:["fonts/*"], dest: "src/"},
 					{src: ["index.html"], dest: "src/"},
-					{src:["js/jquery.min.js"], dest: "src/"}
+					{src:["js/jquery.min.js"], dest: "src/"},
+					{src:["submission.php", "Mailer.php"], dest: "src/"}
 				]
 			}
 		},
@@ -210,8 +211,12 @@ module.exports = function(grunt)
 						src: "fonts/*",
 						dest: "fonts",
 						options: { gzip: true }
+					},
+					{
+						src: "src/*.php",
+						dest: ".",
+						options: { gzip: true }
 					}
-					
 				]
 			}
 		},
@@ -266,7 +271,7 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-s3");
 	grunt.loadNpmTasks("grunt-phplint");
 	
-	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
+	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","phplint:devs","copy"]);
 	grunt.registerTask("deploy", "s3:prod");
 
 };
