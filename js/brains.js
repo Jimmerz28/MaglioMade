@@ -146,7 +146,10 @@ $(document).ready(function()
 		.done(function( msg )
 		{
 			// TODO Hide the form & confirmation
-			console.log(msg);
+			if ( msg.status === 61 )
+			{
+				$("form").hide();
+			}
 		});
 	});
 });
