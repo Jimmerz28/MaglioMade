@@ -10,7 +10,14 @@ module.exports = function(grunt)
 			{
 				options:
 				{
-					"report": "gzip"
+					"report": "gzip",
+					mangle:
+					{
+						except: ["jQuery"]
+					},
+					dead_code: false,
+					quote_keys: true
+					
 				},
 				files:
 				{
@@ -101,7 +108,8 @@ module.exports = function(grunt)
 				[
 					{expand: true, src:["fonts/*"], dest: "src/"},
 					{src: ["index.html"], dest: "src/"},
-					{src:["js/jquery.min.js"], dest: "src/"}
+					{src:["js/jquery.min.js"], dest: "src/"},
+					{src:["submission.php", "Mailer.php"], dest: "src/"}
 				]
 			}
 		},
@@ -176,12 +184,17 @@ module.exports = function(grunt)
 				]
 			}
 		},
+		phplint:
+		{
+			devs: ["*.php"]
+		},
 		watch:
 		{
 			options:
 			{
 				// Makes the task not take over a minute
-				spawn: false
+				spawn: false,
+				debounceDelay: 500,
 			},
 			scripts:
 			{
@@ -197,6 +210,16 @@ module.exports = function(grunt)
 			{
 				files: ["sass/mm.scss"],
 				tasks: ["sass:dev"]
+			},
+			html:
+			{
+				files: ["index.html"],
+				tasks: ["htmlhint"]
+			},
+			php:
+			{
+				files: ["*.php"],
+				tasks: ["phplint:devs"]
 			}
 		}
 	});

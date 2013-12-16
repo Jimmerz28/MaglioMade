@@ -419,6 +419,22 @@ footer
 	}
 }
 
+a[href*=".pdf"]
+{
+	padding: 1em 4em;
+	margin-left: 1em;
+}
+
+.obfusc
+{
+	display: none;
+}
+
+.seeThrough
+{
+	opacity: 0;
+}
+
 .rightArrow, .leftArrow
 {
 	flex: 0 0 34px;
@@ -485,10 +501,4 @@ svg.activeIndicator rect
        {
                margin-bottom: 1em;
        }
-}
-
-a[href*=".pdf"]
-{
-	padding: 1em 4em;
-	margin-left: 1em;
 }

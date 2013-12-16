@@ -91,6 +91,19 @@ function ResumeReel(container)
 	});
 }
 
+function serializeForm(form)
+{
+	var inputs = {};
+
+	// Find each of the inputs from the company info
+	$.each( $(form).find(":input").serializeArray(), function(i, field)
+	{
+		inputs[field.name] = field.value;
+	});
+
+	return JSON.stringify(inputs);
+}
+
 function scrollEmDown(elements, bufferPixs, speed)
 {
 	$(elements).on( "click", function( event )
@@ -109,12 +122,36 @@ function scrollEmDown(elements, bufferPixs, speed)
 
 $(document).ready(function()
 {
-	$("#initial + div").hide();
+	// Hide the navigation bar so it can fade in after a scroll
+	// Hide the spam filter fields in the form
+	$("form > label, #address, #initial + div").addClass("obfusc");
+	
 	scrollEmDown($("header a"), 100, 500);
 	
+	// Create the reel and then initialize it
 	var reel = new ResumeReel(document.getElementById("resumeCopy"));
-	
 	reel.init();
+	
+	// Catch the submission
+	$("form").submit(function(event)
+	{
+		event.preventDefault();
+		
+		$.ajax(
+		{
+			type: "POST",
+			url: "submission.php",
+			data: {json: serializeForm(this)}
+		})
+		.done(function( msg )
+		{
+			// TODO Hide the form & confirmation
+			if ( msg.status === 61 )
+			{
+				$("form").hide();
+			}
+		});
+	});
 });
 
 var pastPoint = false;
