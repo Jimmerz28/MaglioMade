@@ -12,12 +12,9 @@ module.exports = function(grunt)
 				{
 					"report": "gzip"
 				},
-				my_target:
+				files:
 				{
-					files:
-					{
-						"src/js/brains.min.js": ["js/brains.js"]
-					}
+					"src/js/brains.min.js": ["js/brains.js"]
 				}
 			},
 			dev:
@@ -153,14 +150,13 @@ module.exports = function(grunt)
 				}
 			}
 		},
-		s3:
+		"s3-sync":
 		{
 			options:
 			{
 				key: "<%= aws.key %>",
 				secret: "<%= aws.secret %>",
 				bucket: "<%= aws.bucket %>",
-				access: "public-read",
 				headers:
 				{
 					// 30 Day Cache Policy
@@ -170,44 +166,13 @@ module.exports = function(grunt)
 			},
 			prod:
 			{
-				upload:
+				files:
 				[
 					{
-						src: "src/css/*.css",
-						dest: "css",
-						options: { gzip: true }
-					},
-					{
-						src: "src/js/*.js",
-						dest: "js",
-						options: { gzip: true }
-					},
-					{
-						src: "images/*",
-						dest: "images",
-						options: { gzip: true, gzipExclude: [".jpg", ".png"] }
-					},
-					{
-						src: "images/social/*",
-						dest: "images/social",
-						options: { gzip: true, gzipExclude: [".jpg", ".png"] }
-					},
-					{
-						src: "images/work/*",
-						dest: "images/work",
-						options: { gzip: true, gzipExclude: [".jpg", ".png"] }
-					},
-					{
-						src: "index.html",
-						dest: ".",
-						options: { gzip: true }
-					},
-					{
-						src: "fonts/*",
-						dest: "fonts",
-						options: { gzip: true }
+						root: "src/",
+						src: "/**",
+						dest: "/"
 					}
-					
 				]
 			}
 		},
@@ -244,9 +209,9 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("grunt-s3");
+	grunt.loadNpmTasks("grunt-s3-sync");
 	
 	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
-	grunt.registerTask("deploy", "s3:prod");
+	grunt.registerTask("deploy", "s3-sync");
 
 };
