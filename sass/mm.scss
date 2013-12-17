@@ -412,10 +412,20 @@ footer
 	margin-top: 3em;
 	margin-bottom: 1.25em;
 	
-	img
+	svg
 	{
-		height: 30px;
-		margin-right: 10px;
+		margin-right: 20px;
+	}
+	
+	svg path
+	{
+		@include transition (fill 1s ease-out);
+		fill: $anotherLightGray;
+	}
+	
+	svg:hover path
+	{
+		fill: $someOrange;
 	}
 }
 
