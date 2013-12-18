@@ -458,6 +458,11 @@ a[href*=".pdf"]
 	opacity: .75;
 }
 
+input[type="submit"]
+{
+	cursor: pointer;
+}
+
 .rightArrow
 {
 	@include transform(rotate(180deg));
