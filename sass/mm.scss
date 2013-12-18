@@ -453,6 +453,11 @@ a[href*=".pdf"]
 	cursor: pointer;
 }
 
+.rightArrow:hover, .leftArrow:hover, a[href*=".pdf"]:hover, input[type="submit"]:hover
+{
+	opacity: .75;
+}
+
 .rightArrow
 {
 	@include transform(rotate(180deg));
