@@ -125,12 +125,20 @@ $(document).ready(function()
 	// Hide the navigation bar so it can fade in after a scroll
 	// Hide the spam filter fields in the form
 	$("form > label, #address, #initial + div").addClass("obfusc");
-	
+		
 	scrollEmDown($("header a"), 100, 500);
 	
 	// Create the reel and then initialize it
 	var reel = new ResumeReel(document.getElementById("resumeCopy"));
 	reel.init();
+	
+	$("img[alt='logo']").on("click", function()
+	{
+		$("html, body").stop().animate(
+		{
+			"scrollTop": 0
+		}, 500 );
+	});
 	
 	// Catch the submission
 	$("form").submit(function(event)
