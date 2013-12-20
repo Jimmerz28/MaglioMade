@@ -43,7 +43,7 @@ header
 		border-bottom: 2px transparent solid;
 	}
 	
-	a:hover
+	a:not(:first-child):hover
 	{
 		border-bottom: 2px $someOrange solid;
 	}
