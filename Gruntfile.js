@@ -137,7 +137,7 @@ module.exports = function(grunt)
 				nonew: true,
 				quotmark: "double",
 				trailing: true,
-				maxcomplexity: 4,
+				maxcomplexity: 5,
 				globals:
 				{
 					jQuery: true
