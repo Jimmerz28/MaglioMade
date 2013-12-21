@@ -7,6 +7,7 @@ function ResumeReel(container)
 		
 	self.activeIndex = $(self.lists).index(".activeObject");
 	self.size = $(self.lists).size();
+	self.previousIndex = null;
 	
 	this.init = function()
 	{
@@ -44,33 +45,39 @@ function ResumeReel(container)
 		return indicators[0].children;
 	}
 	
-	function moveTo(arrows)
+	function setActiveIndex(offset, infinite)
 	{
-		var offset = ($(arrows).attr("class") === "rightArrow") ? 1 : -1;
-		
 		if ( (self.activeIndex + offset) < 0 )
 		{
-			self.activeIndex = 0;
+			self.previousIndex = self.activeIndex;
+			self.activeIndex = (infinite) ? (self.size - 1) : 0;
 		}
 		
 		else if ( (self.activeIndex + offset) > (self.size - 1) )
 		{
-			self.activeIndex = self.size - 1;
+			self.previousIndex = self.activeIndex;
+			self.activeIndex = (infinite) ? 0 : (self.size - 1);
 		}
 		
 		else
 		{
+			self.previousIndex = self.activeIndex;
 			self.activeIndex = self.activeIndex + offset;
 		}
+	}
+	
+	function moveTo(arrows, infinite)
+	{
+		var offset = ($(arrows).attr("class") === "rightArrow") ? 1 : -1;
 		
-		return offset;
+		setActiveIndex(offset, infinite);
 	}
 		
 	$(self).find(".rightArrow, .leftArrow").on("click", function()
 	{
-		var offset = moveTo(this);
+		moveTo(this, true);
 		
-		$(self.lists).eq(self.activeIndex - offset).fadeOut("fast", function()
+		$(self.lists).eq(self.previousIndex).fadeOut("fast", function()
 		{
 			$(self.lists).removeClass();
 			$(self.lists).eq(self.activeIndex).fadeIn("fast");
