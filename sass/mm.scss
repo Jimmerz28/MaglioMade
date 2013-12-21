@@ -282,7 +282,7 @@ img[alt="logo"]
 		&:hover > img + div, img + div
 		{
 			transition: opacity .5s linear, margin .5s cubic-bezier(0.460, 0.155, 0.370, 1.355);
-			transition-delay: .5s;
+			// transition-delay: .5s;
 		}
 	}
 }
