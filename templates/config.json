@@ -3,6 +3,7 @@
     {
       "title": "The Crosby Press",
       "description": "web, mobile & email design",
+      "baseURL": "images/projects/the_crosby_press/",
       "images": [
         {
           "src": "Crosby_01-Concept.jpg",
@@ -33,6 +34,7 @@
     {
       "title": "Iconography",
       "description": "illustration, typography",
+      "baseURL": "images/projects/iconography/",
       "images": [
         {
           "src": "Icons_01-Fall.jpg",
@@ -75,6 +77,7 @@
     {
       "title": "Supercompressor",
       "description": "web design",
+      "baseURL": "images/projects/supercompressor/",
       "images": [
         {
           "src": "SC_01-Concept.jpg",
@@ -87,6 +90,7 @@
     {
       "title": "Select Logos",
       "description": "logo design, branding, identity",
+      "baseURL": "images/projects/logos/",
       "images": [
         {
           "src": "Logos_01-Maglio.jpg",
@@ -111,6 +115,7 @@
     {
       "title": "Editorial Graphics",
       "description": "illustration, infographics, typography, photo manipulation",
+      "baseURL": "images/projects/editorial_graphics/",
       "images": [
         {
           "src": "Edit_01-Booze.jpg",
