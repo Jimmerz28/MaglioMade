@@ -61,6 +61,54 @@ header
 	}
 }
 
+#projectpage
+{
+	background-color: $someTanColor;
+	
+	& > header
+	{
+		opacity: 1;
+		position: relative;
+	}
+	
+	.title, .backNav
+	{
+		text-align: center;
+		padding: 4em 0;
+		color: $someDarkGray;
+		margin: 0 auto;
+		width: 20em;
+		padding: 3em;
+	}
+	
+	.title
+	{
+		h1, h2
+		{
+			padding: 0;
+			margin: 0;
+		}
+		
+		h1
+		{
+			padding: .5em;
+		}
+		
+		h2
+		{
+			font-weight: normal;
+			font-size: 14pt;
+		}
+		
+		border-bottom: $someOrange 2px solid;
+	}
+	
+	svg
+	{
+		fill: $someDarkGray;
+	}
+}
+
 section, header > div, header
 {
 	display: flex;
@@ -461,6 +509,29 @@ a[href*=".pdf"]
 	margin-left: 1em;
 }
 
+.backNav
+{
+	border-top: $someOrange 2px solid;
+	
+	img
+	{
+		vertical-align: middle;
+		padding-right: 1.5em;
+	}
+}
+
+.pictures
+{
+	padding: 3em 0;
+	text-align: center;
+	
+	img
+	{
+		width: 1024px;
+		padding: 1em 0;
+	}
+}
+
 .obfusc
 {
 	display: none;
@@ -538,13 +609,13 @@ svg.activeIndicator rect
 
 .columnFlex
 {
-       flex-direction: column;
-       width: 725px;
-       font-size: 1.2em;
-       align-items: stretch !important;
-
-       & p:first-of-type
-       {
-               margin-bottom: 1em;
-       }
+	flex-direction: column;
+	width: 725px;
+	font-size: 1.2em;
+	align-items: stretch !important;
+	
+	& p:first-of-type
+	{
+		margin-bottom: 1em;
+	}
 }
