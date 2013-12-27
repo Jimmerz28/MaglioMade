@@ -1,0 +1,172 @@
+{
+  "pages": [
+    {
+      "title": "The Crosby Press",
+      "description": "web, mobile & email design",
+      "images": [
+        {
+          "src": "Crosby_01-Concept.jpg",
+          "hoverTitle": "The Crosby Press Desktop Concept",
+          "hoverSubtitle": "view larger image",
+          "url": "Crosby_01-Concept.jpg"
+        },
+        {
+          "src": "Crosby_02-Desktop.jpg",
+          "hoverTitle": "Current Desktop Design",
+          "hoverSubtitle": "view live site",
+          "url": "www.thecrosbypress.com"
+        },
+        {
+          "src": "Crosby_03-Mobile.jpg",
+          "hoverTitle": "Current Mobile Design",
+          "hoverSubtitle": "view live site",
+          "url": "www.thecrosbypress.com"
+        },
+        {
+          "src": "Crosby_04-Email.jpg",
+          "hoverTitle": "Current Email Design",
+          "hoverSubtitle": "view larger image",
+          "url": "Crosby_04-Email.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Iconography",
+      "description": "illustration, typography",
+      "images": [
+        {
+          "src": "Icons_01-Fall.jpg",
+          "hoverTitle": "Supercompressor – Fall Vices",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.supercompressor.com/vice/fall-winter-drinking-essentials-bitter-warmth-supercompressor-com"
+        },
+        {
+          "src": "Icons_02-Best.jpg",
+          "hoverTitle": "Thrillist – Best Fall Beers",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/drink/new-york/best-fall-beers-in-nyc"
+        },
+        {
+          "src": "Icons_03-Cold.jpg",
+          "hoverTitle": "Supercompressor – Cold Weather Running",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.supercompressor.com/gear/cold-weather-running-essentials-for-men-running-outdoors-in-rain-snow"
+        },
+        {
+          "src": "Icons_04-Taste.jpg",
+          "hoverTitle": "Thrillist – Taste Test",
+          "hoverSubtitle": "view live articles",
+          "url": "http://www.thrillist.com/taste-test"
+        },
+        {
+          "src": "Icons_05-Grooming.jpg",
+          "hoverTitle": "Supercompressor – Grooming Guide",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.supercompressor.com/gear/8-all-natural-cold-weather-grooming-essentials"
+        },
+        {
+          "src": "Icons_06-Sample.jpg",
+          "hoverTitle": "Thrillist – Article Watermarks",
+          "hoverSubtitle": "view larger image",
+          "url": "Icons_06-Sample.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Supercompressor",
+      "description": "web design",
+      "images": [
+        {
+          "src": "SC_01-Concept.jpg",
+          "hoverTitle": "Supercompressor Web Concept",
+          "hoverSubtitle": "view larger image",
+          "url": "SC_01-Concept.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Select Logos",
+      "description": "logo design, branding, identity",
+      "images": [
+        {
+          "src": "Logos_01-Maglio.jpg",
+          "hoverTitle": "MaglioMade",
+          "hoverSubtitle": "view larger image",
+          "url": "Logos_01-Maglio.jpg"
+        },
+        {
+          "src": "Logos_02-Super.jpg",
+          "hoverTitle": "Supercompressor",
+          "hoverSubtitle": "view larger image",
+          "url": "Logos_02-Super.jpg"
+        },
+        {
+          "src": "Logos_03-Enerkem.jpg",
+          "hoverTitle": "Enerkem",
+          "hoverSubtitle": "view larger image",
+          "url": "Logos_03-Enerkem.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Editorial Graphics",
+      "description": "illustration, infographics, typography, photo manipulation",
+      "images": [
+        {
+          "src": "Edit_01-Booze.jpg",
+          "hoverTitle": "Red, White & Booze",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/drink/nation/red-white-and-booze-mapping-all-50-states-most-iconic-beerhooch"
+        },
+        {
+          "src": "Edit_02-Fridge.jpg",
+          "hoverTitle": "Food Expiration Infographic",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/nation/how-long-do-things-in-your-fridge-stay-good-after-their-expiration-dates"
+        },
+        {
+          "src": "Edit_03-Food.jpg",
+          "hoverTitle": "Banned Foods Infographic",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/nation/foods-illegal-in-the-united-states-of-america-thrillist-nation"
+        },
+        {
+          "src": "Edit_04-Office.jpg",
+          "hoverTitle": "Thrillist Travel – Article Lead",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/travel/nation/travel-to-the-most-remote-places-on-earth-thrillist-nation"
+        },
+        {
+          "src": "Edit_05-Chicago.jpg",
+          "hoverTitle": "Chicago Pork Infographic",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/chicago/best-pork-dishes-in-chicago-your-chicago-nose-to-tail-pork-guide"
+        }
+      ]
+    },
+    {
+      "title": "Print Designs",
+      "description": "",
+      "images": [
+        {
+          "src": "Print_01-Craftsman.jpg",
+          "hoverTitle": "Craftsman – Print Ad",
+          "hoverSubtitle": "view larger image",
+          "url": "Print_01-Craftsman.jpg"
+        },
+        {
+          "src": "Print_02-Bodum.jpg",
+          "hoverTitle": "Bodum – Print Ad",
+          "hoverSubtitle": "view larger image",
+          "url": "Print_02-Bodum.jpg"
+        },
+        {
+          "src": "Print_03-Enerkem.jpg",
+          "hoverTitle": "Enerkem – Print Ad",
+          "hoverSubtitle": "view larger image",
+          "url": "Print_03-Enerkem.jpg"
+        }
+      ]
+    }
+  ]
+}
