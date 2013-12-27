@@ -12,13 +12,18 @@ function createFile(singlePage, dir)
         var filename = (singlePage.title).toLowerCase();
         filename = filename.replace(/ /g,"_");
         
+        if ( !fs.existsSync(dir) )
+        {
+            fs.mkdirSync(dir);
+        }
+        
         fs.writeFile( dir + "/" + filename + ".html", html);
     });
 }
 
 var jade = require("jade");
 var fs = require("fs");
-var dir = "src/projects";
+var dir = "projects";
 var projects = fs.readFileSync("templates/config.json", "utf-8");
 projects = JSON.parse(projects);
 
