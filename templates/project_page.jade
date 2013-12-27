@@ -3,10 +3,24 @@ html(lang="en")
     head
         meta(charset="utf-8")
         title Maglio Made
-        link(rel="stylesheet", href="css/mm.css")
+        link(rel="stylesheet", href="../css/mm.css")
     body(id="projectpage")
         header
             div
                 img(src="images/magliomade-logo-icon.svg", alt="logo")
         hgroup
             h1 #{page.title}
+            p #{page.description}
+        section(class="pictures")
+            div
+                each pic in page.images
+                    img(src="../" + page.baseURL + pic.src, alt=pic.hoverTitle)
+        div(class="backNav")
+            a(href="index.html#work")
+                img(src="images/back-arrow.svg", alt="Back Arrow")
+        footer
+            div
+                img(src="images/footerLogo.svg", alt="Footer Logo")
+                p Copyright &copy; 2013 Mitchell Maglio 
+                    span |
+                special thanks to Jim Holby
