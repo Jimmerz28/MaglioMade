@@ -367,15 +367,7 @@ img[alt="logo"]
 				
 				a
 				{		
-					color: $someDarkGray;
-					opacity: .6;
-					font-style: italic;
-					margin-bottom: 20px;
-					
-					&::after
-					{
-						content: " >";
-					}
+					@include linkStyle;
 				}
 			}
 		}
@@ -396,8 +388,7 @@ img[alt="logo"]
 		
 		&:hover > img + div, img + div
 		{
-			transition: opacity .5s linear, margin .5s cubic-bezier(0.460, 0.155, 0.370, 1.355);
-			// transition-delay: .5s;
+			@include hoverTransition;
 		}
 	}
 }
@@ -594,8 +585,8 @@ a[href*=".pdf"]
 	
 	img
 	{
-		width: 1024px;
-		padding: 1em 0;
+		width: $projectImagesWidth;
+		height: $projectImageHeight;
 	}
 }
 
