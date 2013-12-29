@@ -14,9 +14,18 @@ html(lang="en")
         section(class="pictures")
             div
                 each pic in page.images
-                    img(src="../" + page.baseURL + pic.src, alt=pic.hoverTitle)
+                    div(class="projectImage")
+                        img(src="../" + page.baseURL + "medium/" + pic.src, alt=pic.hoverTitle)
+                        div
+                            h2 #{pic.hoverTitle}
+                            
+                            if ( (pic.url).match(/\.jpg/g) != null )
+                                a(href="../" + page.baseURL + "full/" + pic.url) #{pic.hoverSubtitle}
+                            else
+                                a(href=pic.url) #{pic.hoverSubtitle}
+                            
         div(class="backNav")
-            a(href="index.html#work") <img src="../images/back-arrow.svg" alt="Back Arrow" />Back to Work
+            a(href="../index.html#work") <img src="../images/back-arrow.svg" alt="Back Arrow" />Back to Work
         footer
             div
                 img(src="../images/footerLogo.svg", alt="Footer Logo")
