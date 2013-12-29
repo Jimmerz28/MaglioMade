@@ -261,6 +261,54 @@ img[alt="logo"]
 	cursor: pointer;
 }
 
+.projectImage
+{
+	width: $projectImagesWidth;
+	height: $projectImageHeight;
+	display: inline-block;
+	overflow: hidden;
+	margin: 1em 0;
+	
+	> div
+	{
+		text-align: left;
+		padding: 2em 1em;
+		position: relative;
+		background-color: $someOrange;
+		opacity: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		@include hoverTransition;
+		
+		h2
+		{
+			color: white;
+			font-weight: normal;
+		}
+		
+		a
+		{
+			@include linkStyle;
+		}
+		
+		h2, a
+		{
+			display: inline;
+			vertical-align: middle;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.projectImage:hover > div
+{
+	margin-top: -98px;
+	opacity: .95;
+}
+
 .workPreviews
 {
 	// Contains image and child div with paragraph and link
