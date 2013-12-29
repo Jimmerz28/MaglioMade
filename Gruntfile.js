@@ -109,7 +109,8 @@ module.exports = function(grunt)
 					{expand: true, src:["fonts/*"], dest: "src/"},
 					{src: ["index.html"], dest: "src/"},
 					{src:["js/jquery.min.js"], dest: "src/"},
-					{src:["submission.php", "Mailer.php"], dest: "src/"}
+					{src:["submission.php", "Mailer.php"], dest: "src/"},
+					{src:["projects/*"], dest: "src/"}
 				]
 			}
 		},
