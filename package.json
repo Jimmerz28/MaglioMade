@@ -21,6 +21,7 @@
     "grunt-htmlhint": "~0.4.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-jshint": "~0.7.2",
-    "grunt-s3-sync": "~0.4.1"
+    "grunt-s3": "~0.2.0-alpha.3",
+    "grunt-imagine": "~0.3.2"
   }
 }
