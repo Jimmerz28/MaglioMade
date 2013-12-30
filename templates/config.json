@@ -152,6 +152,7 @@
     {
       "title": "Print Designs",
       "description": "",
+      "baseURL": "images/projects/print/",
       "images": [
         {
           "src": "Print_01-Craftsman.jpg",
