@@ -11,6 +11,7 @@ $mountainHeight: 1170px;
 $projectImagesWidth: 1024px;
 $projectImageHeight: 576px;
 $workPreviewImagesSize: 270px;
+$placeHolderColor: #FFFFFF;
 
 @mixin linkStyle
 {
@@ -501,6 +502,12 @@ img[alt="logo"]
 		font-size: 18pt;
 		width: 100%;
 		margin-bottom: 20px;
+		outline: none;
+	}
+	
+	input:focus, textarea:focus
+	{
+		background-color: #8a8a8a;
 	}
 	
 	input
@@ -676,4 +683,23 @@ svg.activeIndicator rect
 	{
 		margin-bottom: 1em;
 	}
+}
+
+// Color the placeholders
+*::-webkit-input-placeholder 
+{
+	color: $placeHolderColor;
+}    
+
+*::-moz-placeholder 
+{
+	/* FF 19+ */
+	color: $placeHolderColor;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder 
+{
+	/* IE 10+ */
+	color: $placeHolderColor;
 }
