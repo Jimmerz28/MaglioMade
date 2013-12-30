@@ -40,7 +40,7 @@ module.exports = function(grunt)
 				options:
 				{
 					optimizationLevel: 7,
-					
+					progressive: true
 				},
 				files:
 				[{
@@ -107,10 +107,9 @@ module.exports = function(grunt)
 				files:
 				[
 					{expand: true, src:["fonts/*"], dest: "src/"},
-					{src: ["index.html"], dest: "src/"},
 					{src:["js/jquery.min.js"], dest: "src/"},
 					{src:["submission.php", "Mailer.php"], dest: "src/"},
-					{src:["projects/*"], dest: "src/"}
+					{src:["projects/*.html"], dest: "src/"}
 				]
 			}
 		},
@@ -122,7 +121,7 @@ module.exports = function(grunt)
 				{
 					"tag-pair": true
 				},
-				src: ["index.html"]
+				src: ["index.html", "projects/*.html"]
 			}
 		},
 		jshint:
@@ -159,28 +158,30 @@ module.exports = function(grunt)
 				}
 			}
 		},
-		"s3-sync":
+		s3:
 		{
 			options:
 			{
-				key: "<%= aws.key %>",
-				secret: "<%= aws.secret %>",
-				bucket: "<%= aws.bucket %>",
+				key: '<%= aws.key %>',
+				secret: '<%= aws.secret %>',
+				bucket: '<%= aws.bucket %>',
+				access: 'public-read',
 				headers:
 				{
 					// 30 Day Cache Policy
 					"Cache-Control": "max-age=2678400, public",
 					"Expires": new Date(Date.now() + 2678400).toUTCString()
-				}
+				},
+				gzip: true
 			},
 			prod:
 			{
-				files:
+				upload:
 				[
 					{
-						root: "src/",
-						src: "/**",
-						dest: "/"
+						src: "src/**/*.*",
+						dest: "/",
+						rel: "src"
 					}
 				]
 			}
@@ -233,9 +234,10 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks("grunt-s3-sync");
+	grunt.loadNpmTasks('grunt-s3');
+	grunt.loadNpmTasks('grunt-imagine');
 	
 	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
-	grunt.registerTask("deploy", "s3-sync");
+	grunt.registerTask("deploy", "s3:prod");
 
 };
