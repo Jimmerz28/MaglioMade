@@ -16,6 +16,7 @@ $placeHolderColor: #FFFFFF;
 {
 	color: $someDarkGray;
 	opacity: .6;
+	font-weight: 300;
 	font-style: italic;
 	margin-bottom: 20px;
 	
@@ -128,7 +129,7 @@ header
 		
 		h2
 		{
-			font-weight: normal;
+			font-weight: 300;
 			font-size: 14pt;
 		}
 		
@@ -296,7 +297,7 @@ img[alt="logo"]
 		h2
 		{
 			color: white;
-			font-weight: normal;
+			font-weight: 300;
 		}
 		
 		a
@@ -316,7 +317,7 @@ img[alt="logo"]
 
 .projectImage:hover > div
 {
-	margin-top: -97px;
+	margin-top: -93px;
 	opacity: .95;
 }
 
