@@ -106,7 +106,6 @@ module.exports = function(grunt)
 			{
 				files:
 				[
-					{expand: true, src:["fonts/*"], dest: "src/"},
 					{src:["js/jquery.min.js"], dest: "src/"},
 					{src:["submission.php", "Mailer.php"], dest: "src/"},
 					{src:["projects/*.html"], dest: "src/"}
