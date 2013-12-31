@@ -614,7 +614,7 @@ a[href*=".pdf"]
 	cursor: pointer;
 }
 
-.rightArrow:hover, .leftArrow:hover, a[href*=".pdf"]:hover, input[type="submit"]:hover
+.rightArrow:hover, .leftArrow:hover, a[href*=".pdf"]:hover, input[type="submit"]:hover, div.backNav a:hover img
 {
 	opacity: .75;
 }
