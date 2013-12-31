@@ -1,5 +1,4 @@
 @import 'bourbon';
-@include font-face(NewsGothic, "../fonts/nwgthc", normal, normal);
 
 $someOrange: #D59029;
 $someTanColor: #E6E2D0;
@@ -31,11 +30,20 @@ $placeHolderColor: #FFFFFF;
 	transition: opacity .5s linear, margin .5s linear
 }
 
+@mixin headerCommon
+{
+	height: 100px;
+	background-color: rgba(255,255,255,.75);
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+}
+
 html, body, p, h1
 {
 	padding: 0;
 	margin: 0;
-	font-family: NewsGothic;
+	font-family: 'Open Sans', sans-serif;
 }
 
 html, body
@@ -73,7 +81,10 @@ header
 	{
 		border-bottom: 2px $someOrange solid;
 	}
-	
+}
+
+header
+{
 	img
 	{
 		width: 94px;
@@ -155,7 +166,6 @@ footer
 {
 	height: 100px;
 	background-color: $anotherLightGray;
-	font-family: NewsGothic;
 	
 	display: flex;
 	flex-direction: row;
@@ -339,7 +349,7 @@ img[alt="logo"]
 			background-color: white;
 			height: $workPreviewImagesSize;
 			width: $workPreviewImagesSize;
-			margin-top: -$workPreviewImagesSize - 4px;
+			margin-top: -$workPreviewImagesSize - 5px;
 			
 			> div
 			{
@@ -497,7 +507,7 @@ img[alt="logo"]
 	{
 		border: none;
 		color: white;
-		font-family: NewsGothic;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 18pt;
 		width: 100%;
 		margin-bottom: 20px;
