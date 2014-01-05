@@ -11,6 +11,7 @@ $projectImagesWidth: 1024px;
 $projectImageHeight: 576px;
 $workPreviewImagesSize: 270px;
 $placeHolderColor: #FFFFFF;
+$headerHeight: 100px;
 
 @mixin linkStyle
 {
@@ -33,7 +34,7 @@ $placeHolderColor: #FFFFFF;
 
 @mixin headerCommon
 {
-	height: 100px;
+	height: $headerHeight;
 	background-color: rgba(255,255,255,.75);
 	position: fixed;
 	z-index: 5;
@@ -61,8 +62,8 @@ a:link, a:hover, a:active, a:visited
 body:not(#projectpage) header
 {
 	@include headerCommon;
-	@include transition (opacity .2s ease-in);
-	opacity: 0;
+	margin-top: -$headerHeight;
+	transition: margin .4s linear;
 	
 	a:link, a:active, a:visited
 	{
