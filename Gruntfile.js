@@ -173,14 +173,15 @@ module.exports = function(grunt)
 				},
 				gzip: true
 			},
-			prod:
+			sync:
 			{
 				upload:
 				[
 					{
 						src: "src/**/*.*",
 						dest: "/",
-						rel: "src"
+						rel: "src",
+						options: { verify: true }
 					}
 				]
 			}
