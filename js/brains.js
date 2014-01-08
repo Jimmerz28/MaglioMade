@@ -173,25 +173,26 @@ var pastPoint = false;
 
 $(document).on("scroll", function()
 {
-	if ( $(this).scrollTop() > 100 && pastPoint === false )
-	{
-		$("header").addClass("fadeItBack");
-		
-		$("#initial").fadeOut(200, function()
+	var mustScroll = 500;
+	var fadeTime = 500;
+	
+	if ( $(this).scrollTop() > mustScroll && pastPoint === false )
+	{		
+		$("#initial").fadeOut(fadeTime, function()
 		{
-			$("#initial + div").fadeIn(200);
+			$("#initial + div").fadeIn(fadeTime);
+			$("header").addClass("bringItBack");
 		});
 		
 		pastPoint = true;
 	}
 	
-	if ( $(this).scrollTop() < 100 && pastPoint === true )
+	if ( $(this).scrollTop() < mustScroll && pastPoint === true )
 	{
-		$("header").removeClass();
-		
-		$("#initial + div").fadeOut(200, function()
+		$("#initial + div").fadeOut(fadeTime, function()
 		{
-			$("#initial").fadeIn(200);
+			$("#initial").fadeIn(fadeTime);
+			$("header").removeClass();
 		});
 		
 		pastPoint = false;

@@ -161,10 +161,10 @@ module.exports = function(grunt)
 		{
 			options:
 			{
-				key: '<%= aws.key %>',
-				secret: '<%= aws.secret %>',
-				bucket: '<%= aws.bucket %>',
-				access: 'public-read',
+				key: "<%= aws.key %>",
+				secret: "<%= aws.secret %>",
+				bucket: "<%= aws.bucket %>",
+				access: "public-read",
 				headers:
 				{
 					// 30 Day Cache Policy
@@ -175,7 +175,7 @@ module.exports = function(grunt)
 			},
 			sync:
 			{
-				upload:
+				sync:
 				[
 					{
 						src: "src/**/*.*",
