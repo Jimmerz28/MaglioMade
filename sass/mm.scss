@@ -165,7 +165,7 @@ section
 		color: $someOrange;
 		padding: 15px 45px 15px 15px;
 		width: 100px;
-		margin-bottom: 90px;
+		margin-bottom: 86px;
 		text-transform: lowercase;
 	}
 }
@@ -260,8 +260,14 @@ footer
 {
 	background-color: $someTanColor;
 	height: 793px;
-	padding-bottom: 33px;
+	padding-bottom: 150px - 53;
 		
+		
+	h1
+	{
+		margin-bottom: 86px - 17;
+	}
+	
 	.central > div
 	{
 		margin-left: -22px;
@@ -414,7 +420,7 @@ img[alt="logo"]
 #resume
 {
 	background-color: $someLightGray;
-	padding-bottom: 63px;
+	padding-bottom: 168px;
 	
 	h1
 	{
@@ -471,7 +477,7 @@ img[alt="logo"]
 {
 	background-color: $someDarkGray;
 	color: white;
-	padding-bottom: 70px;
+	padding-bottom: 130px;
 	
 	h3
 	{
