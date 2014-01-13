@@ -297,7 +297,7 @@ img[alt="logo"]
 	> div
 	{
 		text-align: left;
-		padding: 2em 1em;
+		padding: 30px 1em;
 		position: relative;
 		background-color: $someOrange;
 		opacity: 0;
@@ -330,7 +330,7 @@ img[alt="logo"]
 
 .projectImage:hover > div
 {
-	margin-top: -93px;
+	margin-top: -89px;
 	opacity: .95;
 }
 
