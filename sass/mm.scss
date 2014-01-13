@@ -563,7 +563,7 @@ img[alt="logo"]
 	}
 }
 
-.innerCircle > div
+.innerCircle > div:first-of-type
 {
 	display: flex;
 	flex-direction: column;
