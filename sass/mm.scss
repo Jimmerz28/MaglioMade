@@ -407,7 +407,6 @@ img[alt="logo"]
 		{
 			background-color: $someOrange;
 			color: white;
-			// margin-left: -$workPreviewImagesSize;
 			overflow: hidden;
 		}
 		
@@ -492,7 +491,7 @@ img[alt="logo"]
 		font-size: 18pt;
 		font-weight: 100;
 		font-style: normal;
-		margin: -.5em 0 0;
+		margin: -.4em 0 0 0;
 		line-height: 32pt;
 		
 		& > span
@@ -512,11 +511,6 @@ img[alt="logo"]
 	{
 		width: 22em;
 		line-height: 18pt;
-		
-		&:first-of-type
-		{
-			margin: 2em 0 2em 0;
-		}
 	}
 	
 	input:not([type="submit"]), textarea
@@ -560,14 +554,6 @@ img[alt="logo"]
 		{
 			flex: 0 0 50%;
 		}
-		
-		.innerCircle
-		{
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			justify-content: space-between;
-		}
 	}
 	
 	input[type="text"], input[type="email"], textarea
@@ -576,11 +562,16 @@ img[alt="logo"]
 	}
 }
 
-#socials
+.innerCircle > div
 {
-	margin-top: 3em;
-	margin-bottom: 1.25em;
-	
+	display: flex;
+	flex-direction: column;
+	height: 480px;
+	justify-content: space-between;	
+}
+
+#socials
+{	
 	svg
 	{
 		margin-right: 20px;
