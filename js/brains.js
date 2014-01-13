@@ -177,7 +177,7 @@ $(document).on("scroll", function()
 	var fadeTime = 500;
 	
 	if ( $(this).scrollTop() > mustScroll && pastPoint === false )
-	{		
+	{
 		$("#initial").fadeOut(fadeTime, function()
 		{
 			$("#initial + div").fadeIn(fadeTime);
