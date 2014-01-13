@@ -238,6 +238,6 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks('grunt-imagine');
 	
 	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
-	grunt.registerTask("deploy", "s3:prod");
+	grunt.registerTask("deploy", "s3");
 
 };
