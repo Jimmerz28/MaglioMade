@@ -12,6 +12,7 @@ $projectImageHeight: 576px;
 $workPreviewImagesSize: 270px;
 $placeHolderColor: #FFFFFF;
 $headerHeight: 100px;
+$transitionSpeed: .25s;
 
 @mixin linkStyle
 {
@@ -29,7 +30,7 @@ $headerHeight: 100px;
 
 @mixin hoverTransition
 {
-	transition: opacity .5s linear, margin .5s linear
+	transition: opacity $transitionSpeed linear, margin $transitionSpeed linear
 }
 
 @mixin headerCommon
