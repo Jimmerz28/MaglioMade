@@ -1,10 +1,12 @@
 <?php
 
 	require_once 'Mailer.php';
-	
-	if ( isset($_POST["json"]) || !json_decode($_POST["json"]) )
+
+	if ( (!isset($_POST["json"])) || (!json_decode($_POST["json"])) )
 	{
-		echo '{"error": "Invalid JSON string."}';
+		header("Access-Control-Allow-Origin: *");
+		header('Content-Type: application/json; charset=utf8');
+		echo json_encode(array("error" => "Invalid JSON string."));
 		return;
 	}
 	
@@ -12,7 +14,9 @@
 	
 	if ( !isset($checkEm->name, $checkEm->email, $checkEm->message) )
 	{
-		echo '{"error": "Missing required field."}';
+		header("Access-Control-Allow-Origin: *");
+		header('Content-Type: application/json; charset=utf8');
+		echo json_encode(array("error" => "Missing required field."));
 		return;
 	}
 	
@@ -24,7 +28,7 @@
 	
 	$mailer->subject = "MaglioMade Email";
 	
-	$headers = "From: maglio@trollin.pro" . "\r\n";
+	$headers = "From: noreply@magliomade.com" . "\r\n";
 	$headers .= "Content-Type: text/plain";
 	
-	echo $mailer->send("jamesdholby@gmail.com", $headers);
+	echo $mailer->send("mitchell.w.maglio@gmail.com", $headers);

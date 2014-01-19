@@ -61,28 +61,34 @@
 		
 		public function send($sender, $headers)
 		{
-			$status = '{"status": 49}';
+			header("Access-Control-Allow-Origin: *");
+			header('Content-Type: application/json; charset=utf8');
+			$status = json_encode(array("status" => 49));
 			
 			if ( !isset($this->message) )
 			{
-				$status = '{"error": "Message cannot be empty"}';
+				$status = json_encode(array("error" => "Message cannot be empty"));
 			}
 			
 			if ( !isset($this->subject) )
 			{
-				$status = '{"error":"Subject cannot be empty!"}';
+				$status = json_encode(array("error" => "Subject cannot be empty"));
 			}
 			
 			if ( !$this->isBotFieldPopulated() )
 			{
 				if ( mail($sender, $this->subject, $this->message, $headers) )
 				{
-					$status = '{"status": 61}';
+					header("Access-Control-Allow-Origin: *");
+					header('Content-Type: application/json; charset=utf8');
+					$status = json_encode(array("status" => 61));
 				}
 				
 				else
 				{
-					$status = '{"status": 95}';
+					header("Access-Control-Allow-Origin: *");
+					header('Content-Type: application/json; charset=utf8');
+					$status = json_encode(array("status" => 95));
 				}
 			}
 			
