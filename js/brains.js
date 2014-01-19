@@ -155,15 +155,17 @@ $(document).ready(function()
 		$.ajax(
 		{
 			type: "POST",
-			url: "submission.php",
+			url: "http://default-environment-vm8rc3r2i7.elasticbeanstalk.com/submission.php",
 			data: {json: serializeForm(this)}
 		})
 		.done(function( msg )
 		{
+			console.log( msg.status );
+			
 			// TODO Hide the form & confirmation
 			if ( msg.status === 61 )
 			{
-				$("form").hide();
+				$("form").parent().html("<p>Thanks! I'll get back to you soon!</p>").addClass("mailConfirm");
 			}
 		});
 	});
