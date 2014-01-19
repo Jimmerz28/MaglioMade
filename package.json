@@ -22,6 +22,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-jshint": "~0.7.2",
     "grunt-s3": "~0.2.0-alpha.3",
-    "grunt-imagine": "~0.3.2"
+    "grunt-imagine": "~0.3.2",
+    "grunt-phplint": "0.0.5"
   }
 }
