@@ -28,7 +28,7 @@
 	
 	$mailer->subject = "MaglioMade Email";
 	
-	$headers = "From: noreply@magliomade.com" . "\r\n";
+	$headers = "From: " . $_SERVER["mailfrom"] . "\r\n";
 	$headers .= "Content-Type: text/plain";
 	
-	echo $mailer->send("mitchell.w.maglio@gmail.com", $headers);
+	echo $mailer->send($_SERVER["mailto"], $headers);
