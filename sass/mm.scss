@@ -15,6 +15,14 @@ $headerHeight: 100px;
 $transitionSpeed: .25s;
 $childPageHeaderSpacing: 60px;
 
+@mixin permaUnderline
+{
+	padding-bottom: 5px;
+	border-bottom: 2px $someOrange solid;
+	padding-right: 14px;
+	color: white !important;
+}
+
 @mixin linkStyle
 {
 	color: $someDarkGray;
@@ -596,6 +604,19 @@ a[href*=".pdf"]
 	margin-left: 1em;
 }
 
+.mailConfirm
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	p
+	{
+		@include permaUnderline;
+		font-size: 16pt;
+	}
+}
+
 .backNav
 {
 	border-top: $someOrange 2px solid;
@@ -688,10 +709,7 @@ svg.activeIndicator rect
 
 .permaUnderline
 {
-	padding-bottom: 5px;
-	border-bottom: 2px $someOrange solid;
-	padding-right: 14px;
-	color: white !important;
+	@include permaUnderline;
 }
 
 .columnFlex
