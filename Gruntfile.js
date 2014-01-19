@@ -107,8 +107,9 @@ module.exports = function(grunt)
 				files:
 				[
 					{src:["js/jquery.min.js"], dest: "src/"},
-					{src:["submission.php", "Mailer.php"], dest: "src/"},
-					{src:["projects/*.html"], dest: "src/"}
+					{src:["projects/*.html"], dest: "src/"},
+					{src:["index.html"], dest: "src/"},
+					{src:["resume/*.pdf"], dest: "src/"}
 				]
 			}
 		},
@@ -173,7 +174,7 @@ module.exports = function(grunt)
 				},
 				gzip: true
 			},
-			sync:
+			dist:
 			{
 				sync:
 				[
@@ -234,10 +235,11 @@ module.exports = function(grunt)
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-	grunt.loadNpmTasks('grunt-s3');
-	grunt.loadNpmTasks('grunt-imagine');
+	grunt.loadNpmTasks("grunt-s3");
+	grunt.loadNpmTasks("grunt-imagine");
+	grunt.loadNpmTasks("grunt-phplint");
 	
 	grunt.registerTask("default", ["svgmin","uglify:dist","imagemin","sass:dist","htmlhint","jshint:brains","copy"]);
-	grunt.registerTask("deploy", "s3");
+	grunt.registerTask("deploy", "s3:dist");
 
 };
