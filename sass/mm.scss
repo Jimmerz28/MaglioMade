@@ -23,6 +23,13 @@ $childPageHeaderSpacing: 60px;
 	color: white !important;
 }
 
+@mixin centerShit
+{
+	@include display(flex);
+	@include justify-content(center);
+	@include align-items(center);
+}
+
 @mixin linkStyle
 {
 	color: $someDarkGray;
@@ -161,14 +168,12 @@ header
 
 section, header > div, header
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include centerShit;
 }
 
 section
 {
-	flex-direction: column;
+	@include flex-direction(column);
 	
 	h1
 	{
@@ -187,15 +192,13 @@ footer
 	height: 100px;
 	background-color: $anotherLightGray;
 	
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	@include centerShit;
+	@include flex-direction(row);
 	
 	> div
 	{
-		display: flex;
-		align-items: center;
+		@include display(flex);
+		@include align-items(center);
 	}
 	
 	p
@@ -217,7 +220,7 @@ footer
 	background-image: url("../images/Mt-Hood-Gotham.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: $mountainHeight;
+	// height: $mountainHeight;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -255,15 +258,15 @@ footer
 
 #initial
 {
-	display: flex;
-	flex-display: row;
-	align-items: center;
+	@include display(flex);
+	@include flex-direction(row);
+	@include align-items(center);
 }
 
 .central
 {
-	display: flex;
-	flex-direction: column;
+	@include display(flex);
+	@include flex-direction(column);
 	background-color: inherit;
 	width: 900px;
 }
@@ -285,10 +288,6 @@ footer
 		margin-left: -22px;
 		margin-right: -44px;
 		margin-bottom: 90px;
-		
-		// Have to wait til flex-wrap shit is supported in FF
-		// flex-flow: row wrap;
-		// display: flex;
 	}
 }
 
@@ -311,16 +310,18 @@ img[alt="logo"]
 	
 	> div
 	{
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include align-items(center);
+		@include hoverTransition;
+		
 		text-align: left;
 		padding: 30px 1em;
 		position: relative;
 		background-color: $someOrange;
 		opacity: 0;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		@include hoverTransition;
+		
 		
 		h2
 		{
@@ -383,11 +384,12 @@ img[alt="logo"]
 			
 			> div
 			{
+				@include display(flex);
+				@include flex-direction(column);
+				@include justify-content(space-between);
+			
 				padding: 20px;
 				height: $workPreviewImagesSize - 20px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
 				
 				h2
 				{
@@ -472,9 +474,9 @@ img[alt="logo"]
 	}
 	
 	& > div:first-of-type
-	{
-		display: flex;
-		align-items: center;
+	{	
+		@include display(flex);
+		@include align-items(center);
 		
 		> div
 		{
@@ -555,13 +557,13 @@ img[alt="logo"]
 	}
 	
 	.central > div
-	{
-		display: flex;
-		flex-direction: row;
+	{		
+		@include display(flex);
+		@include flex-direction(row);
 		
 		> div
 		{
-			flex: 0 0 50%;
+			@include flex(0 0 50%);
 		}
 	}
 	
@@ -572,11 +574,12 @@ img[alt="logo"]
 }
 
 .innerCircle > div:first-of-type
-{
-	display: flex;
-	flex-direction: column;
+{	
+	@include display(flex);
+	@include justify-content(space-between);
+	@include flex-direction(column);
+	
 	height: 480px;
-	justify-content: space-between;	
 }
 
 #socials
@@ -611,10 +614,8 @@ a[href*=".pdf"]
 }
 
 .mailConfirm
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+{	
+	@include centerShit;
 	
 	p
 	{
@@ -721,10 +722,10 @@ svg.activeIndicator rect
 
 .columnFlex
 {
-	flex-direction: column;
+	@include flex-direction(column);
+	@include align-items(stretch);
 	width: 725px;
 	font-size: 1.2em;
-	align-items: stretch !important;
 	
 	& p:first-of-type
 	{
