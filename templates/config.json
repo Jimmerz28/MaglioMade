@@ -7,33 +7,101 @@
       "images": [
         {
           "src": "Crosby_01-Concept.jpg",
-          "hoverTitle": "The Crosby Press Desktop Concept",
+          "hoverTitle": "The Crosby Press Homepage Concept",
           "hoverSubtitle": "view larger image",
           "url": "Crosby_01-Concept.jpg"
         },
         {
+          "src": "Crosby_01B-Concept.jpg",
+          "hoverTitle": "The Crosby Press Article Concept",
+          "hoverSubtitle": "view larger image",
+          "url": "Crosby_01B-Concept.jpg"
+        },
+        {
           "src": "Crosby_02-Desktop.jpg",
-          "hoverTitle": "Current Desktop Design",
+          "hoverTitle": "Original Desktop Design",
           "hoverSubtitle": "view live site",
           "url": "http://www.thecrosbypress.com"
         },
         {
           "src": "Crosby_03-Mobile.jpg",
-          "hoverTitle": "Current Mobile Design",
+          "hoverTitle": "Original Mobile Design",
           "hoverSubtitle": "view live site",
           "url": "http://www.thecrosbypress.com"
         },
         {
           "src": "Crosby_04-Email.jpg",
-          "hoverTitle": "Current Email Design",
+          "hoverTitle": "Original Email Design",
           "hoverSubtitle": "view larger image",
           "url": "Crosby_04-Email.jpg"
         }
       ]
     },
     {
+      "title": "Web Design",
+      "description": "product design, webpage layout & email design",
+      "baseURL": "images/projects/web_design/",
+      "images": [
+        {
+          "src": "WD_01-Concept.jpg",
+          "hoverTitle": "Supercompressor Homepage Concept",
+          "hoverSubtitle": "view larger image",
+          "url": "WD_01-Concept.jpg"
+        },
+        {
+          "src": "WD_02-FullGallery.jpg",
+          "hoverTitle": "Thrillist Full Screen Gallery",
+          "hoverSubtitle": "view larger image",
+          "url": "WD_02-FullGallery.jpg"
+        },
+        {
+          "src": "WD_03-Recycle.jpg",
+          "hoverTitle": "Recycle Surge Website",
+          "hoverSubtitle": "view live site",
+          "url": "http://www.recyclesurge.com"
+        }
+      ]
+    },
+    {
+      "title": "Infographics",
+      "description": "layout, illustration & typography",
+      "baseURL": "images/projects/infographics/",
+      "images": [
+        {
+          "src": "Info_01-Booze.jpg",
+          "hoverTitle": "Red, White & Booze",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/drink/nation/red-white-and-booze-mapping-all-50-states-most-iconic-beerhooch"
+        },
+        {
+          "src": "Info_02-McDonalds.jpg",
+          "hoverTitle": "Historical Timeline of the McDonald's Menu",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/nation/a-historical-timeline-of-everything-on-the-mcdonald-s-menu-thrillist-nation"
+        },
+        {
+          "src": "Info_03-Fridge.jpg",
+          "hoverTitle": "Food Expiration Infographic",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/nation/how-long-do-things-in-your-fridge-stay-good-after-their-expiration-dates"
+        },
+        {
+          "src": "Info_04-Banned.jpg",
+          "hoverTitle": "Banned Foods Infographic",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/nation/foods-illegal-in-the-united-states-of-america-thrillist-nation"
+        },
+        {
+          "src": "Info_05-Chicago.jpg",
+          "hoverTitle": "Chicago Pork Infographic",
+          "hoverSubtitle": "view live article",
+          "url": "http://www.thrillist.com/eat/chicago/best-pork-dishes-in-chicago-your-chicago-nose-to-tail-pork-guide"
+        }
+      ]
+    },
+    {
       "title": "Iconography",
-      "description": "illustration, typography",
+      "description": "illustration & typography",
       "baseURL": "images/projects/iconography/",
       "images": [
         {
@@ -75,6 +143,31 @@
       ]
     },
     {
+      "title": "Online Advertising",
+      "description": "layout, composition & typography",
+      "baseURL": "images/projects/online_advertising/",
+      "images": [
+        {
+          "src": "Adv_01-TL300.jpg",
+          "hoverTitle": "Thrillist Shops Banner",
+          "hoverSubtitle": "view larger image",
+          "url": "Adv_01-TL300.jpg"
+        },
+        {
+          "src": "Adv_02-TL970.jpg",
+          "hoverTitle": "Thrillist Shops Banner",
+          "hoverSubtitle": "view larger image",
+          "url": "Adv_02-TL970.jpg"
+        },
+        {
+          "src": "Adv_03-TLApp.jpg",
+          "hoverTitle": "Thrillist iPhone App Launch Banner",
+          "hoverSubtitle": "view larger image",
+          "url": "Adv_03-TLApp.jpg"
+        }
+      ]
+    },
+    {
       "title": "Supercompressor",
       "description": "web design",
       "baseURL": "images/projects/supercompressor/",
@@ -109,6 +202,12 @@
           "hoverTitle": "Enerkem",
           "hoverSubtitle": "view larger image",
           "url": "Logos_03-Enerkem.jpg"
+        },
+        {
+          "src": "Logos_04-TCP.jpg",
+          "hoverTitle": "The Crosby Press (refresh)",
+          "hoverSubtitle": "view larger image",
+          "url": "Logos_04-TCP.jpg"
         }
       ]
     },
@@ -118,34 +217,28 @@
       "baseURL": "images/projects/editorial_graphics/",
       "images": [
         {
-          "src": "Edit_01-Booze.jpg",
-          "hoverTitle": "Red, White & Booze",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/drink/nation/red-white-and-booze-mapping-all-50-states-most-iconic-beerhooch"
+          "src": "Edit_01-Gift.jpg",
+          "hoverTitle": "The Crosby Press Golden Rule Gifting",
+          "hoverSubtitle": "view larger image",
+          "url": "Edit_01-Gift.jpg"
         },
         {
-          "src": "Edit_02-Fridge.jpg",
-          "hoverTitle": "Food Expiration Infographic",
+          "src": "Edit_02-Nutella.jpg",
+          "hoverTitle": "Thrillist LA – Article Lead",
           "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/nation/how-long-do-things-in-your-fridge-stay-good-after-their-expiration-dates"
+          "url": "http://www.thrillist.com/eat/los-angeles/downtown/bow-down-to-the-nutella-pizza-thrillist-la"
         },
         {
-          "src": "Edit_03-Food.jpg",
-          "hoverTitle": "Banned Foods Infographic",
+          "src": "Edit_03-Timbers.jpg",
+          "hoverTitle": "Thrillist Portland – Article Lead",
           "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/nation/foods-illegal-in-the-united-states-of-america-thrillist-nation"
+          "url": "http://www.thrillist.com/entertainment/portland/the-10-worst-portland-timbers-fans"
         },
         {
           "src": "Edit_04-Office.jpg",
           "hoverTitle": "Thrillist Travel – Article Lead",
           "hoverSubtitle": "view live article",
           "url": "http://www.thrillist.com/travel/nation/travel-to-the-most-remote-places-on-earth-thrillist-nation"
-        },
-        {
-          "src": "Edit_05-Chicago.jpg",
-          "hoverTitle": "Chicago Pork Infographic",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/chicago/best-pork-dishes-in-chicago-your-chicago-nose-to-tail-pork-guide"
         }
       ]
     },
