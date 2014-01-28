@@ -133,7 +133,7 @@ $(document).ready(function()
 	// Hide the spam filter fields in the form
 	$("form > label, #address, #initial + div").addClass("obfusc");
 		
-	scrollEmDown($("header a"), 100, 500);
+	scrollEmDown($("header a, .slideLink"), 100, 500);
 	
 	// Create the reel and then initialize it
 	var reel = new ResumeReel(document.getElementById("resumeCopy"));
