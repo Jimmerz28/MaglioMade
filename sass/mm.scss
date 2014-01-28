@@ -615,6 +615,19 @@ a[href*=".pdf"]
 	margin-left: 1em;
 }
 
+.formSuccess
+{
+	input:not(.orangeButton), textarea
+	{
+		opacity: .2;
+	}
+	
+	input[type="submit"]
+	{
+		font-size: 14pt !important;
+	}
+}
+
 .specialWords
 {
 	color: #e6e2d0;

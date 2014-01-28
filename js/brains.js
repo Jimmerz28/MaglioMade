@@ -161,11 +161,12 @@ $(document).ready(function()
 		.done(function( msg )
 		{
 			console.log( msg.status );
-			
+		
 			// TODO Hide the form & confirmation
 			if ( msg.status === 61 )
 			{
-				$("form").parent().html("<p>Thanks! I'll get back to you soon!</p>").addClass("mailConfirm");
+				$("form").addClass("formSuccess");
+				$("input[value='Send It']").prop("value","Thanks! I'll get back to you soon");
 			}
 		});
 	});
