@@ -7,4 +7,4 @@ validation*.json
 src/*
 js/brains.min.js
 grunt-aws.json
-projects/
+/projects/*.html
