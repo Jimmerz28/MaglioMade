@@ -318,18 +318,23 @@ img[alt="logo"]
 	
 	> div
 	{
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(space-between);
-		@include align-items(center);
 		@include hoverTransition;
 		
 		text-align: left;
-		padding: 30px 1em;
 		position: relative;
 		background-color: $someOrange;
 		opacity: 0;
 		
+		a
+		{
+			@include display(flex);
+			@include flex-direction(row);
+			@include justify-content(space-between);
+			@include align-items(center);
+		
+			padding: 30px 1em;
+			height: 100%;
+		}
 		
 		h2
 		{
@@ -337,12 +342,12 @@ img[alt="logo"]
 			font-weight: 300;
 		}
 		
-		a
+		p
 		{
 			@include linkStyle;
 		}
 		
-		h2, a
+		h2, p
 		{
 			display: inline;
 			vertical-align: middle;

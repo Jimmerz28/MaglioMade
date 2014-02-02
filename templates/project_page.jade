@@ -18,12 +18,14 @@ html(lang="en")
                     div(class="projectImage")
                         img(src="../" + page.baseURL + "medium/" + pic.src, alt=pic.hoverTitle)
                         div
-                            h2 #{pic.hoverTitle}
-                            
                             if ( (pic.url).match(/\.jpg/g) != null )
-                                a(href="../" + page.baseURL + "full/" + pic.url) #{pic.hoverSubtitle}
+                                a(href="../" + page.baseURL + "full/" + pic.url)
+                                    h2 #{pic.hoverTitle}
+                                    p #{pic.hoverSubtitle}
                             else
-                                a(href=pic.url) #{pic.hoverSubtitle}
+                                a(href=pic.url)
+                                    h2 #{pic.hoverTitle}
+                                    p #{pic.hoverSubtitle}
                             
         div(class="backNav")
             a(href="../index.html#work", rel="prev") <img src="../images/back-arrow.svg" alt="Back Arrow" />Back to Work
