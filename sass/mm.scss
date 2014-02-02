@@ -230,7 +230,6 @@ footer
 	p
 	{
 		color: white;
-		opacity: .6;
 		font-weight: 100;
 		
 		span
@@ -244,6 +243,15 @@ footer
 		position: relative;
 		margin-top: $mountainHeight * 2;
 	}
+	
+	.columnFlex
+	{
+		font-size: 28.5pt;
+		line-height: 42pt;
+		width: 700px !important;
+		opacity: 1 !important;
+		
+	}
 }
 
 #intro, header
@@ -256,6 +264,11 @@ footer
 	@include display(flex);
 	@include flex-direction(row);
 	@include align-items(center);
+	
+	p
+	{
+		opacity: .6;
+	}
 }
 
 .central
