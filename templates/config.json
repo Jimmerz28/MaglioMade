@@ -183,7 +183,7 @@
     {
       "title": "Select Logos",
       "description": "logo design, branding, identity",
-      "baseURL": "images/projects/logos/",
+      "baseURL": "images/projects/select_logos/",
       "images": [
         {
           "src": "Logos_01-Maglio.jpg",
