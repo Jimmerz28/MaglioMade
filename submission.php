@@ -1,7 +1,7 @@
 <?php
 
-	require_once 'Mailer.php';
-
+	require "vendor/autoload.php";
+	
 	if ( (!isset($_POST["json"])) || (!json_decode($_POST["json"])) )
 	{
 		header("Access-Control-Allow-Origin: *");
@@ -20,15 +20,41 @@
 		return;
 	}
 	
-	$mailer = new Mailer(json_encode($checkEm), '{"failOn":["address"]}');
+	//SMTP Settings
+	$mail = new PHPMailer();
+	$mail->IsSMTP();
+	$mail->SMTPAuth   = true; 
+	$mail->Host       = "email-smtp.us-east-1.amazonaws.com";
+	$mail->Username   = $_SERVER["AWS_ACCESS_KEY_ID"];
+	$mail->Password   = $_SERVER["AWS_SECRET_KEY"];
+	$mail->Port = 587;
+	$mail->SMTPSecure = "tls";
 	
-	$mailer->message = "Name: {$checkEm->name}" . PHP_EOL;
-	$mailer->message .= "Email: {$checkEm->email}" . PHP_EOL;
-	$mailer->message .= "Message: {$checkEm->message}" . PHP_EOL;
+	$mail->SetFrom($_SERVER["PARAM3"], $_SERVER["PARAM2"]); //from (verified email address)
+	$mail->Subject = $_SERVER["PARAM1"]; //subject
 	
-	$mailer->subject = "MaglioMade Email";
+	//message
+	$body = "Name: {$checkEm->name}" . PHP_EOL;
+	$body .= "Email: {$checkEm->email}" . PHP_EOL;
+	$body .= "Message: {$checkEm->message}" . PHP_EOL;
 	
-	$headers = "From: " . $_SERVER["mailfrom"] . "\r\n";
-	$headers .= "Content-Type: text/plain";
+	$mail->MsgHTML($body);
 	
-	echo $mailer->send($_SERVER["mailto"], $headers);
+	//recipient
+	$mail->AddAddress($_SERVER["PARAM4"], $_SERVER["PARAM5"]);
+	
+	//Success
+	if ($mail->Send())
+	{ 
+		header("Access-Control-Allow-Origin: *");
+		header('Content-Type: application/json; charset=utf8');
+		echo json_encode(array("status" => 61));
+	}
+	
+	//Error
+	else
+	{ 
+		header("Access-Control-Allow-Origin: *");
+		header('Content-Type: application/json; charset=utf8');
+		echo json_encode(array("error" => $mail->ErrorInfo));
+	} 

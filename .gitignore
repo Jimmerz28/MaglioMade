@@ -8,3 +8,4 @@ src/*
 js/brains.min.js
 grunt-aws.json
 /projects/*.html
+vendor/*
