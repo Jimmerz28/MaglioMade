@@ -778,6 +778,16 @@ svg.activeIndicator rect
 	width: 555px;
 }
 
+input[type="submit"]:disabled
+{
+	cursor: default;
+}
+
+input[type="submit"]:disabled:hover
+{
+	opacity: 1;
+}
+
 // Color the placeholders
 *::-webkit-input-placeholder 
 {
