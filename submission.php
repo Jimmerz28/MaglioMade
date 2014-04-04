@@ -24,7 +24,7 @@
 	$mail = new PHPMailer();
 	$mail->IsSMTP();
 	$mail->SMTPAuth   = true; 
-	$mail->Host       = "email-smtp.us-east-1.amazonaws.com";
+	$mail->Host       = $_SERVER["smtp_server"];
 	$mail->Username   = $_SERVER["AWS_ACCESS_KEY_ID"];
 	$mail->Password   = $_SERVER["AWS_SECRET_KEY"];
 	$mail->Port = 587;
