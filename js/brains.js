@@ -129,6 +129,9 @@ function scrollEmDown(elements, bufferPixs, speed)
 
 $(document).ready(function()
 {
+	$("form :input").prop("disabled", false);
+	$("form")[0].reset();
+	
 	// Hide the navigation bar so it can fade in after a scroll
 	// Hide the spam filter fields in the form
 	$("form > label, #address, #initial + div").addClass("obfusc");
@@ -150,19 +153,26 @@ $(document).ready(function()
 	// Catch the submission
 	$("form").submit(function(event)
 	{
-		event.preventDefault();
+		// Stop the form from submitting
+		event.preventDefault(event);
+		var something = serializeForm(this);
 		
+		// Disable all inputs after we've submitted
+		$("form :input").prop("disabled", true);
+		
+		// TODO Some logic if we fail
+		// TODO Loading indicator
+		// TODO Some timeout
+		
+		// When the form is sucessful style it
 		$.ajax(
 		{
 			type: "POST",
-			url: "http://default-environment-vm8rc3r2i7.elasticbeanstalk.com/submission.php",
-			data: {json: serializeForm(this)}
+			url: "http://magliomade.elasticbeanstalk.com/submission.php",
+			data: { json: something }
 		})
 		.done(function( msg )
 		{
-			console.log( msg.status );
-		
-			// TODO Hide the form & confirmation
 			if ( msg.status === 61 )
 			{
 				$("form").addClass("formSuccess");
