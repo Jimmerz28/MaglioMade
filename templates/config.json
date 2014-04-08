@@ -43,6 +43,12 @@
       "baseURL": "images/projects/web_design/",
       "images": [
         {
+          "src": "WD_00-Kansas.jpg",
+          "hoverTitle": "Built In Kansas City Concept",
+          "hoverSubtitle": "View Project",
+          "url": "http://dribbble.com/shots/1496154-Built-in-Kansas-City-Exploration?list=users&offset=0"
+        },
+        {
           "src": "WD_01-Concept.jpg",
           "hoverTitle": "Supercompressor Homepage Concept",
           "hoverSubtitle": "view larger image",
