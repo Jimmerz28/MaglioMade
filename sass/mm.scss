@@ -203,7 +203,7 @@ footer
 		font-size: 10pt;
 		margin-left: 3em;
 		
-		span
+		span:not(#copyrightYear)
 		{
 			margin: 0 .5em;
 		}
