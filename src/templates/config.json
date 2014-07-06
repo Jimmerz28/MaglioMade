@@ -168,19 +168,6 @@
       ]
     },
     {
-      "title": "Supercompressor",
-      "description": "web design",
-      "baseURL": "images/projects/supercompressor/",
-      "images": [
-        {
-          "src": "SC_01-Concept.jpg",
-          "hoverTitle": "Supercompressor Web Concept",
-          "hoverSubtitle": "view larger image",
-          "url": "SC_01-Concept.jpg"
-        }
-      ]
-    },
-    {
       "title": "Select Logos",
       "description": "logo design, branding, identity",
       "baseURL": "images/projects/select_logos/",
@@ -245,7 +232,7 @@
     {
       "title": "Print Designs",
       "description": "advertising, illustration, typography, layout, compositing",
-      "baseURL": "images/projects/print/",
+      "baseURL": "images/projects/print_designs/",
       "images": [
         {
           "src": "Print_01-Craftsman.jpg",
