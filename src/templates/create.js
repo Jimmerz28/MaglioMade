@@ -2,7 +2,7 @@ function createFile(singlePage, dir)
 {    
     var options = { pretty: true, page: singlePage };
     
-    jade.renderFile("templates/project_page.jade", options, function(err, html)
+    jade.renderFile("src/templates/project_page.jade", options, function(err, html)
     {
         if ( err )
         {
@@ -23,8 +23,8 @@ function createFile(singlePage, dir)
 
 var jade = require("jade");
 var fs = require("fs");
-var dir = "projects";
-var projects = fs.readFileSync("templates/config.json", "utf-8");
+var dir = "dist/projects";
+var projects = fs.readFileSync("src/templates/config.json", "utf-8");
 projects = JSON.parse(projects);
 
 (projects.pages).forEach(function(singlePage)

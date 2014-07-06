@@ -4,7 +4,7 @@ bourbon/
 /.*
 node_modules
 validation*.json
-src/*
+dist/*
 js/brains.min.js
 grunt-aws.json
 /projects/*.html

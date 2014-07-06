@@ -1,0 +1,57 @@
+[
+    {
+        "name": "phpmailer/phpmailer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPMailer/PHPMailer.git",
+            "reference": "d4aea208907c7375f202677d8bf4538ec4db271f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/d4aea208907c7375f202677d8bf4538ec4db271f",
+            "reference": "d4aea208907c7375f202677d8bf4538ec4db271f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "require-dev": {
+            "phpdocumentor/phpdocumentor": "*",
+            "phpunit/phpunit": "*"
+        },
+        "time": "2014-04-01 12:35:55",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "class.phpmailer.php",
+                "class.pop3.php",
+                "class.smtp.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Jim Jagielski",
+                "email": "jimjag@gmail.com"
+            },
+            {
+                "name": "Marcus Bointon",
+                "email": "phpmailer@synchromedia.co.uk"
+            },
+            {
+                "name": "Andy Prevost",
+                "email": "codeworxtech@users.sourceforge.net"
+            },
+            {
+                "name": "Brent R. Matzelle"
+            }
+        ],
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
+    }
+]
