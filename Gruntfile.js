@@ -179,9 +179,9 @@ module.exports = function(grunt)
 				sync:
 				[
 					{
-						src: "src/**/*.*",
+						src: "dist/**/*.*",
 						dest: "/",
-						rel: "src",
+						rel: "dist",
 						options: { verify: true }
 					}
 				]
