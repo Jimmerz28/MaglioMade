@@ -27,7 +27,7 @@ var paths =
     templates: "./templates/**/*.jade"
 };
 
-gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","styles", "scripts","generateChildren"], function(){});
+gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","styles", "scripts", "generateChildren"], function(){});
 
 gulp.task("copyfonts", function()
 {
