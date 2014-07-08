@@ -149,4 +149,5 @@ gulp.task("watch", function()
     gulp.watch("./html/**/*.html", {cwd: paths.src, read: false}, ["htmlminification"]);
     gulp.watch("./images/**/*", {cwd: paths.src, read: false}, ["imagemin"]);
     gulp.watch("./gulpfile.js", ["gulpvalidate"]);
+    gulp.watch(paths.scripts, {cwd: paths.src, read: false}, ["scripts"]);
 });
