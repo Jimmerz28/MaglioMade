@@ -45,7 +45,6 @@ $transitionSpeed: .25s;
 {
 	color: $someDarkGray;
 	opacity: .6;
-	font-weight: 300;
 	font-style: italic;
 }
 
@@ -69,7 +68,7 @@ html, body, p, h1
 {
 	padding: 0;
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 html, body
@@ -161,7 +160,6 @@ body:not(#projectpage) header
 		
 		h2
 		{
-			font-weight: 300;
 			font-size: 14pt;
 		}
 		
@@ -191,7 +189,6 @@ section
 		width: 100px;
 		margin-bottom: 86px;
 		text-transform: lowercase;
-		font-weight: normal;
 	}
 }
 
@@ -277,7 +274,6 @@ footer
 	left: 0px;
 	right: 0px;
 	text-transform: uppercase;
-	font-weight: 700;
 }
 
 #intro, header
@@ -353,7 +349,6 @@ img[alt="logo"]
 		h2
 		{
 			color: white;
-			font-weight: 300;
 		}
 		
 		p
@@ -434,15 +429,13 @@ img[alt="logo"]
 						h2
 						{
 							font-size: 18pt * .8;
-	                       line-height: 25pt * .8;
-	                       font-weight: normal;
+	                       				line-height: 25pt * .8;
 						}
 						
 						p
 						{
 							font-size: 14pt * .9;
-		                   line-height: 22pt * .7;
-	                       font-weight: 300;
+		                   			line-height: 22pt * .7;
 						}
 					}
 					
@@ -540,7 +533,6 @@ img[alt="logo"]
 	{
 		width: 15em;
 		font-size: 18pt;
-		font-weight: 100;
 		font-style: normal;
 		margin: -.4em 0 0 0;
 		line-height: 32pt;
