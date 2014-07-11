@@ -193,13 +193,23 @@ $(document).on("scroll", function()
 	
 	if ( $(this).scrollTop() > mustScroll && pastPoint === false )
 	{
-		$("header").addClass("bringItBack");
+		$("#initial").fadeOut(fadeTime, function()
+		{
+			$("#initial + div").fadeIn(fadeTime);
+			$("header").addClass("bringItBack");
+		});
+		
 		pastPoint = true;
 	}
 	
 	if ( $(this).scrollTop() < mustScroll && pastPoint === true )
 	{
-		$("header").removeClass();
+		$("#initial + div").fadeOut(fadeTime, function()
+		{
+			$("#initial").fadeIn(fadeTime);
+			$("header").removeClass();
+		});
+		
 		pastPoint = false;
 	}
 });
