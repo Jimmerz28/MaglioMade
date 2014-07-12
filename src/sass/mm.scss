@@ -69,6 +69,7 @@ html, body, p, h1
 	padding: 0;
 	margin: 0;
 	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
 }
 
 html, body
@@ -239,6 +240,10 @@ footer
 	background-repeat: no-repeat;
 	background-size: 30% auto;
 	
+	color: $linksColor;
+	font-size: 22pt;
+	line-height: 32pt;
+	
 	& + div
 	{
 		position: relative;
@@ -253,9 +258,7 @@ footer
 
 .columnFlex
 {
-	font-size: 28.5pt;
-	line-height: 42pt;
-	margin-top: 10%;
+	margin-top: 5%;
 	width: 700px !important;
 	opacity: 1 !important;	
 }
@@ -266,8 +269,7 @@ footer
 	text-align: center;
 	font-size: 18pt;
 	color: $linksColor;
-	margin-top: 5%;
-	font-weight: 300;
+	margin-top: 2%;
 }
 
 #intro, header
@@ -764,7 +766,6 @@ svg.activeIndicator rect
 	@include flex-direction(column);
 	@include align-items(stretch);
 	width: 725px;
-	font-size: 1.2em;
 	
 	& p:first-of-type
 	{
