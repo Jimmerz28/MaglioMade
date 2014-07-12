@@ -226,54 +226,48 @@ footer
 	height: 179px;
 }
 
-.scrollArrow
-{
-	width: 60px;
-	height: 60px;
-}
-
 #intro
 {
+	justify-content: flex-start;
 	background-color: $headerBackground;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	
-	p
-	{
-		color: white;
-		
-		span
-		{
-			color: $someOrange;
-		}
-	}
+	background-image: url("../images/MM_Head.png");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 30% auto;
 	
 	& + div
 	{
 		position: relative;
 		margin-top: $mountainHeight * 2;
 	}
-	
-	.columnFlex
-	{
-		font-size: 28.5pt;
-		line-height: 42pt;
-		margin-top: 10%;
-		width: 700px !important;
-		opacity: 1 !important;
-		
-	}
+}
+
+.aboveFace
+{
+	margin-top: 80px;
+}
+
+.columnFlex
+{
+	font-size: 28.5pt;
+	line-height: 42pt;
+	margin-top: 10%;
+	width: 700px !important;
+	opacity: 1 !important;	
 }
 
 .scrollThing
 {
-	bottom: 0px;
-	margin: 0px 0px 50px auto;
-	position: absolute;
-	left: 0px;
-	right: 0px;
 	text-transform: uppercase;
+	text-align: center;
+	font-size: 18pt;
+	color: $linksColor;
+	margin-top: 5%;
+	font-weight: 300;
 }
 
 #intro, header
