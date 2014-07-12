@@ -9,6 +9,7 @@ $someBlack: #303030;
 $limeGreen: #99CC99;
 $anotherLightGray: #8A8A8A;
 $placeHolderColor: #FFFFFF;
+$evenSectionBackground: $placeHolderColor;
 $accentWord: $limeGreen;
 $accentWordHover: #66CC66;
 $linksColor: #9A9A9A;
@@ -184,11 +185,12 @@ section
 	
 	h1
 	{
-		background-color: white;
-		color: $someOrange;
-		padding: 15px 45px 19px 15px;
-		width: 100px;
-		margin-bottom: 86px;
+		font-size: 30pt;
+		color: $limeGreen;
+		width: 268px;
+		text-align: center;
+		height: 150px;
+		line-height: 160px;
 		text-transform: lowercase;
 	}
 }
@@ -287,15 +289,9 @@ footer
 
 #work
 {
-	background-color: $someTanColor;
+	background-color: $evenSectionBackground;
 	height: 1120px;
 	padding-bottom: 150px - 53;
-		
-		
-	h1
-	{
-		margin-bottom: 86px - 17;
-	}
 	
 	.central > div
 	{
