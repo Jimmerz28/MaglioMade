@@ -12,7 +12,7 @@ var gulp = require("gulp"),
     jade = require("gulp-jade"),
     prefix = require("gulp-autoprefixer"),
     uglify = require("gulp-uglify"),
-    clean = require("gulp-clean")
+    clean = require("gulp-rimraf")
     exec = require('child_process').exec;
 
 var paths =
