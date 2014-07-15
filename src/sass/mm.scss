@@ -19,13 +19,13 @@ $headerBackground: #E5E5E5;
 $mountainHeight: 1170px;
 $projectImagesWidth: 1024px;
 $projectImageHeight: 576px;
-$workPreviewImagesSize: 270px;
+$workPreviewImagesSize: 210px;
 $headerHeight: 70px;
 $childPageHeaderSpacing: 60px;
 $workImagesPadding: 20px;
 
 /* Transitions */
-$transitionSpeed: .25s;
+$transitionSpeed: .5s;
 
 @mixin permaUnderline
 {
@@ -51,7 +51,12 @@ $transitionSpeed: .25s;
 
 @mixin hoverTransition
 {
-	transition: opacity $transitionSpeed linear, margin $transitionSpeed linear
+	transition: opacity $transitionSpeed linear, margin $transitionSpeed linear;
+}
+
+@mixin previewImagesTransition
+{
+	transition: all 1s ease-out;
 }
 
 @mixin headerCommon
@@ -187,12 +192,16 @@ section
 	{
 		font-size: 30pt;
 		color: $limeGreen;
-		width: 268px;
-		text-align: center;
 		height: 150px;
 		line-height: 160px;
 		text-transform: lowercase;
 	}
+}
+
+.alternateHeader
+{
+	width: $workPreviewImagesSize;
+	text-align: center;
 }
 
 footer
@@ -221,6 +230,15 @@ footer
 			margin: 0 .5em;
 		}
 	}
+}
+
+.scrollLink p, .workPreviews p
+{
+	font-size: 11pt;
+	color: $linksColor;
+	padding-top: 10px;
+	text-transform: lowercase;
+	@include previewImagesTransition;
 }
 
 .logo
@@ -284,20 +302,17 @@ footer
 	@include display(flex);
 	@include flex-direction(column);
 	background-color: inherit;
-	width: 900px;
+	width: 960px;
 }
 
 #work
 {
 	background-color: $evenSectionBackground;
-	height: 1120px;
-	padding-bottom: 150px - 53;
 	
 	.central > div
 	{
-		margin-left: -22px;
-		margin-right: -44px;
-		margin-bottom: 90px;
+		text-align: center;
+		margin-bottom: 112px;
 	}
 }
 
@@ -371,90 +386,42 @@ img[alt="logo"]
 	{
 		width: $workPreviewImagesSize;
 		display: inline-block;
-		margin: 22px;
-		overflow: hidden;
+		
+		&:hover img
+		{
+			border: 1px solid $limeGreen;
+			@include previewImagesTransition;
+		}
+		
+		&:hover p
+		{
+			color: $limeGreen;
+			@include previewImagesTransition;
+		}
+		
+		&:nth-of-type(-n + 5)
+		{
+			// This is still on the first row
+			margin-top: 60px - 38;
+		}
+		
+		&:nth-of-type(4n + 2)
+		{
+			margin: 0 40px;
+		}
+		
+		&:nth-of-type(4n + 3)
+		{
+			margin-right: 40px;
+		}
 		
 		img
 		{
 			height: $workPreviewImagesSize;
 			width: $workPreviewImagesSize;
-			
-			&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
-			{
-				margin-top: 0;
-			}
-		}
-		
-		// 
-		> div
-		{
-			position: relative;
-			z-index: 1;
-			opacity: 0;
-			background-color: white;
-			height: $workPreviewImagesSize;
-			width: $workPreviewImagesSize;
-			margin-top: -$workPreviewImagesSize - 5px;
-		
-			a
-			{
-				display: block;
-				height: $workPreviewImagesSize - $workImagesPadding;
-				
-				> div
-				{
-					@include display(flex);
-				   	@include flex-direction(column);
-			       	@include justify-content(space-between);
-			       	height: $workPreviewImagesSize - ($workImagesPadding * 2);
-			       	width: $workPreviewImagesSize - ($workImagesPadding * 2);
-		           	padding: $workImagesPadding;
-					
-					> div
-					{
-						h2, p
-						{
-							padding: 0;
-							margin: 0;
-						}
-						
-						h2
-						{
-							font-size: 18pt * .8;
-	                       				line-height: 25pt * .8;
-						}
-						
-						p
-						{
-							font-size: 14pt * .9;
-		                   			line-height: 22pt * .7;
-						}
-					}
-					
-					> p
-					{
-						@include linkStyle;
-					}
-				}
-			}
-		}
-		
-		img + div
-		{
-			background-color: $someOrange;
-			color: white;
-			overflow: hidden;
-		}
-		
-		&:hover > img + div
-		{
-			margin-left: 0;
-			opacity: .95;
-		}	
-		
-		&:hover > img + div, img + div
-		{
-			@include hoverTransition;
+			padding: 1px;
+			border: 1px solid transparent;
+			@include previewImagesTransition;
 		}
 	}
 }
