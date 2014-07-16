@@ -14,6 +14,7 @@ $accentWord: $limeGreen;
 $accentWordHover: #66CC66;
 $linksColor: #9A9A9A;
 $headerBackground: #E5E5E5;
+$resumeBackgroundColor: #F0F0F0;
 
 /* Sizes */
 $mountainHeight: 1170px;
@@ -56,7 +57,7 @@ $transitionSpeed: .5s;
 
 @mixin previewImagesTransition
 {
-	transition: all 1s ease-out;
+	transition: all .3s ease-out;
 }
 
 @mixin headerCommon
@@ -247,6 +248,16 @@ footer
 	height: 179px;
 }
 
+.sideHeader
+{
+	padding-left: 3.6rem;
+}
+
+#resume
+{
+	background-color: $resumeBackgroundColor;
+}
+
 #intro
 {
 	justify-content: flex-start;
@@ -426,42 +437,28 @@ img[alt="logo"]
 	}
 }
 
-#resume
-{
-	background-color: $someLightGray;
-	padding-bottom: 168px;
-	
-	h1
-	{
-		width: 122px;
-	}
-
-	p
-	{
-		color: white;
-		font-size: 14pt;
-	}
-}
-
 .container > div:not(.activeObject)
 {
 	display: none;
-}
-
-.container > div
-{
-	height: 300px;
 }
 
 #resumeCopy
 {
 	p
 	{		
+		color: $linksColor;
+	
 		&:first-of-type
 		{
-			font-size: 20pt;
-			line-height: 30pt;
+			font-size: 25pt;
+			line-height: 35pt;
 			margin-bottom: 1em;
+		}
+		
+		&:nth-of-type(2)
+		{
+			font-size: 18pt;
+			line-height: 28pt;
 		}
 	}
 	
@@ -472,7 +469,7 @@ img[alt="logo"]
 		
 		> div
 		{
-			padding: 0 5em;
+			padding: 0 37px;
 		}
 	}
 	
@@ -661,15 +658,15 @@ a[href*=".pdf"]
 	opacity: 0;
 }
 
-.rightArrow, .leftArrow
+.arrow
 {
-	flex: 0 0 34px;
-	width: 34px;
-	height: 57px;
+	flex: 0 0 23px;
+	width: 23px;
+	height: 40px;
 	cursor: pointer;
 }
 
-.rightArrow:hover, .leftArrow:hover, a[href*=".pdf"]:hover, input[type="submit"]:hover, div.backNav a:hover img
+.arrow:hover, a[href*=".pdf"]:hover, input[type="submit"]:hover, div.backNav a:hover img
 {
 	opacity: .75;
 }
@@ -679,14 +676,14 @@ input[type="submit"]
 	cursor: pointer;
 }
 
-.rightArrow
+.rotate180
 {
 	@include transform(rotate(180deg));
 }
 
 .indicators
 {
-	margin: 3em 0 5em 0;
+	margin:  50px 0 66px 0;
 	text-align: center;
 	
 	svg
@@ -704,14 +701,36 @@ input[type="submit"]
 
 svg.activeIndicator rect
 {
-	fill: $someOrange;
+	fill: $limeGreen;
 }
 
-.orangeButton
+.resumeDownload
 {
-	background-color: $someOrange;
+	margin-bottom: 170px;
+	text-align: center;
+
+	p
+	{
+		display: inline-block;
+		color: $linksColor;
+	}
+}
+
+.styledButton
+{
+	background: transparent;
+	border: 1px solid $limeGreen;
 	text-transform: uppercase;
 	font-size: 16pt;
+	color: $limeGreen !important;
+	@include previewImagesTransition;
+	
+	&:hover
+	{
+		background: $limeGreen;
+		color: $placeHolderColor !important;
+		@include previewImagesTransition;
+	}
 }
 
 .fadeItBack

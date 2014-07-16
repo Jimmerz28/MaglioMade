@@ -68,12 +68,12 @@ function ResumeReel(container)
 	
 	function moveTo(arrows, infinite)
 	{
-		var offset = ($(arrows).attr("class") === "rightArrow") ? 1 : -1;
+		var offset = ($(arrows).attr("data-direction") === "left") ? -1 : 1;
 		
 		setActiveIndex(offset, infinite);
 	}
 		
-	$(self).find(".rightArrow, .leftArrow").on("click", function()
+	$(self).find(".arrow").on("click", function()
 	{
 		moveTo(this, true);
 		
