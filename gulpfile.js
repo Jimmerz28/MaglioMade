@@ -13,7 +13,9 @@ var gulp = require("gulp"),
     prefix = require("gulp-autoprefixer"),
     uglify = require("gulp-uglify"),
     clean = require("gulp-rimraf")
-    exec = require('child_process').exec;
+    exec = require("child_process").exec,
+    s3 = require("gulp-s3"),
+    fs = require("fs");
 
 var paths =
 {
@@ -27,7 +29,17 @@ var paths =
     templates: "./templates/**/*.jade"
 };
 
+aws = JSON.parse(fs.readFileSync("credentials/deploy_creds.json"));
+
 gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","styles", "scripts", "generateChildren"], function(){});
+
+gulp.task("deploy", ["s3"], function(){});
+
+gulp.task("s3", function()
+{
+    return gulp.src("./**", {cwd: paths.dist})
+    .pipe(s3(aws));
+});
 
 gulp.task("copyfonts", function()
 {
