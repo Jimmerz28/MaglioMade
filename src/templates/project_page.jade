@@ -7,10 +7,7 @@ html(lang="en")
         script(defer="defer", src="../js/libs/jquery.min.js")
         script(defer="defer", src="../js/childBrains.min.js")
     body(id="projectpage")
-        header
-            div
-                a(href="../index.html")
-                    img(src="../images/magliomade-logo-icon.svg", alt="logo")
+        include ./includes/header.jade
         div.title
             h1 #{page.title}
             h2 #{page.description}
