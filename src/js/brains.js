@@ -176,7 +176,7 @@ $(document).ready(function()
 			if ( msg.status === 61 )
 			{
 				$("form").addClass("formSuccess");
-				$("input[value='Send It']").prop("value","Thanks! I'll get back to you soon");
+				$("input[value='Send It']").prop("value","Talk to you soon");
 			}
 		});
 	});
