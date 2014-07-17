@@ -116,14 +116,25 @@ function scrollEmDown(elements, bufferPixs, speed)
 	$(elements).on( "click", function( event )
 	{
 		event.preventDefault();
-
+		
 		var target = this.hash,
 		$target = $(target);
-
-		$("html, body").stop().animate(
+		
+		if ( target === "" )
 		{
-			"scrollTop": $target.offset().top - bufferPixs
-		}, speed );
+			$("html, body").stop().animate(
+			{
+				"scrollTop": 0
+			}, speed );
+		}
+	
+		else
+		{
+			$("html, body").stop().animate(
+			{
+				"scrollTop": $target.offset().top - bufferPixs
+			}, speed );	
+		}
 	});
 }
 
@@ -141,14 +152,6 @@ $(document).ready(function()
 	// Create the reel and then initialize it
 	var reel = new ResumeReel(document.getElementById("resumeCopy"));
 	reel.init();
-	
-	$("img[alt='logo']").on("click", function()
-	{
-		$("html, body").stop().animate(
-		{
-			"scrollTop": 0
-		}, 500 );
-	});
 	
 	// Catch the submission
 	$("form").submit(function(event)
