@@ -217,7 +217,7 @@ section
 footer
 {
 	height: 100px;
-	background-color: $anotherLightGray;
+	background-color: $footerBackgroundColor;
 	
 	@include centerShit;
 	@include flex-direction(row);
@@ -230,10 +230,15 @@ footer
 	
 	p
 	{
-		color: #C4C4C4;
+		color: $linksColor;
 		text-transform: lowercase;
 		font-size: 10pt;
 		margin-left: 3em;
+		
+		a:link
+		{
+			text-decoration: underline;
+		}
 		
 		span:not(#copyrightYear)
 		{
@@ -339,6 +344,11 @@ footer
 img[alt="logo"]
 {
 	cursor: pointer;
+}
+
+.smallLogo
+{
+	width: 131px;
 }
 
 .projectImage
