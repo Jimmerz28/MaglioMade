@@ -198,8 +198,9 @@ $(document).on("scroll", function()
 	{
 		$("#initial").fadeOut(fadeTime, function()
 		{
-			$("#initial + div").fadeIn(fadeTime);
+			$(".hiddenHeader").fadeIn(fadeTime);
 			$("header").addClass("bringItBack");
+			$("#introtext").removeClass("obfusc").fadeIn(fadeTime);
 		});
 		
 		pastPoint = true;
@@ -207,10 +208,10 @@ $(document).on("scroll", function()
 	
 	if ( $(this).scrollTop() < mustScroll && pastPoint === true )
 	{
-		$("#initial + div").fadeOut(fadeTime, function()
+		$("#introtext").fadeOut(fadeTime, function()
 		{
 			$("#initial").fadeIn(fadeTime);
-			$("header").removeClass();
+			$("header").removeClass("bringItBack");
 		});
 		
 		pastPoint = false;

@@ -74,8 +74,6 @@ $transitionSpeed: .5s;
 {
 	height: $headerHeight;
 	background-color: #FFFFFF;
-	position: fixed;
-	z-index: 5;
 	width: 100%;
 	border-bottom: 1px solid $limeGreen;
 	color: $linksColor;
@@ -99,20 +97,25 @@ a:link, a:hover, a:active, a:visited
 	text-decoration: none;
 }
 
-body:not(#projectpage) header
+header
 {
 	@include headerCommon;
-	margin-top: -$headerHeight;
-	transition: margin .4s linear;
 	
-	a:link, a:active, a:visited
+	a:link:not(:first-child)
 	{
 		// Need to take off 4 pixes or so due to the font to acheive 50px between links
 		margin-left: 46px;
 		font-size: 16pt;
 		color: $linksColor;
-		vertical-align: 50%;
 	}
+}
+
+.hiddenHeader
+{
+	margin-top: -$headerHeight;
+	transition: margin .4s linear;
+	position: fixed;
+	z-index: 5;
 }
 
 .bringItBack
@@ -136,20 +139,14 @@ body:not(#projectpage) header
 	}
 }
 
-#projectpage header
+.flex-row-center
 {
-	@include headerCommon;
+	@include centerShit;
 }
 
 #projectpage
 {
 	background-color: $someTanColor;
-	
-	& > header
-	{
-		opacity: 1;
-		position: relative;
-	}
 	
 	.title, .backNav
 	{
