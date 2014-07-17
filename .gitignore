@@ -11,3 +11,4 @@ grunt-aws.json
 vendor/*
 ._.*
 ._*
+credentials/
