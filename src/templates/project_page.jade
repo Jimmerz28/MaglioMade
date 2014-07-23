@@ -8,27 +8,23 @@ html(lang="en")
         script(defer="defer", src="../js/childBrains.min.js")
     body(id="projectpage")
         include ./includes/header.jade
-        div.title
-            h1 #{page.title}
-            h2 #{page.description}
+        div
+            h1.title #{page.title}
         section.pictures
             div
                 each pic in page.images
-                    div.projectImage
+                    div
                         img(src="../" + page.baseURL + "medium/" + pic.src, alt=pic.hoverTitle)
-                        - console.log(page.baseURL + ": " + pic.src)
-                        div
-                            if ( (pic.url).match(/\.jpg/g) != null )
-                                a(href="../" + page.baseURL + "full/" + pic.url)
-                                    h2 #{pic.hoverTitle}
-                                    p #{pic.hoverSubtitle}
-                            else
-                                a(href=pic.url)
-                                    h2 #{pic.hoverTitle}
-                                    p #{pic.hoverSubtitle}
-                            
+                        div.caption
+                            div
+                                if ( (pic.url).match(/\.jpg/g) != null )
+                                        h2.captionTitle #{pic.hoverTitle}
+                                        a.styledButton.viewProjectLink(href="../" + page.baseURL + "full/" + pic.url) #{pic.hoverSubtitle}
+                                else
+                                        h2.captionTitle #{pic.hoverTitle}
+                                        a.styledButton.viewProjectLink(href=pic.url) #{pic.hoverSubtitle}
         div.backNav
-            a(href="../index.html#work", rel="prev") <img src="../images/back-arrow.svg" alt="Back Arrow" />Back to Work
+            a(href="../index.html#work", rel="prev") <img src="../images/Back-Arrow.svg" alt="Back Arrow" />Back to Work
         footer
             div
                 img(src="../images/footerLogo.svg", alt="Footer Logo")

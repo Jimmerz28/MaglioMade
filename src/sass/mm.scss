@@ -79,7 +79,7 @@ $transitionSpeed: .5s;
 	color: $linksColor;
 }
 
-html, body, p, h1, h3
+html, body, p, h1, h3, h2
 {
 	padding: 0;
 	margin: 0;
@@ -146,43 +146,38 @@ header
 
 #projectpage
 {
-	background-color: $someTanColor;
+	background-color: $headerBackground;
+	
+	.title
+	{
+		font-size: 30pt;
+		color: $limeGreen;
+		height: 150px;
+		line-height: 150px;
+	}
 	
 	.title, .backNav
 	{
 		text-align: center;
-		padding: 3em;
-		color: $someDarkGray;
-		margin: 0 auto;
-		width: 20em;
 	}
 	
-	.title
+	.backNav
 	{
-		padding: $childPageHeaderSpacing 0;
-		
-		h1, h2
-		{
-			padding: 0;
-			margin: 0;
-		}
-		
-		h1
-		{
-			padding: .5em;
-		}
-		
-		h2
-		{
-			font-size: 14pt;
-		}
-		
-		border-bottom: $someOrange 2px solid;
+		padding: 3em;
 	}
 	
 	svg
 	{
 		fill: $someDarkGray;
+	}
+	
+	.pictures
+	{
+		img
+		{
+			width: $projectImagesWidth;
+			height: $projectImageHeight;
+		}
 	}
 }
 
@@ -348,62 +343,30 @@ img[alt="logo"]
 	width: 131px;
 }
 
-.projectImage
+.caption
 {
-	width: $projectImagesWidth;
-	height: $projectImageHeight;
-	display: block;
-	overflow: hidden;
-	
-	&:not(:last-child)
-	{
-		margin-bottom: 1em;
-	}
+	height: 83px;
+	padding: 10px 20px 0 20px;
 	
 	> div
 	{
-		@include hoverTransition;
-		
-		text-align: left;
-		position: relative;
-		background-color: $someOrange;
-		opacity: 0;
-		
-		a
-		{
-			@include display(flex);
-			@include flex-direction(row);
-			@include justify-content(space-between);
-			@include align-items(center);
-		
-			padding: 30px 1em;
-			height: 100%;
-		}
-		
-		h2
-		{
-			color: white;
-		}
-		
-		p
-		{
-			@include linkStyle;
-		}
-		
-		h2, p
-		{
-			display: inline;
-			vertical-align: middle;
-			margin: 0;
-			padding: 0;
-		}
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 }
 
-.projectImage:hover > div
+.viewProjectLink
 {
-	margin-top: -89px;
-	opacity: .95;
+	padding: .6rem 2rem;
+	font-size: 14pt;
+}
+
+.captionTitle
+{
+	font-size: 18pt;
+	color: $linksColor;
 }
 
 .workPreviews
@@ -458,6 +421,11 @@ img[alt="logo"]
 	display: none;
 }
 
+.container
+{
+	height: 307px;
+}
+
 #resumeCopy
 {
 	p
@@ -466,15 +434,15 @@ img[alt="logo"]
 	
 		&:first-of-type
 		{
-			font-size: 25pt;
-			line-height: 35pt;
+			font-size: 22pt;
+			line-height: 32pt;
 			margin-bottom: 1em;
 		}
 		
 		&:nth-of-type(2)
 		{
-			font-size: 18pt;
-			line-height: 28pt;
+			font-size: 16pt;
+			line-height: 24pt;
 		}
 	}
 	
@@ -609,6 +577,7 @@ a[href*=".pdf"]
 {
 	padding: 1em 4em;
 	margin-left: 50px;
+	font-size: 16pt;
 }
 
 .formSuccess
@@ -642,25 +611,21 @@ a[href*=".pdf"]
 }
 
 .backNav
-{
-	border-top: $someOrange 2px solid;
+{	
+	font-size: 14pt;
+	color: $linksColor;
 	
 	img
 	{
 		vertical-align: middle;
 		padding-right: 1.5em;
-	}
-}
-
-.pictures
-{
-	padding: $childPageHeaderSpacing 0;
-	text-align: center;
-	
-	img
-	{
-		width: $projectImagesWidth;
-		height: $projectImageHeight;
+		height: 40px;
+		width: 23px;
+		
+		&:hover
+		{
+			opacity: .5;
+		}
 	}
 }
 
@@ -737,7 +702,6 @@ svg.activeIndicator rect
 	background: transparent;
 	border: 1px solid $limeGreen;
 	text-transform: uppercase;
-	font-size: 16pt;
 	color: $limeGreen !important;
 	@include previewImagesTransition;
 	
