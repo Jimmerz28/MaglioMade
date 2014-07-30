@@ -15,6 +15,7 @@ var gulp = require("gulp"),
     clean = require("gulp-rimraf")
     exec = require("child_process").exec,
     s3 = require("gulp-s3"),
+    imageResize = require("gulp-image-resize"),
     fs = require("fs");
 
 var paths =
@@ -31,7 +32,7 @@ var paths =
 
 aws = JSON.parse(fs.readFileSync("credentials/deploy_creds.json"));
 
-gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","styles", "scripts", "generateChildren"], function(){});
+gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","styles", "scripts", "generateChildren", "generateProjectImages"], function(){});
 
 gulp.task("deploy", ["s3"], function(){});
 
@@ -56,7 +57,7 @@ gulp.task("csslint", ["styles"], function()
 
 gulp.task("imagemin", function()
 {
-    return gulp.src("./images/**/*", {cwd: paths.src})
+    return gulp.src(["./images/**/*", "!./images/projects/**/*"], {cwd: paths.src})
     .pipe(changed("./images", {cwd: paths.dist}))
     .pipe(imagemin())
     .pipe(gulp.dest("./images", {cwd: paths.dist}));
@@ -153,6 +154,41 @@ gulp.task("generateChildren", function()
 {
     exec("node src/templates/create.js");
 });
+
+gulp.task("generateFullPreviews", function()
+{
+    return gulp.src("./images/projects/**/*.{png,jpg}", { cwd: paths.src })
+    .pipe(rename(function(path)
+    {
+        path.dirname += "/full";
+        path.basename += "_Full";
+    }))
+    .pipe(imagemin())
+    .pipe( gulp.dest("./images/projects", {cwd: paths.dist}) );
+});
+
+gulp.task("generateMediumPreviews", function()
+{
+    return gulp.src("./images/projects/**/*.{png,jpg}", { cwd: paths.src })
+    .pipe(imageResize(
+        {
+            width: 700,
+            height: 394,
+            crop: false,
+            upscale: false,
+            imageMagick: true
+        }))
+    .pipe(imagemin())
+    .pipe(rename(function(path)
+    {
+        path.dirname += "/medium";
+        path.basename += "_Medium";
+    }))
+    .pipe( gulp.dest("./images/projects", {cwd: paths.dist}) )
+    .pipe(imagemin())
+});
+
+gulp.task("generateProjectImages", ["generateMediumPreviews", "generateFullPreviews"], function(){});
 
 gulp.task("watch", function()
 {
