@@ -14,12 +14,14 @@ html(lang="en")
             div
                 each pic in page.images
                     div
-                        img(src="../" + page.baseURL + "medium/" + pic.src, alt=pic.hoverTitle)
+                        - var mediumPic = pic.src.replace(/(\.[\w\d_-]+)$/i, '_Medium$1');
+                        img(src="../" + page.baseURL + "/medium/" + mediumPic, alt=pic.hoverTitle)
                         div.caption
                             div
-                                if ( (pic.url).match(/\.jpg/g) != null )
+                                if ( (pic.url).match(/full-size image/g) != null )
                                         h2.captionTitle #{pic.hoverTitle}
-                                        a.styledButton.viewProjectLink(href="../" + page.baseURL + "full/" + pic.url) #{pic.hoverSubtitle}
+                                        - var fullPic = pic.src.replace(/(\.[\w\d_-]+)$/i, '_Full$1');
+                                        a.styledButton.viewProjectLink(href="../" + page.baseURL + "/full/" + fullPic) #{pic.hoverSubtitle}
                                 else
                                         h2.captionTitle #{pic.hoverTitle}
                                         a.styledButton.viewProjectLink(href=pic.url) #{pic.hoverSubtitle}

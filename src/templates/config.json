@@ -1,256 +1,224 @@
 {
   "pages": [
     {
-      "title": "The Crosby Press",
-      "description": "web, mobile & email design",
-      "baseURL": "images/projects/the_crosby_press/",
+      "title": "Web Design",
+      "baseURL": "images/projects/web_design",
       "images": [
+        {
+          "src": "WD_01-Built-In-KC.jpg",
+          "hovertitle": "The Crosby Press Homepage Concept",
+          "hoversubtitle": "VIEW PROJECT",
+          "url": "https://dribbble.com/shots/1496154-Built-in-Kansas-City-Exploration?list=users&offset=2"
+        },
         {
           "src": "Crosby_01-Concept.jpg",
-          "hoverTitle": "The Crosby Press Homepage Concept",
-          "hoverSubtitle": "view larger image",
-          "url": "Crosby_01-Concept.jpg"
-        },
-        {
-          "src": "Crosby_01B-Concept.jpg",
-          "hoverTitle": "The Crosby Press Article Concept",
-          "hoverSubtitle": "view larger image",
-          "url": "Crosby_01B-Concept.jpg"
-        },
-        {
-          "src": "Crosby_02-Desktop.jpg",
-          "hoverTitle": "Original Desktop Design",
-          "hoverSubtitle": "view live site",
-          "url": "http://www.thecrosbypress.com"
-        },
-        {
-          "src": "Crosby_03-Mobile.jpg",
-          "hoverTitle": "Original Mobile Design",
-          "hoverSubtitle": "view live site",
-          "url": "http://www.thecrosbypress.com"
-        },
-        {
-          "src": "Crosby_04-Email.jpg",
-          "hoverTitle": "Original Email Design",
-          "hoverSubtitle": "view larger image",
-          "url": "Crosby_04-Email.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Web Design",
-      "description": "product design, webpage layout & email design",
-      "baseURL": "images/projects/web_design/",
-      "images": [
-        {
-          "src": "WD_00-Kansas.jpg",
-          "hoverTitle": "Built In Kansas City Concept",
-          "hoverSubtitle": "View Project",
-          "url": "http://dribbble.com/shots/1496154-Built-in-Kansas-City-Exploration?list=users&offset=0"
+          "hovertitle": "Supercompressor Homepage Concept",
+          "hoversubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         },
         {
           "src": "WD_01-Concept.jpg",
-          "hoverTitle": "Supercompressor Homepage Concept",
-          "hoverSubtitle": "view larger image",
-          "url": "WD_01-Concept.jpg"
+          "hovertitle": "",
+          "hoversubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         },
         {
           "src": "WD_02-FullGallery.jpg",
-          "hoverTitle": "Thrillist Full Screen Gallery",
-          "hoverSubtitle": "view larger image",
-          "url": "WD_02-FullGallery.jpg"
+          "hovertitle": "Thrillist Full Screen Gallery",
+          "hoversubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         },
         {
           "src": "WD_03-Recycle.jpg",
-          "hoverTitle": "Recycle Surge Website",
-          "hoverSubtitle": "view live site",
-          "url": "http://www.recyclesurge.com"
-        }
-      ]
-    },
-    {
-      "title": "Infographics",
-      "description": "layout, illustration & typography",
-      "baseURL": "images/projects/infographics/",
-      "images": [
-        {
-          "src": "Info_01-Booze.jpg",
-          "hoverTitle": "Red, White & Booze",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/drink/nation/red-white-and-booze-mapping-all-50-states-most-iconic-beerhooch"
-        },
-        {
-          "src": "Info_02-McDonalds.jpg",
-          "hoverTitle": "Historical Timeline of the McDonald's Menu",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/nation/a-historical-timeline-of-everything-on-the-mcdonald-s-menu-thrillist-nation"
-        },
-        {
-          "src": "Info_03-Fridge.jpg",
-          "hoverTitle": "Food Expiration Infographic",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/nation/how-long-do-things-in-your-fridge-stay-good-after-their-expiration-dates"
-        },
-        {
-          "src": "Info_04-Banned.jpg",
-          "hoverTitle": "Banned Foods Infographic",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/nation/foods-illegal-in-the-united-states-of-america-thrillist-nation"
-        },
-        {
-          "src": "Info_05-Chicago.jpg",
-          "hoverTitle": "Chicago Pork Infographic",
-          "hoverSubtitle": "view live article",
-          "url": "http://www.thrillist.com/eat/chicago/best-pork-dishes-in-chicago-your-chicago-nose-to-tail-pork-guide"
+          "hovertitle": "Recycle Surge Website",
+          "hoversubtitle": "VIEW LIVE SITE",
+          "url": "www.recyclesurge.com"
         }
       ]
     },
     {
       "title": "Iconography",
-      "description": "illustration & typography",
-      "baseURL": "images/projects/iconography/",
+      "baseURL": "images/projects/iconography",
       "images": [
+        {
+          "src": "Icons_02-BikePolo.jpg",
+          "hoverTitle": "Bike Polo Illustration",
+          "hoverSubtitle": "VIEW PROJECT",
+          "url": "https://dribbble.com/shots/1425775-Bike-Polo?list=users&offset=5"
+        },
         {
           "src": "Icons_01-Fall.jpg",
           "hoverTitle": "Supercompressor – Fall Vices",
-          "hoverSubtitle": "view live article",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
           "url": "http://www.supercompressor.com/vice/fall-winter-drinking-essentials-bitter-warmth-supercompressor-com"
-        },
-        {
-          "src": "Icons_00-Polo.jpg",
-          "hoverTitle": "Bike Polo Illustration",
-          "hoverSubtitle": "View Project",
-          "url": "http://dribbble.com/shots/1425775-Bike-Polo?list=users&offset=3"
         },
         {
           "src": "Icons_02-Best.jpg",
           "hoverTitle": "Thrillist – Best Fall Beers",
-          "hoverSubtitle": "view live article",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
           "url": "http://www.thrillist.com/drink/new-york/best-fall-beers-in-nyc"
         },
         {
-          "src": "Icons_05-GoneFishing.jpg",
+          "src": "Icons_04-GoneFishing.jpg",
           "hoverTitle": "Gone Fishing Illustration",
-          "hoverSubtitle": "View Project",
-          "url": "http://dribbble.com/shots/1435140-Gone-Fishing?list=users&offset=2"
+          "hoverSubtitle": "VIEW PROJECT",
+          "url": "https://dribbble.com/shots/1435140-Gone-Fishing?list=users&offset=4"
         },
         {
           "src": "Icons_03-Cold.jpg",
           "hoverTitle": "Supercompressor – Cold Weather Running",
-          "hoverSubtitle": "view live article",
-          "url": "http://dribbble.com/shots/1435140-Gone-Fishing?list=users&offset=2"
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.supercompressor.com/gear/cold-weather-running-essentials-for-men-running-outdoors-in-rain-snow"
         }
       ]
     },
     {
-      "title": "Online Advertising",
-      "description": "layout, composition & typography",
-      "baseURL": "images/projects/online_advertising/",
+      "title": "Infographics",
+      "baseURL": "images/projects/infographics",
       "images": [
         {
-          "src": "Adv_01-TL300.jpg",
-          "hoverTitle": "Thrillist Shops Banner",
-          "hoverSubtitle": "view larger image",
-          "url": "Adv_01-TL300.jpg"
+          "src": "Info_01-Booze.jpg",
+          "hoverTitle": "Red, White & Booze",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.thrillist.com/drink/nation/red-white-and-booze-mapping-all-50-states-most-iconic-beerhooch"
         },
         {
-          "src": "Adv_02-TL970.jpg",
-          "hoverTitle": "Thrillist Shops Banner",
-          "hoverSubtitle": "view larger image",
-          "url": "Adv_02-TL970.jpg"
+          "src": "Info_02-McDonalds.jpg",
+          "hoverTitle": "Historical Timeline of the McDonald's Menu",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.thrillist.com/eat/nation/a-historical-timeline-of-everything-on-the-mcdonald-s-menu-thrillist-nation"
         },
         {
-          "src": "Adv_03-TLApp.jpg",
-          "hoverTitle": "Thrillist iPhone App Launch Banner",
-          "hoverSubtitle": "view larger image",
-          "url": "Adv_03-TLApp.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Select Logos",
-      "description": "logo design, branding, identity",
-      "baseURL": "images/projects/select_logos/",
-      "images": [
-        {
-          "src": "Logos_01-Maglio.jpg",
-          "hoverTitle": "MaglioMade",
-          "hoverSubtitle": "view larger image",
-          "url": "Logos_01-Maglio.jpg"
+          "src": "Info_03-Fridge.jpg",
+          "hoverTitle": "Food Expiration Infographic",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.thrillist.com/eat/nation/how-long-do-things-in-your-fridge-stay-good-after-their-expiration-dates"
         },
         {
-          "src": "Logos_02-Super.jpg",
-          "hoverTitle": "Supercompressor",
-          "hoverSubtitle": "view larger image",
-          "url": "Logos_02-Super.jpg"
+          "src": "Info_04-Banned.jpg",
+          "hoverTitle": "Banned Foods Infographic",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.thrillist.com/eat/nation/foods-illegal-in-the-united-states-of-america-thrillist-nation"
         },
         {
-          "src": "Logos_03-Enerkem.jpg",
-          "hoverTitle": "Enerkem",
-          "hoverSubtitle": "view larger image",
-          "url": "Logos_03-Enerkem.jpg"
-        },
-        {
-          "src": "Logos_04-TCP.jpg",
-          "hoverTitle": "The Crosby Press (refresh)",
-          "hoverSubtitle": "view larger image",
-          "url": "Logos_04-TCP.jpg"
+          "src": "Info_05-Chicago.jpg",
+          "hoverTitle": "Chicago Pork Infographic",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.thrillist.com/eat/chicago/best-pork-dishes-in-chicago-your-chicago-nose-to-tail-pork-guide"
         }
       ]
     },
     {
       "title": "Editorial Graphics",
-      "description": "illustration, infographics, typography, photo manipulation",
-      "baseURL": "images/projects/editorial_graphics/",
+      "baseURL": "images/projects/editorial_graphics",
       "images": [
         {
-          "src": "Edit_01-Gift2.jpg",
+          "src": "Edit-GoogleGlass.jpg",
+          "hoverTitle": "Thrillist SF – Article Lead",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
+          "url": "http://www.thrillist.com/entertainment/san-francisco/the-do-s-and-don-ts-of-wearing-google-glass-thrillist-san-francisco"
+        },
+        {
+          "src": "Edit_01-Gift.jpg",
           "hoverTitle": "The Crosby Press Golden Rule Gifting",
-          "hoverSubtitle": "view larger image",
-          "url": "Edit_01-Gift2.jpg"
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         },
         {
           "src": "Edit_02-Nutella.jpg",
           "hoverTitle": "Thrillist LA – Article Lead",
-          "hoverSubtitle": "view live article",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
           "url": "http://www.thrillist.com/eat/los-angeles/downtown/bow-down-to-the-nutella-pizza-thrillist-la"
         },
         {
           "src": "Edit_03-Timbers.jpg",
           "hoverTitle": "Thrillist Portland – Article Lead",
-          "hoverSubtitle": "view live article",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
           "url": "http://www.thrillist.com/entertainment/portland/the-10-worst-portland-timbers-fans"
         },
         {
           "src": "Edit_04-Office.jpg",
           "hoverTitle": "Thrillist Travel – Article Lead",
-          "hoverSubtitle": "view live article",
+          "hoverSubtitle": "VIEW LIVE ARTICLE",
           "url": "http://www.thrillist.com/travel/nation/travel-to-the-most-remote-places-on-earth-thrillist-nation"
         }
       ]
     },
     {
+      "title": "Select Logos",
+      "baseURL": "images/projects/select_logos",
+      "images": [
+        {
+          "src": "Logos_01-Maglio.jpg",
+          "hoverTitle": "MaglioMade",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        },
+        {
+          "src": "Logos_02-Super.jpg",
+          "hoverTitle": "Supercompressor",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        },
+        {
+          "src": "Logos_03-Enerkem.jpg",
+          "hoverTitle": "Enerkem",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        },
+        {
+          "src": "Logos_04-TCP.jpg",
+          "hoverTitle": "The Crosby Press (refresh)",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        }
+      ]
+    },
+    {
+      "title": "Online Advertising",
+      "baseURL": "images/projects/online_advertising",
+      "images": [
+        {
+          "src": "Adv_01-TL300.jpg",
+          "hoverTitle": "Thrillist Shops Banner",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        },
+        {
+          "src": "Adv_02-TL970.jpg",
+          "hoverTitle": "Thrillist Shops Banner",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        },
+        {
+          "src": "Adv_03-TLApp.jpg",
+          "hoverTitle": "Thrillist iPhone App Launch Banner",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
+        }
+      ]
+    },
+    {
       "title": "Print Designs",
-      "description": "advertising, illustration, typography, layout, compositing",
-      "baseURL": "images/projects/print_designs/",
+      "baseURL": "images/projects/print_designs",
       "images": [
         {
           "src": "Print_01-Craftsman.jpg",
           "hoverTitle": "Craftsman – Print Ad",
-          "hoverSubtitle": "view larger image",
-          "url": "Print_01-Craftsman.jpg"
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         },
         {
           "src": "Print_02-Bodum.jpg",
           "hoverTitle": "Bodum – Print Ad",
-          "hoverSubtitle": "view larger image",
-          "url": "Print_02-Bodum.jpg"
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         },
         {
           "src": "Print_03-Enerkem.jpg",
           "hoverTitle": "Enerkem – Print Ad",
-          "hoverSubtitle": "view larger image",
-          "url": "Print_03-Enerkem.jpg"
+          "hoverSubtitle": "VIEW LARGER IMAGE",
+          "url": "full-size image"
         }
       ]
     }
