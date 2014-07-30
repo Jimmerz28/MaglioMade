@@ -32,14 +32,6 @@ $workImagesPadding: 20px;
 /* Transitions */
 $transitionSpeed: .5s;
 
-@mixin permaUnderline
-{
-	padding-bottom: 5px;
-	border-bottom: 2px $someOrange solid;
-	padding-right: 14px;
-	color: white !important;
-}
-
 @mixin centerShit
 {
 	@include display(flex);
@@ -107,6 +99,18 @@ header
 		margin-left: 46px;
 		font-size: 16pt;
 		color: $linksColor;
+	}
+}
+
+.colorHover
+{
+	color: $linksColor;
+	@include previewImagesTransition;
+	
+	&:hover
+	{
+		color: $limeGreen !important;
+		@include previewImagesTransition;
 	}
 }
 
@@ -581,9 +585,10 @@ a[href*=".pdf"]
 	font-size: 16pt;
 }
 
+// TODO: Update this so that the submit button doesn't gray out
 .formSuccess
 {
-	input:not(.orangeButton), textarea
+	input:not(.styledButton), textarea
 	{
 		opacity: .2;
 	}
@@ -606,7 +611,6 @@ a[href*=".pdf"]
 	
 	p
 	{
-		@include permaUnderline;
 		font-size: 16pt;
 	}
 }
@@ -717,11 +721,6 @@ svg.activeIndicator rect
 .fadeItBack
 {
 	opacity: 1 !important;
-}
-
-.permaUnderline
-{
-	@include permaUnderline;
 }
 
 .columnFlex
