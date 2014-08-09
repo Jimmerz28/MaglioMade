@@ -6,32 +6,32 @@
       "images": [
         {
           "src": "WD_01-Built-In-KC.jpg",
-          "hovertitle": "The Crosby Press Homepage Concept",
-          "hoversubtitle": "VIEW PROJECT",
+          "hoverTitle": "The Crosby Press Homepage Concept",
+          "hoverSubtitle": "VIEW PROJECT",
           "url": "https://dribbble.com/shots/1496154-Built-in-Kansas-City-Exploration?list=users&offset=2"
         },
         {
           "src": "Crosby_01-Concept.jpg",
-          "hovertitle": "Supercompressor Homepage Concept",
-          "hoversubtitle": "VIEW LARGER IMAGE",
+          "hoverTitle": "Supercompressor Homepage Concept",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
           "url": "full-size image"
         },
         {
           "src": "WD_01-Concept.jpg",
-          "hovertitle": "",
-          "hoversubtitle": "VIEW LARGER IMAGE",
+          "hoverTitle": "",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
           "url": "full-size image"
         },
         {
           "src": "WD_02-FullGallery.jpg",
-          "hovertitle": "Thrillist Full Screen Gallery",
-          "hoversubtitle": "VIEW LARGER IMAGE",
+          "hoverTitle": "Thrillist Full Screen Gallery",
+          "hoverSubtitle": "VIEW LARGER IMAGE",
           "url": "full-size image"
         },
         {
           "src": "WD_03-Recycle.jpg",
-          "hovertitle": "Recycle Surge Website",
-          "hoversubtitle": "VIEW LIVE SITE",
+          "hoverTitle": "Recycle Surge Website",
+          "hoverSubtitle": "VIEW LIVE SITE",
           "url": "www.recyclesurge.com"
         }
       ]
