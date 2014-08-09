@@ -27,7 +27,8 @@ var paths =
     images: "./images/**/*.{svg,png,jpg}",
     scripts: "./js/*.js",
     libs: "./js/libs/**/*.js",
-    templates: "./templates/**/*.jade"
+    templates: "./templates/**/*.jade",
+    resume: "./resume/*.pdf"
 };
 
 aws = JSON.parse(fs.readFileSync("credentials/deploy_creds.json"));
@@ -185,7 +186,14 @@ gulp.task("generateMediumPreviews", function()
         path.basename += "_Medium";
     }))
     .pipe( gulp.dest("./images/projects", {cwd: paths.dist}) )
-    .pipe(imagemin())
+    .pipe(imagemin());
+});
+
+gulp.task("copyResume", function()
+{
+   return gulp.src(paths.resume, {cwd: paths.src})
+   .pipe(rename("MaglioMade_Resume.pdf"))
+   .pipe(gulp.dest("./resume", {cwd: paths.dist}))
 });
 
 gulp.task("generateProjectImages", ["generateMediumPreviews", "generateFullPreviews"], function(){});
