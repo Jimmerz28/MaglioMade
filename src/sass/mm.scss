@@ -580,7 +580,8 @@ img[alt="logo"]
 
 a[href*=".pdf"]
 {
-	padding: 1em 4em;
+	// Mitchell wants it to be 60px tall
+	padding: .9rem 4em;
 	margin-left: 50px;
 	font-size: 16pt;
 }
