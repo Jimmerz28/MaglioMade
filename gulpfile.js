@@ -1,7 +1,6 @@
 var gulp = require("gulp"),
     sass = require("gulp-ruby-sass"),
     gutil = require("gulp-util"),
-    w3cjs = require("gulp-w3cjs"),
     csslint = require("gulp-csslint"),
     rename = require("gulp-rename"),
     minifyHTML = require("gulp-minify-html"),
@@ -12,10 +11,13 @@ var gulp = require("gulp"),
     jade = require("gulp-jade"),
     prefix = require("gulp-autoprefixer"),
     uglify = require("gulp-uglify"),
-    clean = require("gulp-rimraf")
+    clean = require("gulp-rimraf"),
     exec = require("child_process").exec,
     s3 = require("gulp-s3"),
     imageResize = require("gulp-image-resize"),
+    publish = require("gulp-awspublish"),
+    gzip = require("gulp-gzip"),
+    parallelize = require("concurrent-transform"),
     fs = require("fs");
 
 var paths =
@@ -37,10 +39,22 @@ gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","sty
 
 gulp.task("deploy", ["s3"], function(){});
 
-gulp.task("s3", function()
+gulp.task("publish", function()
 {
-    return gulp.src("./**", {cwd: paths.dist})
-    .pipe(s3(aws));
+    var publisher = publish.create(
+        {
+            key: aws.key,
+            secret: aws.secret,
+            bucket: aws.bucket,
+            region: aws.region
+        });
+        
+    var headers = {"Cache-Control": "max-age=0, no-cache, no-transform, public"};
+    
+    return gulp.src("./dist/**/*.*")
+    .pipe(publisher.sync(headers))
+    .pipe(publisher.cache())
+    .pipe(publish.reporter());
 });
 
 gulp.task("copyfonts", function()
@@ -48,11 +62,12 @@ gulp.task("copyfonts", function()
     return gulp.src("./fonts/*", {cwd: paths.src})
     .pipe(gulp.dest("./fonts", {cwd: paths.dist}));
 });
-
+ 
 gulp.task("csslint", ["styles"], function()
 {
     return gulp.src("./css/*.css", {cwd: paths.dist})
     .pipe(csslint())
+    .pipe(prefix("last 1 version"))
     .pipe(csslint.reporter());
 });
 
@@ -76,7 +91,6 @@ gulp.task("htmlvalidation", function()
 {
     return gulp.src("./html/**/*.html", {cwd: paths.src})
     .pipe(minifyHTML())
-    // .pipe(w3cjs())
     .pipe(gulp.dest("./", {cwd: paths.dist}));
 });
 
@@ -106,11 +120,6 @@ gulp.task("gulpvalidate", function()
     return gulp.src("./gulpfile.js")
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
-});
-
-gulp.task("createChildren", function()
-{
-    exec()
 });
 
 gulp.task("copyJSLibs", function()
