@@ -13,7 +13,6 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     clean = require("gulp-rimraf"),
     exec = require("child_process").exec,
-    s3 = require("gulp-s3"),
     imageResize = require("gulp-image-resize"),
     publish = require("gulp-awspublish"),
     gzip = require("gulp-gzip"),
@@ -37,8 +36,6 @@ aws = JSON.parse(fs.readFileSync("credentials/deploy_creds.json"));
 
 gulp.task("build", ["imagemin", "htmlvalidation", "copyfonts", "copyJSLibs","styles", "scripts", "generateChildren", "generateProjectImages"], function(){});
 
-gulp.task("deploy", ["s3"], function(){});
-
 gulp.task("publish", function()
 {
     var publisher = publish.create(
@@ -52,7 +49,7 @@ gulp.task("publish", function()
     var headers = {"Cache-Control": "max-age=0, no-cache, no-transform, public"};
     
     return gulp.src("./dist/**/*.*")
-    .pipe(publisher.sync(headers))
+    .pipe(publisher.publish(headers))
     .pipe(publisher.cache())
     .pipe(publish.reporter());
 });
